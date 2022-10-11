@@ -1,0 +1,15 @@
+// @import "../../styles/abstracts";
+
+.Logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: $white;
+}
+
+.Logo-span {
+  font-size: 2rem;
+  color: $white;
+  font-weight: 900;
+  letter-spacing: $spacing-sm;
+}
