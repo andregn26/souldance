@@ -21,8 +21,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role=list],
-ol[role=list] {
+ul,
+ol {
   list-style: none;
 }
 
@@ -136,32 +136,32 @@ select {
 }
 
 .Nav {
-  display: none;
   height: 100%;
+  display: none;
   align-items: center;
 }
-
-.Nav--ul {
+.Nav ul {
   height: 100%;
-  margin-left: 32px;
   display: flex;
+  margin-right: 32px;
 }
-.Nav--ul li {
+.Nav ul li {
   height: 100%;
 }
-.Nav--ul li:not(last-child) {
+.Nav ul li:not(:last-child) {
   margin-right: 24px;
 }
-.Nav--ul li a {
+.Nav ul li a {
   display: flex;
   align-items: center;
+  height: 100%;
   font-size: 1.1rem;
   letter-spacing: 0.4px;
   text-decoration: none;
   color: #fff;
   position: relative;
 }
-.Nav--ul li a::after {
+.Nav ul li a::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -173,14 +173,14 @@ select {
   opacity: 0;
   transition: 0.3s ease opacity;
 }
-.Nav--ul li a:hover::after {
+.Nav ul li a:hover::after {
   opacity: 1;
 }
-.Nav--ul li a:hover {
+.Nav ul li a:hover {
   color: #fff;
 }
 @media (min-width: 48em) {
-  .Nav--ul {
+  .Nav {
     display: flex;
   }
 }
