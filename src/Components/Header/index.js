@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import Logo from "../../UI/Logo"
 import Nav from "./Nav"
+import { CgMenuRightAlt, CgClose } from "react-icons/cg"
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -8,22 +9,21 @@ const Header = () => {
     setMenuOpen((p) => !p)
   }
   const menuToggle = !menuOpen ? (
-    <cgMenuRight onClick={handleMenuToggle} />
+    <CgMenuRightAlt onClick={handleMenuToggle} />
   ) : (
-    <cgClose onClick={handleMenuToggle} />
+    <CgClose onClick={handleMenuToggle} />
   )
 
   return (
     <div className="Header">
-      <Nav>
-        <Logo />
-        <div className="Header--menu">
-          <div className="Header--menu-toggle">{menuToggle}</div>
-          <aside className="Menu">
-            {menuOpen && "Show"} <Nav isMenu menuToggle={handleMenuToggle} />
-          </aside>
-        </div>
-      </Nav>
+      <Logo />
+      <Nav />
+      <div className="Header--menu">
+        <div className="Header--menu-toggle">{menuToggle}</div>
+        <aside className="Menu">
+          {menuOpen && "Show"} <Nav isMenu menuToggle={handleMenuToggle} />
+        </aside>
+      </div>
     </div>
   )
 }
