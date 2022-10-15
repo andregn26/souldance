@@ -15,16 +15,16 @@ const Header = () => {
   )
 
   return (
-    <div className="Header">
+    <header className="Header">
       <Logo />
       <Nav />
       <div className="Header--menu">
         <div className="Header--menu-toggle">{menuToggle}</div>
-        <aside className="Menu">
-          {menuOpen && "Show"} <Nav isMenu menuToggle={handleMenuToggle} />
+        <aside className={`${"Menu"} ${menuOpen && "Show"}`}>
+          <Nav isMenu menuToggle={handleMenuToggle} />
         </aside>
       </div>
-    </div>
+    </header>
   )
 }
 

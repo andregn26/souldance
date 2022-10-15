@@ -19,13 +19,15 @@
     @include breakpoint(md) {
       display: none;
     }
-    &--toggle {
-      color: $white;
+    &-toggle {
+      color: $black;
+      // background-color: white;
       position: relative;
       z-index: 10;
       cursor: pointer;
       svg {
         font-size: 2rem;
+        color: $white;
       }
       &:hover {
         transform: scale(1.05);
@@ -44,8 +46,8 @@
       max-width: 400px;
       height: 100vh;
       outline: 0;
-      background: $dark;
-      z-index: 9;
+      background: $black;
+      z-index: 7;
       transform: translateX(100vw);
       opacity: 0;
       transition: all 0.3s ease;

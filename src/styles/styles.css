@@ -99,16 +99,17 @@ select {
     display: none;
   }
 }
-.Header--menu--toggle {
-  color: #fff;
+.Header--menu-toggle {
+  color: #030502;
   position: relative;
   z-index: 10;
   cursor: pointer;
 }
-.Header--menu--toggle svg {
+.Header--menu-toggle svg {
   font-size: 2rem;
+  color: #fff;
 }
-.Header--menu--toggle:hover {
+.Header--menu-toggle:hover {
   transform: scale(1.05);
 }
 .Header--menu .Menu {
@@ -124,8 +125,8 @@ select {
   max-width: 400px;
   height: 100vh;
   outline: 0;
-  background: #0f1515;
-  z-index: 9;
+  background: #030502;
+  z-index: 7;
   transform: translateX(100vw);
   opacity: 0;
   transition: all 0.3s ease;
@@ -185,26 +186,26 @@ select {
   }
 }
 
-.menu--nav {
+.Menu--nav {
   width: 100%;
   display: flex;
   flex-direction: column;
   text-align: center;
   font-size: 1.4rem;
 }
-.menu--nav ul {
+.Menu--nav ul {
   display: flex;
   flex-direction: column;
   margin-bottom: 32px;
 }
-.menu--nav ul li:not(:last-child) {
+.Menu--nav ul li:not(:last-child) {
   margin-bottom: 24px;
 }
-.menu--nav ul li a {
+.Menu--nav ul li a {
   text-decoration: none;
   color: #fff;
 }
-.menu--nav ul li a:hover {
+.Menu--nav ul li a:hover {
   color: #fff;
 }
 
