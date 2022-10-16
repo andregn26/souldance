@@ -1,10 +1,11 @@
 import React from "react"
+import Button from "../../../UI/Button"
 
 const Nav = ({ isMenu, menuToggle }) => {
   return (
     <nav className={isMenu ? "Menu--nav" : "Nav"}>
-      <ul className="Nav--ul">
-        <li className="Nav--li" onClick={menuToggle}>
+      <ul>
+        <li onClick={menuToggle}>
           <a href="/">Locations</a>
         </li>
         <li onClick={menuToggle}>
@@ -14,6 +15,9 @@ const Nav = ({ isMenu, menuToggle }) => {
           <a href="/">Learn More</a>
         </li>
       </ul>
+      <Button outline onClick={menuToggle}>
+        Entra em Contacto
+      </Button>
     </nav>
   )
 }

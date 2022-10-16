@@ -121,8 +121,7 @@ select {
   bottom: 0px;
   right: 0px;
   padding: 3rem;
-  width: 70vw;
-  max-width: 400px;
+  width: 100vw;
   height: 100vh;
   outline: 0;
   background: #030502;
@@ -133,7 +132,7 @@ select {
 }
 .Header--menu .Show {
   transform: translateX(0vw);
-  opacity: 1;
+  opacity: 0.9;
 }
 
 .Nav {
@@ -187,7 +186,7 @@ select {
 }
 
 .Menu--nav {
-  width: 100%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -197,6 +196,7 @@ select {
   display: flex;
   flex-direction: column;
   margin-bottom: 32px;
+  padding-left: 0;
 }
 .Menu--nav ul li:not(:last-child) {
   margin-bottom: 24px;
@@ -221,6 +221,40 @@ select {
   color: #fff;
   font-weight: 900;
   letter-spacing: 12px;
+}
+
+.Button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  padding: 12px 32px;
+  font-family: inherit;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  font-size: 1.1rem;
+  background: #dbe6ed;
+  color: #0f1515;
+  border: 1px solid #0f1515;
+  transition: all 0.3s ease;
+}
+.Button:hover {
+  background: rgab(#dbe6ed, 0.8);
+}
+.Button-outline {
+  border: 1px solid #dbe6ed;
+  background: transparent;
+  color: #dbe6ed;
+  border-radius: 12px;
+  padding: 12px 32px;
+  font-family: inherit;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+.Button-outline:hover {
+  background: rgba(219, 230, 237, 0.2);
 }
 
 body {

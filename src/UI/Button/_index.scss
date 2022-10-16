@@ -1,0 +1,36 @@
+.Button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: $borderRadius;
+  padding: $spacing-sm $spacing-lg;
+  font-family: inherit;
+  font-weight: 700;
+  letter-spacing: $letterSpacing;
+  font-size: 1.1rem;
+  background: $light;
+  color: $dark;
+  border: 1px solid $dark;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgab($light, 0.8);
+  }
+
+  &-outline {
+    border: 1px solid $light;
+    background: transparent;
+    color: $light;
+    border-radius: $borderRadius;
+    padding: $spacing-sm $spacing-lg;
+    font-family: inherit;
+    font-weight: 700;
+    letter-spacing: $letterSpacing;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: rgba($light, 0.2);
+    }
+  }
+}

@@ -42,8 +42,8 @@
       bottom: 0px;
       right: 0px;
       padding: 3rem;
-      width: 70vw;
-      max-width: 400px;
+      width: 100vw;
+      // max-width: 700px;
       height: 100vh;
       outline: 0;
       background: $black;
@@ -55,7 +55,7 @@
 
     .Show {
       transform: translateX(0vw);
-      opacity: 1;
+      opacity: 0.9;
     }
   }
 }
