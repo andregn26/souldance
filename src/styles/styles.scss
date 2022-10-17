@@ -1,7 +1,9 @@
 @import "./abstracts";
-@import "../Components";
-@import "../UI";
+
 body {
   width: 100%;
   font-family: $lato;
 }
+@import "../Pages";
+@import "../Components";
+@import "../UI";

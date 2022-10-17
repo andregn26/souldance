@@ -1,14 +1,16 @@
+import React, { Fragment } from "react"
 import "./styles/styles.scss"
 
 import Header from "./Components/Header"
-import Button from "./UI/Button"
+
+import Homepage from "./Pages/Homepage"
 
 function App() {
   return (
-    <div className="App">
+    <Fragment>
       <Header />
-      <Button />
-    </div>
+      <Homepage />
+    </Fragment>
   )
 }
 
