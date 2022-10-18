@@ -52,9 +52,34 @@
         grid-template-columns: repeat(3, 1fr);
       }
     }
+    &-ViewMore {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a {
+        letter-spacing: $letterSpacing;
+        padding: $spacing-sm $spacing-md;
+        text-decoration: none;
+        border-radius: $borderRadius;
+        color: $dark;
+        transition: 0.3s ease all;
+        display: flex;
+        align-items: center;
+        font-size: 1.1rem;
+
+        svg {
+          font-size: 1.2rem;
+          margin-left: $spacing-sm;
+          padding-top: 2px;
+        }
+
+        &:hover {
+          background: rgba($dark, 0.05);
+        }
+      }
+    }
   }
 }
-
 .Gallery-Item {
   cursor: pointer;
   position: relative;
@@ -70,5 +95,59 @@
     .Overlay {
       background: transparent;
     }
+  }
+  &-Img {
+    border-top-left-radius: $borderRadius;
+    border-top-right-radius: $borderRadius;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+  }
+  .Overlay {
+    border-top-left-radius: $borderRadius;
+    border-top-right-radius: $borderRadius;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    background: rgba($dark, 0.4);
+    transition: 0.3s ease all;
+  }
+  &-Content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25%;
+    background: $white;
+    border-bottom-left-radius: $borderRadius;
+    border-bottom-right-radius: $borderRadius;
+    svg {
+      color: $aqua;
+      font-size: 1.1rem;
+    }
+    &-Class {
+      margin-left: 6px;
+      font-size: 1.2rem;
+      color: $dark;
+      letter-spacing: $letterSpacing;
+    }
+  }
+  &-Tag {
+    position: absolute;
+    background: $white;
+    top: -12px;
+    left: $spacing-sm;
+    padding: 6px 8px;
+    border-radius: $borderRadius;
+    font-size: 0.8rem;
+    letter-spacing: $letterSpacing;
   }
 }
