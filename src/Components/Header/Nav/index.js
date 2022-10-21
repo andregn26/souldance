@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import Button from "../../../UI/Button"
 
 const Nav = ({ isMenu, menuToggle }) => {
@@ -6,13 +7,13 @@ const Nav = ({ isMenu, menuToggle }) => {
     <nav className={isMenu ? "Menu--nav" : "Nav"}>
       <ul>
         <li onClick={menuToggle}>
-          <a href="/">Locations</a>
+          <Link to={"sobre-nos"}>Sobre Nós</Link>
         </li>
         <li onClick={menuToggle}>
-          <a href="/">Pricing</a>
+          <Link to={"pricing"}>Horários</Link>
         </li>
         <li onClick={menuToggle}>
-          <a href="/">Learn More</a>
+          <Link to={"learn-more"}>Learn More</Link>
         </li>
       </ul>
       <Button outline onClick={menuToggle}>

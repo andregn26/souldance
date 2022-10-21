@@ -1,5 +1,6 @@
 /* Box sizing rules */
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,700&display=swap");
+@import url("~leaflet/dist/leaflet.css");
 *,
 *::before,
 *::after {
@@ -24,6 +25,7 @@ dd {
 ul,
 ol {
   list-style: none;
+  padding-left: 0;
 }
 
 /* Set core root defaults */
@@ -35,7 +37,7 @@ html:focus-within {
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
+  line-height: 1.2;
 }
 
 /* A elements that don't have a class get default styles */
@@ -82,6 +84,18 @@ body {
 
 .Page {
   background-color: yellow;
+}
+
+.learnmore-container {
+  height: 300px;
+  background-color: blue;
+  position: relative;
+}
+
+.h1example {
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
 }
 
 .Header {
@@ -221,9 +235,7 @@ body {
 .Container {
   position: relative;
   height: 100vh;
-  min-height: 1000px;
   margin: 0 auto;
-  background-color: aliceblue;
 }
 
 .Video {
@@ -510,6 +522,10 @@ body {
   width: 1000px;
   margin: 0 1.5rem;
 }
+.Footer .leaflet-container {
+  height: 300px;
+  z-index: 10;
+}
 .Footer-Newsletter {
   display: flex;
   flex-direction: column;
@@ -528,10 +544,127 @@ body {
   font-size: 1.1rem;
   margin-bottom: 24px;
 }
-.Footer-Form {
+.Footer-Newsletter-Form {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.Footer-Newsletter-Form Button {
+  width: 100%;
+}
+@media (min-width: 48em) {
+  .Footer-Newsletter-Form {
+    flex-direction: row;
+  }
+  .Footer-Newsletter-Form Button {
+    width: auto;
+  }
+}
+.Footer .Input {
+  letter-spacing: 0.4px;
+  font-family: inherit;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  padding: 12px 24px;
+  border-radius: 12px;
+}
+@media (min-width: 48em) {
+  .Footer .Input {
+    width: 300px;
+    margin-bottom: 0;
+    margin-right: 12px;
+  }
+}
+.Footer .Input:focus {
+  outline: 0;
+}
+.Footer-Content {
+  width: 100%;
+  min-height: 20vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  text-align: center;
+  margin-bottom: 64px;
+}
+@media (min-width: 37.5em) {
+  .Footer-Content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 48em) {
+  .Footer-Content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.Footer-Content-Col {
+  height: 100%;
+}
+.Footer-Content-Col-Headline {
+  color: #fff;
+  font-size: 1.6rem;
+  margin-bottom: 24px;
+  letter-spacing: 0.4px;
+}
+.Footer-Content-Col-Links li {
+  margin-bottom: 12px;
+}
+.Footer-Content-Col-Links li a {
+  letter-spacing: 0.4px;
+  width: 100%;
+  color: #fff;
+  text-decoration: none;
+}
+.Footer-Base {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+@media (min-width: 48em) {
+  .Footer-Base {
+    flex-direction: row;
+  }
+}
+.Footer-Base a:not(:first-child), .Footer-Base-Year:not(:first-child),
+.Footer-Base ul:not(:first-child) {
+  margin-bottom: 12px;
+}
+@media (min-width: 48em) {
+  .Footer-Base a:not(:first-child), .Footer-Base-Year:not(:first-child),
+.Footer-Base ul:not(:first-child) {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 48em) {
+  .Footer-Base a, .Footer-Base-Year,
+.Footer-Base ul {
+    flex: 1;
+  }
+}
+.Footer-Base-Year {
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0.4px;
+  font-size: 0.9rem;
+}
+.Footer-Base-Socials {
+  display: flex;
+  justify-content: flex-end;
+}
+.Footer-Base-Socials li:not(:last-child) {
+  margin-right: 24px;
+}
+@media (min-width: 48em) {
+  .Footer-Base-Socials li:not(:last-child) {
+    margin-right: 12px;
+  }
+}
+.Footer-Base-Socials li a {
+  font-size: 1.6rem;
+  color: white;
+  text-decoration: none;
 }
 
 .Logo {
@@ -567,6 +700,7 @@ body {
   background: rgab(#dbe6ed, 0.8);
 }
 .Button-outline {
+  cursor: pointer;
   border: 1px solid #dbe6ed;
   background: transparent;
   color: #dbe6ed;
@@ -580,4 +714,32 @@ body {
 }
 .Button-outline:hover {
   background: rgba(219, 230, 237, 0.2);
+}
+.Button-ok {
+  background-color: red;
+}
+
+.Modal-Background {
+  background-color: hsla(0deg, 0%, 0%, 0.792);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-top: 90px;
+}
+.Modal-Container {
+  width: 90%;
+  height: 80%;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.2), 0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.05);
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.Modal-Container-Header {
+  border: 1px solid blue;
 }/*# sourceMappingURL=styles.css.map */

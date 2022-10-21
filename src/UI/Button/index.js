@@ -1,6 +1,6 @@
 import React from "react"
 
-const Button = ({ outline, children, onClick }) => {
+const Button = ({ outline, children, onClick, ok }) => {
   return (
     <button
       onClick={onClick}

@@ -1,0 +1,28 @@
+.Modal {
+  &-Background {
+    background-color: hsla(0, 0%, 0%, 0.792);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: $headerHeight;
+  }
+  &-Container {
+    width: 90%;
+    height: 80%;
+    background-color: $white;
+    border-radius: $borderRadius;
+    box-shadow: $boxShadow;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    &-Header {
+      border: 1px solid blue;
+    }
+  }
+}

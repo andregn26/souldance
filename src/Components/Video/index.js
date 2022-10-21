@@ -8,10 +8,10 @@ const Video = () => {
   return (
     <div className="Container">
       <video
-        autoPlay={false}
+        autoPlay={true}
         muted
         loop
-        src={coverVID}
+        src={SoulDance}
         id="Video"
         className="Video"
       ></video>
@@ -27,7 +27,7 @@ const Video = () => {
           </p>
           <div className="SectionOne-Content-Cta">
             <Button>Vem Experimentar!</Button>
-            <Button outline>Vem Experimentar!</Button>
+            <Button outline>Conhece as Modalidades</Button>
           </div>
         </div>
       </div>
