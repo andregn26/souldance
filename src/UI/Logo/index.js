@@ -2,11 +2,12 @@ import React from "react"
 import LeafSVG from "../../assets/LeafSVG"
 
 const Logo = () => {
+  const handleScrollTop = () => window.scrollTo({ top: 0, behavior: "smooth" })
   return (
     <>
-      <a href="/" className="Logo">
+      <div onClick={handleScrollTop} className="Logo">
         <LeafSVG fillColor={"white"} />
-      </a>
+      </div>
       <span className="Logo-span"></span>
     </>
   )

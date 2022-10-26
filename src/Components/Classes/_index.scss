@@ -3,10 +3,11 @@
   position: relative;
   z-index: 10;
   margin: 0 auto;
+  padding-top: $headerHeight;
 }
 .Classes {
   width: 100%;
-  padding: 100px 0;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,11 +30,11 @@
         content: "";
         position: absolute;
         display: inline;
-        top: 15px;
+        top: 22px;
         right: 0;
-        width: calc(100% - 265px);
+        width: calc(100% - 351px);
         height: 2px;
-        background: $dark;
+        background: #0f1515;
       }
     }
     &-Gallery {

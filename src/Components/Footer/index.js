@@ -16,22 +16,22 @@ L.Icon.Default.mergeOptions({
 
 const footerColumns = [
   {
-    id: 1,
+    id: "1",
     headline: "Sobre Nós",
     links: ["A Nossa História", "Preços e Horários", "Testemunhos"],
   },
   {
-    id: 2,
+    id: "2",
     headline: "Outros Serviços",
     links: ["Alúguer de Espaço", "Aulas para Noivos"],
   },
   {
-    id: 3,
+    id: "3",
     headline: "Conteúdo",
     links: ["Submeter Video", "Submeter Fotografia"],
   },
   {
-    id: 4,
+    id: "4",
     headline: "Social",
     links: ["Facebook", "Instagram", "WhatsApp"],
   },
@@ -39,6 +39,23 @@ const footerColumns = [
 
 const socials = [<FaFacebook />, <FaInstagram />, <FaWhatsapp />]
 const coordinates = [38.75726609842309, -9.283417576324181]
+
+const footerColumnsList = footerColumns.map(({ id, headline, links }) => {
+  return (
+    <div className="Footer-Content-Col" key={`Column${id}`}>
+      <div className="Footer-Content-Col-Headline">{headline}</div>
+      <ul className="Footer-Content-Col-Links">
+        {links.map((link, index) => (
+          <li key={`Link${index}`}>
+            <a href="/">{link}</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+})
+
+console.log(footerColumnsList)
 
 const Footer = () => {
   return (
@@ -66,22 +83,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="Footer-Content">
-          {footerColumns.map(({ id, headline, links }) => (
-            <div className="Footer-Content-Col">
-              <div key={id} className="Footer-Content-Col-Headline">
-                {headline}
-              </div>
-              <ul className="Footer-Content-Col-Links">
-                {links.map((link, index) => (
-                  <li key={index + 1}>
-                    <a href="/">{link}</a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+        <div className="Footer-Content">{footerColumnsList}</div>
 
         <div className="Footer-Base">
           <Logo />
@@ -90,7 +92,7 @@ const Footer = () => {
           </span>
           <ul className="Footer-Base-Socials">
             {socials.map((icon, index) => (
-              <li key={index + 1}>
+              <li key={`icon${index.toString()}`}>
                 <a href="/">{icon}</a>
               </li>
             ))}

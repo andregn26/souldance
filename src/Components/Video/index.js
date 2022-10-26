@@ -26,8 +26,8 @@ const Video = () => {
             necessitatibus accusamus commodi id maxime voluptatum nemo?
           </p>
           <div className="SectionOne-Content-Cta">
-            <Button>Vem Experimentar!</Button>
-            <Button outline>Conhece as Modalidades</Button>
+            <Button className="Alert">Vem Experimentar!</Button>
+            <Button>Conhece as Modalidades</Button>
           </div>
         </div>
       </div>

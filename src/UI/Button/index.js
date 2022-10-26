@@ -1,11 +1,8 @@
 import React from "react"
 
-const Button = ({ outline, children, onClick, ok }) => {
+const Button = ({ className = "", children, onClick }) => {
   return (
-    <button
-      onClick={onClick}
-      className={`${"Button"}${outline ? "-outline" : ""}`}
-    >
+    <button onClick={onClick} className={`PrimaryButton ${className}`}>
       {children}
     </button>
   )

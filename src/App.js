@@ -7,7 +7,6 @@ import "./styles/styles.scss"
 import Header from "./Components/Header"
 import Homepage from "./Pages/Homepage"
 import Footer from "./Components/Footer"
-import AboutUs from "./Pages/AboutUs/index.js"
 
 function App() {
   return (
@@ -15,7 +14,6 @@ function App() {
       <Header />
       <Routes>
         <Route exact path="/" element={<Homepage />} />
-        <Route path="/sobre-nos" element={<AboutUs />} />
       </Routes>
 
       <Footer />

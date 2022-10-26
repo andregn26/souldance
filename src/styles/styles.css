@@ -86,18 +86,6 @@ body {
   background-color: yellow;
 }
 
-.learnmore-container {
-  height: 300px;
-  background-color: blue;
-  position: relative;
-}
-
-.h1example {
-  font-size: 2rem;
-  position: absolute;
-  top: 50%;
-}
-
 .Header {
   height: 90px;
   padding: 0 1.5rem;
@@ -169,6 +157,7 @@ body {
   margin-right: 32px;
 }
 .Nav ul li {
+  cursor: pointer;
   height: 100%;
 }
 .Nav ul li:not(:last-child) {
@@ -198,9 +187,28 @@ body {
 }
 .Nav ul li a:hover::after {
   opacity: 1;
-}
-.Nav ul li a:hover {
   color: #fff;
+}
+.Nav ul li a.active {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-size: 1.1rem;
+  letter-spacing: 0.4px;
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+}
+.Nav ul li a.active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  opacity: 1;
 }
 @media (min-width: 48em) {
   .Nav {
@@ -230,6 +238,10 @@ body {
 }
 .Menu--nav ul li a:hover {
   color: #fff;
+}
+
+.Alert {
+  background-color: aqua;
 }
 
 .Container {
@@ -358,16 +370,29 @@ body {
   }
 }
 
+.AboutUsContainer {
+  min-height: 100vh;
+  background-color: blue;
+  position: relative;
+  margin: 0 auto;
+}
+
+.h1example {
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+}
+
 .ClassesContainer {
   background: #dbe6ed;
   position: relative;
   z-index: 10;
   margin: 0 auto;
+  padding-top: 90px;
 }
 
 .Classes {
   width: 100%;
-  padding: 100px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -390,9 +415,9 @@ body {
   content: "";
   position: absolute;
   display: inline;
-  top: 15px;
+  top: 22px;
   right: 0;
-  width: calc(100% - 265px);
+  width: calc(100% - 351px);
   height: 2px;
   background: #0f1515;
 }
@@ -681,7 +706,7 @@ body {
   letter-spacing: 12px;
 }
 
-.Button {
+.PrimaryButton- {
   cursor: pointer;
   border: none;
   outline: none;
@@ -696,10 +721,14 @@ body {
   border: 1px solid #0f1515;
   transition: all 0.3s ease;
 }
-.Button:hover {
+.PrimaryButton- .Alert {
+  background: red;
+}
+.PrimaryButton-:hover {
   background: rgab(#dbe6ed, 0.8);
 }
-.Button-outline {
+
+.SecondaryButton {
   cursor: pointer;
   border: 1px solid #dbe6ed;
   background: transparent;
@@ -712,11 +741,8 @@ body {
   font-size: 1.1rem;
   transition: all 0.3s ease;
 }
-.Button-outline:hover {
+.SecondaryButton:hover {
   background: rgba(219, 230, 237, 0.2);
-}
-.Button-ok {
-  background-color: red;
 }
 
 .Modal-Background {

@@ -1,7 +1,7 @@
 import React from "react"
 import { useState } from "react"
 
-import { CgClose } from "react-icons/cg"
+// import { CgClose } from "react-icons/cg"
 import { modalities } from "../../Data"
 import ModalClasses from "../../UI/ModalClasses"
 
