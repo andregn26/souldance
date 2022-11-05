@@ -1,0 +1,163 @@
+@use "../abstracts" as *;
+
+@import url("~leaflet/dist/leaflet.css");
+
+/*----------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+Component - Footer
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+----------------------------------------------------------*/
+
+// .Footer {
+//   padding: 100px 0 25px 0;
+//   width: 1000px;
+//   margin: 0 1.5rem;
+
+//   .leaflet-container {
+//     height: 300px;
+//     z-index: 10;
+//   }
+
+//   &-Newsletter {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     text-align: center;
+//     margin-bottom: 100px;
+
+//     &-Headline {
+//       color: $white;
+//       font-size: 1.6rem;
+//       letter-spacing: $letterSpacing;
+//       margin-bottom: $spacing-md;
+//     }
+//     span {
+//       color: $white;
+//       font-size: 1.1rem;
+//       margin-bottom: $spacing-md;
+//     }
+//     &-Form {
+//       display: flex;
+//       flex-direction: column;
+//       align-items: center;
+
+//       Button {
+//         width: 100%;
+//       }
+
+//       @include mq(largeScreenMin) {
+//         Button {
+//           width: auto;
+//         }
+//         flex-direction: row;
+//       }
+//     }
+//   }
+//   .Input {
+//     letter-spacing: $letterSpacing;
+//     font-family: inherit;
+//     font-size: 1.1rem;
+//     margin-bottom: $spacing-sm;
+//     padding: $spacing-sm $spacing-md;
+//     border-radius: $borderRadius;
+
+//     @include mq(largeScreenMin) {
+//       width: 300px;
+//       margin-bottom: 0;
+//       margin-right: $spacing-sm;
+//     }
+
+//     &:focus {
+//       outline: 0;
+//     }
+//   }
+//   &-Content {
+//     width: 100%;
+//     min-height: 20vh;
+//     display: grid;
+//     grid-template-columns: 1fr;
+//     gap: $spacing-md;
+//     text-align: center;
+//     margin-bottom: $spacing-xl;
+
+//     @include mq(mediumScreenMin) {
+//       grid-template-columns: repeat(2, 1fr);
+//     }
+//     @include mq(largeScreenMin) {
+//       grid-template-columns: repeat(4, 1fr);
+//     }
+
+//     &-Col {
+//       height: 100%;
+
+//       &-Headline {
+//         color: $white;
+//         font-size: 1.6rem;
+//         margin-bottom: $spacing-md;
+//         letter-spacing: $letterSpacing;
+//       }
+
+//       &-Links {
+//         li {
+//           margin-bottom: $spacing-sm;
+//           a {
+//             letter-spacing: $letterSpacing;
+//             width: 100%;
+//             color: $white;
+//             text-decoration: none;
+//           }
+//         }
+//       }
+//     }
+//   }
+//   &-Base {
+//     display: flex;
+//     flex-direction: column-reverse;
+//     align-items: center;
+//     justify-content: center;
+//     color: $white;
+//     @include mq(largeScreenMin) {
+//       flex-direction: row;
+//     }
+//     a,
+//     &-Year,
+//     ul {
+//       &:not(:first-child) {
+//         margin-bottom: $spacing-sm;
+//         @include mq(largeScreenMin) {
+//           margin-bottom: 0;
+//         }
+//       }
+//       @include mq(largeScreenMin) {
+//         flex: 1;
+//       }
+//     }
+//     &-Year {
+//       display: flex;
+//       justify-content: center;
+//       letter-spacing: $letterSpacing;
+//       font-size: 0.9rem;
+//     }
+//     &-Socials {
+//       display: flex;
+//       justify-content: flex-end;
+//       li {
+//         &:not(:last-child) {
+//           margin-right: $spacing-md;
+//           @include mq(largeScreenMin) {
+//             margin-right: $spacing-sm;
+//           }
+//         }
+//         a {
+//           font-size: 1.6rem;
+//           color: white;
+//           text-decoration: none;
+//         }
+//       }
+//     }
+//   }
+// }

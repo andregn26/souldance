@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import Logo from "../../UI/Logo"
+import Logo from "../UI/Logo"
 import Nav from "./Nav"
 import { CgMenuRightAlt, CgClose } from "react-icons/cg"
 import useWindowSize from "../../hooks/useWindowSize"

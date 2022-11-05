@@ -1,0 +1,53 @@
+@use "../abstracts" as *;
+
+/*----------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+Containers
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+----------------------------------------------------------*/
+
+.containerTotalWidth {
+  padding-inline: 0.5em;
+  margin-inline: auto;
+  max-width: 100vw;
+}
+.container-padding {
+  padding: 3rem 0;
+}
+
+// .Container {
+//   margin: 0 auto;
+//   &-Video {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background: rgba($dark, 0.3);
+//     padding-top: $headerHeight;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//   }
+//   // &-AboutUs {
+//   //   margin: 0 1.5rem;
+//   //   display: flex;
+//   //   flex-direction: column;
+//   // }
+//   &-swiper {
+//     height: 400px;
+//   }
+// }
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}

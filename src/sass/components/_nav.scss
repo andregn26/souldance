@@ -1,0 +1,113 @@
+@use "../abstracts" as *;
+
+/*----------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+Component - Navbar
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+----------------------------------------------------------*/
+
+.Nav {
+  height: 100%;
+  display: none;
+  align-items: center;
+
+  ul {
+    height: 100%;
+    display: flex;
+    margin-right: $spacing-lg;
+    li {
+      cursor: pointer;
+      height: 100%;
+      &:not(:last-child) {
+        margin-right: $spacing-md;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        letter-spacing: $letterSpacing;
+        text-decoration: none;
+        color: $white;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 3px;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: $white;
+          opacity: 0;
+          transition: 0.3s ease opacity;
+        }
+
+        &:hover::after {
+          opacity: 1;
+          color: $white;
+        }
+      }
+      a.active {
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        letter-spacing: $letterSpacing;
+        text-decoration: none;
+        color: $white;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 3px;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: $white;
+          opacity: 1;
+          // transition: 0.3s ease opacity;
+        }
+      }
+    }
+  }
+
+  @include mq(largeScreenMin) {
+    display: flex;
+  }
+}
+
+.Menu--nav {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $spacing-lg;
+    padding-left: 0;
+
+    li {
+      &:not(:last-child) {
+        margin-bottom: $spacing-md;
+      }
+      a {
+        text-decoration: none;
+        color: $white;
+
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+}

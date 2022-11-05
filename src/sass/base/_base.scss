@@ -1,0 +1,26 @@
+@use "../abstracts" as *;
+
+.Layout-App {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  gap: 0em 0em;
+  grid-template-areas:
+    "Hero_section"
+    "AboutUs_section"
+    "Classes_section";
+}
+.Hero_section {
+  grid-area: Hero_section;
+  // min-height: 100vh;
+}
+.AboutUs_section {
+  grid-area: AboutUs_section;
+  position: relative;
+  min-height: 100vh;
+  background: var(--clr-darkShades-1000);
+}
+.Classes_section {
+  grid-area: Classes_section;
+  // min-height: 100vh;
+}

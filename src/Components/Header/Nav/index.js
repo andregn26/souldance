@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "react-scroll"
 // import { Link } from "react-router-dom"
-import Button from "../../../UI/Button"
+import Button from "../../UI/Button"
 
 const Nav = ({ isMenu, menuToggle }) => {
   return (
@@ -9,10 +9,10 @@ const Nav = ({ isMenu, menuToggle }) => {
       <ul>
         <li>
           <Link
-            to="AboutUsContainer"
+            to="AboutUs_Grid"
             spy={true}
             smooth={true}
-            offset={-90}
+            offset={0}
             duration={500}
             onClick={menuToggle}
           >
@@ -21,10 +21,10 @@ const Nav = ({ isMenu, menuToggle }) => {
         </li>
         <li onClick={menuToggle}>
           <Link
-            to="ClassesContainer"
+            to="Layout-Classes"
             spy={true}
             smooth={true}
-            offset={-90}
+            offset={0}
             duration={500}
             onClick={menuToggle}
           >
@@ -36,7 +36,7 @@ const Nav = ({ isMenu, menuToggle }) => {
             to="Footer"
             spy={true}
             smooth={true}
-            offset={-90}
+            offset={0}
             duration={500}
             onClick={menuToggle}
           >

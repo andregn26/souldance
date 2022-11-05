@@ -1,0 +1,1228 @@
+@import url("~leaflet/dist/leaflet.css");
+@font-face {
+  font-family: "Hind-Regular";
+  src: url("../../public/fonts/Hind-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Hind-Medium";
+  src: url("../../public/fonts/Hind-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Hind-Medium";
+  src: url("../../public/fonts/Hind-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat-ExtraLight";
+  src: url("../../public/fonts/Montserrat-ExtraLight.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Hind-Medium";
+  src: url("../../public/fonts/Hind-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat-Light";
+  src: url("../../public/fonts/Montserrat-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat-Medium";
+  src: url("../../public/fonts/Montserrat-Medium.ttf") format("tttruetypef");
+}
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("../../public/fonts/Montserrat-Regular.ttf") format("truetype");
+}
+.Layout-App {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  gap: 0em 0em;
+  grid-template-areas: "Hero_section" "AboutUs_section" "Classes_section";
+}
+
+.Hero_section {
+  grid-area: Hero_section;
+}
+
+.AboutUs_section {
+  grid-area: AboutUs_section;
+  position: relative;
+  min-height: 100vh;
+  background: var(--clr-darkShades-1000);
+}
+
+.Classes_section {
+  grid-area: Classes_section;
+}
+
+:root {
+  --clr-main-500: hsl(339deg, 58%, 78%);
+  --clr-main-600: hsl(339deg, 57%, 73%);
+  --clr-main-700: hsl(339deg, 57%, 69%);
+  --clr-main-800: hsl(339deg, 58%, 65%);
+  --clr-main-900: hsl(339deg, 58%, 60%);
+  --clr-main-1000: hsl(339deg, 58%, 55%);
+  --clr-main-1000a: hsla(339deg, 58%, 55%, 0.9);
+  --clr-main-1100: hsl(339deg, 46%, 50%);
+  --clr-main-1200: hsl(339deg, 46%, 45%);
+  --clr-main-1300: hsl(339deg, 46%, 39%);
+  --clr-main-1400: hsl(339deg, 46%, 33%);
+  --clr-main-1500: hsl(339deg, 46%, 28%);
+  --clr-lightAccent-500: hsl(326deg, 7%, 81%);
+  --clr-lightAccent-600: hsl(326deg, 6%, 77%);
+  --clr-lightAccent-700: hsl(320deg, 7%, 73%);
+  --clr-lightAccent-800: hsl(324deg, 6%, 69%);
+  --clr-lightAccent-900: hsl(320deg, 7%, 65%);
+  --clr-lightAccent-1000: hsl(323deg, 7%, 62%);
+  --clr-lightAccent-1100: hsl(325deg, 5%, 56%);
+  --clr-lightAccent-1200: hsl(324deg, 4%, 49%);
+  --clr-lightAccent-1300: hsl(327deg, 4%, 43%);
+  --clr-lightAccent-1400: hsl(326deg, 4%, 37%);
+  --clr-lightAccent-1500: hsl(320deg, 4%, 31%);
+  --clr-lightShades-500: hsl(0deg, 14%, 97%);
+  --clr-lightShades-600: hsl(0deg, 18%, 97%);
+  --clr-lightShades-700: hsl(15deg, 20%, 96%);
+  --clr-lightShades-800: hsl(15deg, 17%, 95%);
+  --clr-lightShades-900: hsl(15deg, 15%, 95%);
+  --clr-lightShades-1000: hsl(12deg, 17%, 94%);
+  --clr-darkAccent-500: hsl(283deg, 16%, 78%);
+  --clr-darkAccent-600: hsl(281deg, 16%, 74%);
+  --clr-darkAccent-700: hsl(283deg, 16%, 69%);
+  --clr-darkAccent-800: hsl(281deg, 16%, 65%);
+  --clr-darkAccent-900: hsl(283deg, 16%, 60%);
+  --clr-darkAccent-1000: hsl(282deg, 16%, 56%);
+  --clr-darkAccent-1100: hsl(281deg, 13%, 51%);
+  --clr-darkAccent-1200: hsl(281deg, 13%, 45%);
+  --clr-darkAccent-1300: hsl(281deg, 12%, 39%);
+  --clr-darkAccent-1400: hwb(282 29% 62%);
+  --clr-darkAccent-1500: hsl(280deg, 12%, 28%);
+  --clr-darkShades-1000: hsl(268deg, 20%, 17%);
+  --clr-darkShades-1100: hsl(268deg, 19%, 15%);
+  --clr-darkShades-1200: hsl(266deg, 20%, 14%);
+  --clr-darkShades-1300: hsl(267deg, 18%, 12%);
+  --clr-darkShades-1400: hsl(270deg, 19%, 10%);
+  --clr-darkShades-1500: hsl(270deg, 18%, 9%);
+  --clr-neutral-100: hsl(0deg, 0%, 100%);
+  --clr-neutral-200: hsl(0deg, 0%, 87%);
+  --clr-neutral-300: hsl(0deg, 0%, 80%);
+  --clr-neutral-700: hsl(0deg, 0%, 40%);
+  --clr-neutral-800: hsl(0deg, 0%, 30%);
+  --clr-neutral-900: hsl(0deg, 0%, 15%);
+  --fs-minorThird-300: 1em;
+  --fs-minorThird-400: 1.125em;
+  --fs-minorThird-600: 1.953em;
+  --fs-minorThird-500: 1.563em;
+  --fs-minorThird-700: 2.441em;
+  --fs-minorThird-800: 3.052em;
+}
+
+.text-main-500 {
+  color: hsl(339deg, 58%, 78%);
+}
+
+.bg-main-500 {
+  background-color: hsl(339deg, 58%, 78%);
+}
+
+.text-main-600 {
+  color: hsl(339deg, 57%, 73%);
+}
+
+.bg-main-600 {
+  background-color: hsl(339deg, 57%, 73%);
+}
+
+.text-main-700 {
+  color: hsl(339deg, 57%, 69%);
+}
+
+.bg-main-700 {
+  background-color: hsl(339deg, 57%, 69%);
+}
+
+.text-main-800 {
+  color: hsl(339deg, 58%, 65%);
+}
+
+.bg-main-800 {
+  background-color: hsl(339deg, 58%, 65%);
+}
+
+.text-main-900 {
+  color: hsl(339deg, 58%, 60%);
+}
+
+.bg-main-900 {
+  background-color: hsl(339deg, 58%, 60%);
+}
+
+.text-main-1000 {
+  color: hsl(339deg, 58%, 55%);
+}
+
+.bg-main-1000 {
+  background-color: hsl(339deg, 58%, 55%);
+}
+
+.text-main-1000a {
+  color: hsla(339deg, 58%, 55%, 0.9);
+}
+
+.bg-main-1000a {
+  background-color: hsla(339deg, 58%, 55%, 0.9);
+}
+
+.text-main-1100 {
+  color: hsl(339deg, 46%, 50%);
+}
+
+.bg-main-1100 {
+  background-color: hsl(339deg, 46%, 50%);
+}
+
+.text-main-1200 {
+  color: hsl(339deg, 46%, 45%);
+}
+
+.bg-main-1200 {
+  background-color: hsl(339deg, 46%, 45%);
+}
+
+.text-main-1300 {
+  color: hsl(339deg, 46%, 39%);
+}
+
+.bg-main-1300 {
+  background-color: hsl(339deg, 46%, 39%);
+}
+
+.text-main-1400 {
+  color: hsl(339deg, 46%, 33%);
+}
+
+.bg-main-1400 {
+  background-color: hsl(339deg, 46%, 33%);
+}
+
+.text-main-1500 {
+  color: hsl(339deg, 46%, 28%);
+}
+
+.bg-main-1500 {
+  background-color: hsl(339deg, 46%, 28%);
+}
+
+.text-lightAccent-500 {
+  color: hsl(326deg, 7%, 81%);
+}
+
+.bg-lightAccent-500 {
+  background-color: hsl(326deg, 7%, 81%);
+}
+
+.text-lightAccent-600 {
+  color: hsl(326deg, 6%, 77%);
+}
+
+.bg-lightAccent-600 {
+  background-color: hsl(326deg, 6%, 77%);
+}
+
+.text-lightAccent-700 {
+  color: hsl(320deg, 7%, 73%);
+}
+
+.bg-lightAccent-700 {
+  background-color: hsl(320deg, 7%, 73%);
+}
+
+.text-lightAccent-800 {
+  color: hsl(324deg, 6%, 69%);
+}
+
+.bg-lightAccent-800 {
+  background-color: hsl(324deg, 6%, 69%);
+}
+
+.text-lightAccent-900 {
+  color: hsl(320deg, 7%, 65%);
+}
+
+.bg-lightAccent-900 {
+  background-color: hsl(320deg, 7%, 65%);
+}
+
+.text-lightAccent-1000 {
+  color: hsl(323deg, 7%, 62%);
+}
+
+.bg-lightAccent-1000 {
+  background-color: hsl(323deg, 7%, 62%);
+}
+
+.text-lightAccent-1100 {
+  color: hsl(325deg, 5%, 56%);
+}
+
+.bg-lightAccent-1100 {
+  background-color: hsl(325deg, 5%, 56%);
+}
+
+.text-lightAccent-1200 {
+  color: hsl(324deg, 4%, 49%);
+}
+
+.bg-lightAccent-1200 {
+  background-color: hsl(324deg, 4%, 49%);
+}
+
+.text-lightAccent-1300 {
+  color: hsl(327deg, 4%, 43%);
+}
+
+.bg-lightAccent-1300 {
+  background-color: hsl(327deg, 4%, 43%);
+}
+
+.text-lightAccent-1400 {
+  color: hsl(326deg, 4%, 37%);
+}
+
+.bg-lightAccent-1400 {
+  background-color: hsl(326deg, 4%, 37%);
+}
+
+.text-lightAccent-1500 {
+  color: hsl(320deg, 4%, 31%);
+}
+
+.bg-lightAccent-1500 {
+  background-color: hsl(320deg, 4%, 31%);
+}
+
+.text-lightShades-500 {
+  color: hsl(0deg, 14%, 97%);
+}
+
+.bg-lightShades-500 {
+  background-color: hsl(0deg, 14%, 97%);
+}
+
+.text-lightShades-600 {
+  color: hsl(0deg, 18%, 97%);
+}
+
+.bg-lightShades-600 {
+  background-color: hsl(0deg, 18%, 97%);
+}
+
+.text-lightShades-700 {
+  color: hsl(15deg, 20%, 96%);
+}
+
+.bg-lightShades-700 {
+  background-color: hsl(15deg, 20%, 96%);
+}
+
+.text-lightShades-800 {
+  color: hsl(15deg, 17%, 95%);
+}
+
+.bg-lightShades-800 {
+  background-color: hsl(15deg, 17%, 95%);
+}
+
+.text-lightShades-900 {
+  color: hsl(15deg, 15%, 95%);
+}
+
+.bg-lightShades-900 {
+  background-color: hsl(15deg, 15%, 95%);
+}
+
+.text-lightShades-1000 {
+  color: hsl(12deg, 17%, 94%);
+}
+
+.bg-lightShades-1000 {
+  background-color: hsl(12deg, 17%, 94%);
+}
+
+.text-darkAccent-500 {
+  color: hsl(283deg, 16%, 78%);
+}
+
+.bg-darkAccent-500 {
+  background-color: hsl(283deg, 16%, 78%);
+}
+
+.text-darkAccent-600 {
+  color: hsl(281deg, 16%, 74%);
+}
+
+.bg-darkAccent-600 {
+  background-color: hsl(281deg, 16%, 74%);
+}
+
+.text-darkAccent-700 {
+  color: hsl(283deg, 16%, 69%);
+}
+
+.bg-darkAccent-700 {
+  background-color: hsl(283deg, 16%, 69%);
+}
+
+.text-darkAccent-800 {
+  color: hsl(281deg, 16%, 65%);
+}
+
+.bg-darkAccent-800 {
+  background-color: hsl(281deg, 16%, 65%);
+}
+
+.text-darkAccent-900 {
+  color: hsl(283deg, 16%, 60%);
+}
+
+.bg-darkAccent-900 {
+  background-color: hsl(283deg, 16%, 60%);
+}
+
+.text-darkAccent-1000 {
+  color: hsl(282deg, 16%, 56%);
+}
+
+.bg-darkAccent-1000 {
+  background-color: hsl(282deg, 16%, 56%);
+}
+
+.text-darkAccent-1100 {
+  color: hsl(281deg, 13%, 51%);
+}
+
+.bg-darkAccent-1100 {
+  background-color: hsl(281deg, 13%, 51%);
+}
+
+.text-darkAccent-1200 {
+  color: hsl(281deg, 13%, 45%);
+}
+
+.bg-darkAccent-1200 {
+  background-color: hsl(281deg, 13%, 45%);
+}
+
+.text-darkAccent-1300 {
+  color: hsl(281deg, 12%, 39%);
+}
+
+.bg-darkAccent-1300 {
+  background-color: hsl(281deg, 12%, 39%);
+}
+
+.text-darkAccent-1400 {
+  color: hwb(282 29% 62%);
+}
+
+.bg-darkAccent-1400 {
+  background-color: hwb(282 29% 62%);
+}
+
+.text-darkAccent-1500 {
+  color: hsl(280deg, 12%, 28%);
+}
+
+.bg-darkAccent-1500 {
+  background-color: hsl(280deg, 12%, 28%);
+}
+
+.text-darkShades-1000 {
+  color: hsl(268deg, 20%, 17%);
+}
+
+.bg-darkShades-1000 {
+  background-color: hsl(268deg, 20%, 17%);
+}
+
+.text-darkShades-1100 {
+  color: hsl(268deg, 19%, 15%);
+}
+
+.bg-darkShades-1100 {
+  background-color: hsl(268deg, 19%, 15%);
+}
+
+.text-darkShades-1200 {
+  color: hsl(266deg, 20%, 14%);
+}
+
+.bg-darkShades-1200 {
+  background-color: hsl(266deg, 20%, 14%);
+}
+
+.text-darkShades-1300 {
+  color: hsl(267deg, 18%, 12%);
+}
+
+.bg-darkShades-1300 {
+  background-color: hsl(267deg, 18%, 12%);
+}
+
+.text-darkShades-1400 {
+  color: hsl(270deg, 19%, 10%);
+}
+
+.bg-darkShades-1400 {
+  background-color: hsl(270deg, 19%, 10%);
+}
+
+.text-darkShades-1500 {
+  color: hsl(270deg, 18%, 9%);
+}
+
+.bg-darkShades-1500 {
+  background-color: hsl(270deg, 18%, 9%);
+}
+
+.text-neutral-100 {
+  color: hsl(0deg, 0%, 100%);
+}
+
+.bg-neutral-100 {
+  background-color: hsl(0deg, 0%, 100%);
+}
+
+.text-neutral-200 {
+  color: hsl(0deg, 0%, 87%);
+}
+
+.bg-neutral-200 {
+  background-color: hsl(0deg, 0%, 87%);
+}
+
+.text-neutral-300 {
+  color: hsl(0deg, 0%, 80%);
+}
+
+.bg-neutral-300 {
+  background-color: hsl(0deg, 0%, 80%);
+}
+
+.text-neutral-700 {
+  color: hsl(0deg, 0%, 40%);
+}
+
+.bg-neutral-700 {
+  background-color: hsl(0deg, 0%, 40%);
+}
+
+.text-neutral-800 {
+  color: hsl(0deg, 0%, 30%);
+}
+
+.bg-neutral-800 {
+  background-color: hsl(0deg, 0%, 30%);
+}
+
+.text-neutral-900 {
+  color: hsl(0deg, 0%, 15%);
+}
+
+.bg-neutral-900 {
+  background-color: hsl(0deg, 0%, 15%);
+}
+
+/*----------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+Reset
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+----------------------------------------------------------*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list],
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.6;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/*----------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+Utilities
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+----------------------------------------------------------*/
+.margin-horizontal {
+  margin: 0 1.5rem;
+}
+
+.padding {
+  padding: 2rem;
+}
+
+.vertical-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.flex {
+  display: flex;
+}
+
+/*----------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+Typography
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+----------------------------------------------------------*/
+html {
+  font-size: 62.5%;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  font-size: 1.8rem;
+}
+@media only screen and (min-width: 480px) {
+  body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    font-size: 1.9rem;
+  }
+}
+@media only screen and (min-width: 1279px) {
+  body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    font-size: 2rem;
+  }
+}
+
+body {
+  font-family: "Hind-Regular";
+  color: var(--clr-neutral-900);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Hind-Medium";
+}
+
+.fs-800 {
+  font-size: var(--fs-minorThird-800);
+}
+
+.fs-700 {
+  font-size: var(--fs-minorThird-700);
+}
+
+.fs-600 {
+  font-size: var(--fs-minorThird-600);
+}
+
+.fs-500 {
+  font-size: var(--fs-minorThird-500);
+}
+
+.fs-400 {
+  font-size: var(--fs-minorThird-400);
+}
+
+.fs-normal {
+  font-size: var(--fs-minorThird-300);
+}
+
+/*----------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+Containers
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+----------------------------------------------------------*/
+.containerTotalWidth {
+  padding-inline: 0.5em;
+  margin-inline: auto;
+  max-width: 100vw;
+}
+
+.container-padding {
+  padding: 3rem 0;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+/*----------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+Component - Layout
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+----------------------------------------------------------*/
+.PrimaryButton {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  padding: 12px 32px;
+  font-family: inherit;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  background: #dbe6ed;
+  color: #0f1515;
+  border: 1px solid #0f1515;
+  transition: all 0.3s ease;
+}
+.PrimaryButton:hover {
+  background: rgab(#dbe6ed, 0.8);
+}
+.PrimaryButton-outline {
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  padding: 12px 32px;
+  font-family: inherit;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: #dbe6ed;
+  border: 1px solid #dbe6ed;
+  transition: all 0.3s ease;
+}
+
+.SecondaryButton {
+  cursor: pointer;
+  border: 1px solid #dbe6ed;
+  background: transparent;
+  color: #dbe6ed;
+  border-radius: 12px;
+  padding: 12px 32px;
+  font-family: inherit;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+.SecondaryButton:hover {
+  background: rgba(219, 230, 237, 0.2);
+}
+
+.Logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+.Logo-span {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 900;
+  letter-spacing: 12px;
+}
+
+.Modal-Background {
+  background-color: hsla(0deg, 0%, 0%, 0.792);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-top: 90px;
+}
+.Modal-Container {
+  width: 90%;
+  height: 80%;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.2), 0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.05);
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.Modal-Container-Header {
+  border: 1px solid blue;
+}
+
+/*----------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+Component - Header
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+----------------------------------------------------------*/
+.Header {
+  height: 90px;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  background: var(--clr-darkShades-1500);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  z-index: 1000;
+  transition: all 0.5s ease;
+}
+@media only screen and (min-width: 768px) {
+  .Header {
+    padding: 0 3rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .Header--menu {
+    display: none;
+  }
+}
+.Header--menu-toggle {
+  color: #030502;
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+}
+.Header--menu-toggle svg {
+  font-size: 2em;
+  color: #fff;
+}
+.Header--menu-toggle:hover {
+  transform: scale(1.05);
+}
+.Header--menu .Menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  padding: 3rem;
+  width: 100vw;
+  height: 100vh;
+  outline: 0;
+  background: #030502;
+  z-index: 7;
+  transform: translateX(100vw);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.Header--menu .Show {
+  transform: translateX(0vw);
+  opacity: 0.9;
+}
+
+/*----------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+Component - Navbar
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+----------------------------------------------------------*/
+.Nav {
+  height: 100%;
+  display: none;
+  align-items: center;
+}
+.Nav ul {
+  height: 100%;
+  display: flex;
+  margin-right: 32px;
+}
+.Nav ul li {
+  cursor: pointer;
+  height: 100%;
+}
+.Nav ul li:not(:last-child) {
+  margin-right: 24px;
+}
+.Nav ul li a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  letter-spacing: 0.4px;
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+}
+.Nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  opacity: 0;
+  transition: 0.3s ease opacity;
+}
+.Nav ul li a:hover::after {
+  opacity: 1;
+  color: #fff;
+}
+.Nav ul li a.active {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  letter-spacing: 0.4px;
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+}
+.Nav ul li a.active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  opacity: 1;
+}
+@media only screen and (min-width: 768px) {
+  .Nav {
+    display: flex;
+  }
+}
+
+.Menu--nav {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.Menu--nav ul {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+  padding-left: 0;
+}
+.Menu--nav ul li:not(:last-child) {
+  margin-bottom: 24px;
+}
+.Menu--nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+.Menu--nav ul li a:hover {
+  color: #fff;
+}
+
+.Hero {
+  min-height: 100vh;
+  margin: 0 auto;
+}
+.Hero--Video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.Hero--Overlay {
+  position: absolute;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 21, 21, 0.3);
+  padding-top: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Hero--Overlay--Content-Box {
+  margin: 0 1.5rem;
+  background: rgba(15, 21, 21, 0.6);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  padding: 32px;
+  border-radius: 12px;
+  text-align: left;
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+.Hero--Overlay--Content-Box--Title {
+  font-size: 2.4rem;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+@media only screen and (min-width: 768px) {
+  .Hero--Overlay--Content-Box--Title {
+    font-size: 2rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .Hero--Overlay--Content-Box--Title {
+    font-size: 3rem;
+  }
+}
+.Hero--Overlay--Content-Box--Tagline {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #dbe6ed;
+  font-style: italic;
+  margin-bottom: 24px;
+}
+@media only screen and (min-width: 768px) {
+  .Hero--Overlay--Content-Box--Tagline {
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .Hero--Overlay--Content-Box--Tagline {
+    font-size: 2rem;
+  }
+}
+.Hero--Overlay--Content-Box--Description {
+  text-transform: capitalize;
+  color: #dbe6ed;
+  width: 100%;
+  margin-bottom: 32px;
+  line-height: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .Hero--Overlay--Content-Box--Description {
+    width: 80%;
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .Hero--Overlay--Content-Box--Description {
+    width: 60%;
+    margin: 0 auto 32px auto;
+  }
+}
+.Hero--Overlay--Content-Box--Cta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.Hero--Overlay--Content-Box--Cta button {
+  width: 100%;
+}
+.Hero--Overlay--Content-Box--Cta button:not(:last-child) {
+  margin-bottom: 12px;
+}
+@media only screen and (min-width: 768px) {
+  .Hero--Overlay--Content-Box--Cta {
+    align-items: center;
+    margin: 0 auto;
+    flex-direction: row;
+  }
+  .Hero--Overlay--Content-Box--Cta button {
+    width: auto;
+  }
+  .Hero--Overlay--Content-Box--Cta button:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 12px;
+  }
+}
+
+/*----------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+Component - About Us
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+----------------------------------------------------------*/
+.About_Us--Grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  gap: 1em 0;
+  grid-auto-flow: row;
+  grid-template-areas: "Title" "Text";
+}
+.About_Us--Title {
+  grid-area: Title;
+}
+.About_Us--Text {
+  grid-area: Text;
+}
+
+/* center the blockquote in the page */
+/*----------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+Component - Classes
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+----------------------------------------------------------*/
+/*----------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+Component - Classes Swiper
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+----------------------------------------------------------*/
+.mySwiper {
+  height: 3000px;
+}
+
+/*----------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+Component - Footer
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+----------------------------------------------------------*//*# sourceMappingURL=styles.css.map */

@@ -3,7 +3,8 @@ import { useState } from "react"
 
 // import { CgClose } from "react-icons/cg"
 import { modalities } from "../../Data"
-import ModalClasses from "../../UI/ModalClasses"
+import ModalClasses from "../UI/ModalClasses"
+import ClassesSwiper from "./ClassesSwiper"
 
 const Classes = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -15,7 +16,18 @@ const Classes = () => {
 
   return (
     <>
-      <div className="ClassesContainer">
+      <div className="Layout-Classes">
+        <div className="">
+          <div className="classes-title">
+            <h2>Olá este titulo é um exemplo</h2>
+          </div>
+          <div className="container-swiper">
+            <ClassesSwiper className="mySwiper" />
+          </div>
+        </div>
+      </div>
+
+      {/* <div className="ClassesContainer">
         <div className="Classes">
           <div className="Classes-Content">
             <h2 className="Classes-Content-Title">As nossas modalidades</h2>
@@ -61,7 +73,7 @@ const Classes = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   )
 }

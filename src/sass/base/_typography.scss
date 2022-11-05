@@ -1,0 +1,137 @@
+@use "../abstracts" as *;
+/*----------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+Typography
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+----------------------------------------------------------*/
+
+// * {
+//   font-variation-settings: "wght" var(--font-weight, 375),
+//     "wdth" var(--font-width, 80);
+// }
+
+html {
+  font-size: 62.5%;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  font-size: 1.8rem;
+  // font-weight: 400;
+
+  @include mq(mediumScreenMin) {
+    font-size: 1.8rem;
+  }
+
+  @include mq(largeScreenMin) {
+    font-size: 1.9rem;
+  }
+  @include mq(xLargeScreenMin) {
+    font-size: 2rem;
+  }
+}
+
+body {
+  font-family: "Hind-Regular";
+  color: var(--clr-neutral-900);
+  // letter-spacing: -0.1px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Hind-Medium";
+}
+
+.fs-800 {
+  font-size: var(--fs-minorThird-800);
+}
+.fs-700 {
+  font-size: var(--fs-minorThird-700);
+}
+.fs-600 {
+  font-size: var(--fs-minorThird-600);
+}
+.fs-500 {
+  font-size: var(--fs-minorThird-500);
+}
+.fs-400 {
+  font-size: var(--fs-minorThird-400);
+}
+.fs-normal {
+  font-size: var(--fs-minorThird-300);
+}
+// p {
+//   font-size: var(--fs-minorThird-400);
+// }
+
+// h1,
+// h2,
+// h3,
+// h4 {
+//   font-weight: normal;
+//   font-stretch: 100%;
+//   line-height: 1.1;
+//   color: var(--clr-neutral-800);
+// }
+
+// h1 {
+//   --font-weight: 900;
+// }
+
+// .title {
+//   font-size: clamp(var(--fs-600), calc(1rem + 5vw), 5rem);
+// }
+
+// .article-snippet-title {
+//   --font-weight: 600;
+// }
+
+// time + p {
+//   font-size: 1.25em;
+//   margin: 2em 0 1em !important;
+// }
+
+// // This is setting the font-sizes
+// // based on the ones in the abstract
+// // folder, go there to make updates
+
+// small,
+// .text-small {
+//   font-size: var(--fs-300);
+// }
+
+// strong {
+//   --font-weight: 500;
+//   font-weight: normal;
+// }
+
+// a {
+//   color: var(--clr, var(--clr-primary-400));
+
+//   &:hover,
+//   &:focus {
+//     color: var(--clr-primary-400);
+//     text-decoration: none;
+//   }
+// }
+
+// p:not([class]),
+// ul:not([class]),
+// li:not([class]) {
+//   max-width: 60ch;
+// }
