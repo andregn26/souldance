@@ -6,9 +6,10 @@ import AboutUs from "../Components/AboutUs"
 const Homepage = () => {
   return (
     <Fragment>
-      <div className="Layout-App">
+      <div className="Homepage">
         <Hero />
         <AboutUs />
+        <Classes />
       </div>
     </Fragment>
   )

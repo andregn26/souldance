@@ -51,9 +51,16 @@ html {
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
+  // min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.6;
+}
+html,
+body {
+  overflow-x: hidden;
+}
+body {
+  position: relative;
 }
 
 /* A elements that don't have a class get default styles */

@@ -9,6 +9,7 @@
     left: 0;
     right: 0;
     margin-top: $headerHeight;
+    z-index: 10;
   }
   &-Container {
     width: 90%;

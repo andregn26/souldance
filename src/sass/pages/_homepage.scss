@@ -1,0 +1,34 @@
+@use "../abstracts" as *;
+
+.Homepage {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  gap: 0em 0em;
+  grid-template-areas:
+    "Hero_section"
+    "AboutUs_section"
+    "Classes_section";
+
+  &--Hero_section {
+    grid-area: Hero_section;
+    position: relative;
+    min-height: 100vh;
+  }
+
+  &--AboutUs_section {
+    grid-area: AboutUs_section;
+    position: relative;
+    background: var(--clr-primary-light);
+    color: var(--clr-primary-dark);
+    min-height: 100vh;
+    @include center-vertical;
+  }
+
+  &--Classes_section {
+    grid-area: Classes_section;
+    position: relative;
+    background: var(--clr-primary-light);
+    min-height: 100vh;
+    @include center-vertical;
+  }
+}

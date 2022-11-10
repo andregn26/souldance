@@ -18,7 +18,7 @@ Component - Header
   align-items: center;
   position: fixed;
   width: 100%;
-  background: var(--clr-darkShades-1500);
+  background: var(--clr-primary-main);
   backdrop-filter: blur(5px);
   z-index: 1000;
   transition: all 0.5s ease;
@@ -57,7 +57,7 @@ Component - Header
       // max-width: 700px;
       height: 100vh;
       outline: 0;
-      background: $black;
+      background: var(--clr-primary-main);
       z-index: 7;
       transform: translateX(100vw);
       opacity: 0;
@@ -66,7 +66,7 @@ Component - Header
 
     .Show {
       transform: translateX(0vw);
-      opacity: 0.9;
+      opacity: 1;
     }
   }
 }

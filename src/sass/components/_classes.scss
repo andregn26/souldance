@@ -1,22 +1,45 @@
 @use "../abstracts" as *;
 
-/*----------------------------------------------------------
-------------------------------------------------------------
-------------------------------------------------------------
-------------------------------------------------------------
-Component - Classes
-------------------------------------------------------------
-------------------------------------------------------------
-------------------------------------------------------------
-----------------------------------------------------------*/
+.Classes {
+  &--Grid {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    gap: 1em 0;
+    grid-auto-flow: column;
+    grid-template-areas:
+      "C_Title"
+      "C_Text"
+      "C_Swiper";
+
+    @include mq(largeScreenMin) {
+      width: 85%;
+      grid-template-columns: 2fr 1fr;
+      grid-template-areas:
+        "C_Swiper C_Title C_Title "
+        "C_Swiper C_Text C_Text";
+    }
+    &--Title {
+      grid-area: C_Title;
+      margin: 0 $spacing-md;
+    }
+    &--Text {
+      grid-area: C_Text;
+      margin: 0 $spacing-md;
+    }
+    &--Swiper {
+      grid-area: C_Swiper;
+      width: 100vw;
+      @include mq(largeScreenMin) {
+        width: 480px;
+      }
+    }
+  }
+}
 
 // .Classes {
-//   width: 100%;
-
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-
+//   // @include container;
 //   &-Content {
 //     margin: 0 1.5rem;
 //     width: 1000px;
@@ -84,78 +107,5 @@ Component - Classes
 //         }
 //       }
 //     }
-//   }
-// }
-// .Gallery-Item {
-//   height: 400px;
-//   margin: 0 1.5rem;
-//   cursor: pointer;
-//   position: relative;
-//   border-radius: $borderRadius;
-//   border: 2px solid $white;
-//   transition: 0.3s ease all;
-//   box-shadow: $boxShadow;
-//   &:hover {
-//     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 1px 1px rgba(0, 0, 0, 0.2),
-//       0 3px 3px rgba(0, 0, 0, 0.15), 0 6px 6px rgba(0, 0, 0, 0.1),
-//       0 10px 10px rgba(0, 0, 0, 0.05);
-
-//     .Overlay {
-//       background: transparent;
-//     }
-//   }
-//   &-Img {
-//     border-top-left-radius: $borderRadius;
-//     border-top-right-radius: $borderRadius;
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 75%;
-//     object-fit: cover;
-//   }
-//   .Overlay {
-//     border-top-left-radius: $borderRadius;
-//     border-top-right-radius: $borderRadius;
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 75%;
-//     background: rgba($dark, 0.4);
-//     transition: 0.3s ease all;
-//   }
-//   &-Content {
-//     position: absolute;
-//     bottom: 0;
-//     left: 0;
-//     width: 100%;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     height: 25%;
-//     background: $white;
-//     border-bottom-left-radius: $borderRadius;
-//     border-bottom-right-radius: $borderRadius;
-//     svg {
-//       color: $aqua;
-//       font-size: 1.1rem;
-//     }
-//     &-Class {
-//       margin-left: 6px;
-//       font-size: 1.2rem;
-//       color: $dark;
-//       letter-spacing: $letterSpacing;
-//     }
-//   }
-//   &-Tag {
-//     position: absolute;
-//     background: $white;
-//     top: -12px;
-//     left: $spacing-sm;
-//     padding: 6px 8px;
-//     border-radius: $borderRadius;
-//     font-size: 0.8rem;
-//     letter-spacing: $letterSpacing;
 //   }
 // }

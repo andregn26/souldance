@@ -1,79 +1,25 @@
 import React from "react"
-import { useState } from "react"
-
-// import { CgClose } from "react-icons/cg"
-import { modalities } from "../../Data"
-import ModalClasses from "../UI/ModalClasses"
 import ClassesSwiper from "./ClassesSwiper"
 
 const Classes = () => {
-  const [isOpen, setIsOpen] = useState(false)
-  const [popupcontent, setpopupcontent] = useState([])
-  const changeContent = (modality) => {
-    setpopupcontent([modality])
-    setIsOpen(!isOpen)
-  }
-
   return (
     <>
-      <div className="Layout-Classes">
-        <div className="">
-          <div className="classes-title">
-            <h2>Olá este titulo é um exemplo</h2>
-          </div>
-          <div className="container-swiper">
-            <ClassesSwiper className="mySwiper" />
+      <div className="Homepage--Classes_section Classes border-layout">
+        <div className="Classes--Grid border-container ">
+          <h2 className="Classes--Grid--Title border-child_container">
+            As Nossas Modalidades
+          </h2>
+          <p className="Classes--Grid--Text C_Text border-child_container">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi,
+            dolore. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Saepe numquam dolore impedit earum nobis qui, a exercitationem
+            libero! Quae, explicabo.
+          </p>
+          <div className="Classes--Grid--Swiper C_Swiper border-child_container">
+            <ClassesSwiper />
           </div>
         </div>
       </div>
-
-      {/* <div className="ClassesContainer">
-        <div className="Classes">
-          <div className="Classes-Content">
-            <h2 className="Classes-Content-Title">As nossas modalidades</h2>
-            <div className="Classes-Content-Gallery">
-              {modalities.map((modality, hasLevels, hasLevelZero) => (
-                <div
-                  className="Gallery-Item"
-                  key={modality.id}
-                  onClick={() => {
-                    changeContent(modality)
-                    setIsOpen(true)
-                  }}
-                >
-                  <img
-                    className="Gallery-Item-Img"
-                    src={modality.img}
-                    alt={modality.danceClass}
-                  />
-                  <div className="Overlay"></div>
-                  <div className="Gallery-Item-Content">
-                    <h2 className="Gallery-Item-Content-Class">
-                      {modality.danceClass}
-                    </h2>
-                  </div>
-                  {hasLevels && hasLevelZero && (
-                    <div className="Gallery-Item-Tag">Nível 0,1,2</div>
-                  )}
-                  {hasLevels && !hasLevelZero && (
-                    <div className="Gallery-Item-Tag">Nível 1,2</div>
-                  )}
-                </div>
-              ))}
-              {isOpen && (
-                <div>
-                  {popupcontent.map((pop) => {
-                    return <ModalClasses pop={pop} setIsOpen={setIsOpen} />
-                  })}
-                </div>
-              )}
-            </div>
-            <div className="Classes-Content-ViewMore">
-              <a href="/">Ver Mais</a>
-            </div>
-          </div>
-        </div>
-      </div> */}
     </>
   )
 }

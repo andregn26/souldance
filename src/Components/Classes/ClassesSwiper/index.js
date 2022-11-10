@@ -1,7 +1,9 @@
 import React from "react"
+import { useState } from "react"
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react"
+import ModalClasses from "../../UI/ModalClasses"
 
 // Import Swiper styles
 import "swiper/scss"
@@ -15,9 +17,16 @@ import { Navigation, Pagination } from "swiper"
 import { modalities } from "../../../Data"
 
 const ClassesSwiper = () => {
+  const [isOpen, setIsOpen] = useState(false)
+  const [popupcontent, setpopupcontent] = useState([])
+  const changeContent = (modality) => {
+    setpopupcontent([modality])
+    setIsOpen(!isOpen)
+  }
   return (
     <>
       <Swiper
+        className="Swiper"
         modules={[Navigation, Pagination]}
         navigation={true}
         pagination={{
@@ -25,44 +34,50 @@ const ClassesSwiper = () => {
           dynamicBullets: true,
         }}
         slidesPerView={1}
-        spaceBetween={30}
+        spaceBetween={0}
         breakpoints={{
-          480: {
-            width: 480,
-            slidesPerView: 1,
+          580: {
+            slidesPerView: 2,
           },
         }}
       >
         {modalities.map((modality, hasLevels, hasLevelZero) => (
-          <SwiperSlide key={`${modality.id}`}>
+          <SwiperSlide className="Swiper--Slide" key={`${modality.id}`}>
             <div
-              className="Gallery-Item"
+              className="Swiper--Slide--Item"
               onClick={() => {
-                // changeContent(modality)
-                // setIsOpen(true)
+                changeContent(modality)
+                setIsOpen(true)
               }}
             >
               <img
-                className="Gallery-Item-Img"
+                className="Swiper--Slide--Item--Img"
                 src={modality.img}
                 alt={modality.danceClass}
               />
-              <div className="Overlay"></div>
-              <div className="Gallery-Item-Content">
-                <h2 className="Gallery-Item-Content-Class">
+              <div className="Swiper--Slide--Overlay"></div>
+              <div className="Swiper--Slide--Content">
+                <h4 className="Swiper--Slide--Content--Class">
                   {modality.danceClass}
-                </h2>
+                </h4>
               </div>
               {hasLevels && hasLevelZero && (
-                <div className="Gallery-Item-Tag">Nível 0,1,2</div>
+                <h6 className="Swiper--Slide--Tag">Nível 0,1,2</h6>
               )}
               {hasLevels && !hasLevelZero && (
-                <div className="Gallery-Item-Tag">Nível 1,2</div>
+                <h6 className="Swiper--Slide--Tag">Nível 1,2</h6>
               )}
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
+      {isOpen && (
+        <div>
+          {popupcontent.map((pop) => {
+            return <ModalClasses pop={pop} changeContent={changeContent} />
+          })}
+        </div>
+      )}
     </>
   )
 }

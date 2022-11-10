@@ -25,88 +25,26 @@
 }
 @font-face {
   font-family: "Montserrat-Medium";
-  src: url("../../public/fonts/Montserrat-Medium.ttf") format("tttruetypef");
+  src: url("../../public/fonts/Montserrat-Medium.ttf") format("truetype");
 }
 @font-face {
   font-family: "Montserrat-Regular";
   src: url("../../public/fonts/Montserrat-Regular.ttf") format("truetype");
 }
-.Layout-App {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, auto);
-  gap: 0em 0em;
-  grid-template-areas: "Hero_section" "AboutUs_section" "Classes_section";
-}
-
-.Hero_section {
-  grid-area: Hero_section;
-}
-
-.AboutUs_section {
-  grid-area: AboutUs_section;
-  position: relative;
-  min-height: 100vh;
-  background: var(--clr-darkShades-1000);
-}
-
-.Classes_section {
-  grid-area: Classes_section;
-}
-
 :root {
-  --clr-main-500: hsl(339deg, 58%, 78%);
-  --clr-main-600: hsl(339deg, 57%, 73%);
-  --clr-main-700: hsl(339deg, 57%, 69%);
-  --clr-main-800: hsl(339deg, 58%, 65%);
-  --clr-main-900: hsl(339deg, 58%, 60%);
-  --clr-main-1000: hsl(339deg, 58%, 55%);
-  --clr-main-1000a: hsla(339deg, 58%, 55%, 0.9);
-  --clr-main-1100: hsl(339deg, 46%, 50%);
-  --clr-main-1200: hsl(339deg, 46%, 45%);
-  --clr-main-1300: hsl(339deg, 46%, 39%);
-  --clr-main-1400: hsl(339deg, 46%, 33%);
-  --clr-main-1500: hsl(339deg, 46%, 28%);
-  --clr-lightAccent-500: hsl(326deg, 7%, 81%);
-  --clr-lightAccent-600: hsl(326deg, 6%, 77%);
-  --clr-lightAccent-700: hsl(320deg, 7%, 73%);
-  --clr-lightAccent-800: hsl(324deg, 6%, 69%);
-  --clr-lightAccent-900: hsl(320deg, 7%, 65%);
-  --clr-lightAccent-1000: hsl(323deg, 7%, 62%);
-  --clr-lightAccent-1100: hsl(325deg, 5%, 56%);
-  --clr-lightAccent-1200: hsl(324deg, 4%, 49%);
-  --clr-lightAccent-1300: hsl(327deg, 4%, 43%);
-  --clr-lightAccent-1400: hsl(326deg, 4%, 37%);
-  --clr-lightAccent-1500: hsl(320deg, 4%, 31%);
-  --clr-lightShades-500: hsl(0deg, 14%, 97%);
-  --clr-lightShades-600: hsl(0deg, 18%, 97%);
-  --clr-lightShades-700: hsl(15deg, 20%, 96%);
-  --clr-lightShades-800: hsl(15deg, 17%, 95%);
-  --clr-lightShades-900: hsl(15deg, 15%, 95%);
-  --clr-lightShades-1000: hsl(12deg, 17%, 94%);
-  --clr-darkAccent-500: hsl(283deg, 16%, 78%);
-  --clr-darkAccent-600: hsl(281deg, 16%, 74%);
-  --clr-darkAccent-700: hsl(283deg, 16%, 69%);
-  --clr-darkAccent-800: hsl(281deg, 16%, 65%);
-  --clr-darkAccent-900: hsl(283deg, 16%, 60%);
-  --clr-darkAccent-1000: hsl(282deg, 16%, 56%);
-  --clr-darkAccent-1100: hsl(281deg, 13%, 51%);
-  --clr-darkAccent-1200: hsl(281deg, 13%, 45%);
-  --clr-darkAccent-1300: hsl(281deg, 12%, 39%);
-  --clr-darkAccent-1400: hwb(282 29% 62%);
-  --clr-darkAccent-1500: hsl(280deg, 12%, 28%);
-  --clr-darkShades-1000: hsl(268deg, 20%, 17%);
-  --clr-darkShades-1100: hsl(268deg, 19%, 15%);
-  --clr-darkShades-1200: hsl(266deg, 20%, 14%);
-  --clr-darkShades-1300: hsl(267deg, 18%, 12%);
-  --clr-darkShades-1400: hsl(270deg, 19%, 10%);
-  --clr-darkShades-1500: hsl(270deg, 18%, 9%);
-  --clr-neutral-100: hsl(0deg, 0%, 100%);
-  --clr-neutral-200: hsl(0deg, 0%, 87%);
-  --clr-neutral-300: hsl(0deg, 0%, 80%);
-  --clr-neutral-700: hsl(0deg, 0%, 40%);
-  --clr-neutral-800: hsl(0deg, 0%, 30%);
-  --clr-neutral-900: hsl(0deg, 0%, 15%);
+  --clr-primary-main: hsl(326deg, 76%, 23%);
+  --clr-primary-dark: hsl(271deg, 37%, 13%);
+  --clr-primary-dark_accent: hsl(339deg, 57%, 59%);
+  --clr-primary-light_accent: hsl(339deg, 57%, 69%);
+  --clr-primary-light: hsl(0deg, 4%, 95%);
+  --clr-complementary-main: #3dba56;
+  --clr-complementary-dark: #5bd2a8;
+  --clr-complementary-dark_accent: hsl(159deg, 57%, 59%);
+  --clr-complementary-light_accent: #c8f8db;
+  --clr-complementary-light: hsl(0deg, 0%, 99%);
+  --clr-state-success: hsl(140deg, 66%, 48%);
+  --clr-state-warning: hsl(28deg, 94%, 72%);
+  --clr-state-alert: hsl(341deg, 98%, 46%);
   --fs-minorThird-300: 1em;
   --fs-minorThird-400: 1.125em;
   --fs-minorThird-600: 1.953em;
@@ -115,420 +53,108 @@
   --fs-minorThird-800: 3.052em;
 }
 
-.text-main-500 {
-  color: hsl(339deg, 58%, 78%);
+.text-primary-main {
+  color: hsl(326deg, 76%, 23%);
 }
 
-.bg-main-500 {
-  background-color: hsl(339deg, 58%, 78%);
+.bg-primary-main {
+  background-color: hsl(326deg, 76%, 23%);
 }
 
-.text-main-600 {
-  color: hsl(339deg, 57%, 73%);
+.text-primary-dark {
+  color: hsl(271deg, 37%, 13%);
 }
 
-.bg-main-600 {
-  background-color: hsl(339deg, 57%, 73%);
+.bg-primary-dark {
+  background-color: hsl(271deg, 37%, 13%);
 }
 
-.text-main-700 {
+.text-primary-dark_accent {
+  color: hsl(339deg, 57%, 59%);
+}
+
+.bg-primary-dark_accent {
+  background-color: hsl(339deg, 57%, 59%);
+}
+
+.text-primary-light_accent {
   color: hsl(339deg, 57%, 69%);
 }
 
-.bg-main-700 {
+.bg-primary-light_accent {
   background-color: hsl(339deg, 57%, 69%);
 }
 
-.text-main-800 {
-  color: hsl(339deg, 58%, 65%);
+.text-primary-light {
+  color: hsl(0deg, 4%, 95%);
 }
 
-.bg-main-800 {
-  background-color: hsl(339deg, 58%, 65%);
+.bg-primary-light {
+  background-color: hsl(0deg, 4%, 95%);
 }
 
-.text-main-900 {
-  color: hsl(339deg, 58%, 60%);
+.text-complementary-main {
+  color: #3dba56;
 }
 
-.bg-main-900 {
-  background-color: hsl(339deg, 58%, 60%);
+.bg-complementary-main {
+  background-color: #3dba56;
 }
 
-.text-main-1000 {
-  color: hsl(339deg, 58%, 55%);
+.text-complementary-dark {
+  color: #5bd2a8;
 }
 
-.bg-main-1000 {
-  background-color: hsl(339deg, 58%, 55%);
+.bg-complementary-dark {
+  background-color: #5bd2a8;
 }
 
-.text-main-1000a {
-  color: hsla(339deg, 58%, 55%, 0.9);
+.text-complementary-dark_accent {
+  color: hsl(159deg, 57%, 59%);
 }
 
-.bg-main-1000a {
-  background-color: hsla(339deg, 58%, 55%, 0.9);
+.bg-complementary-dark_accent {
+  background-color: hsl(159deg, 57%, 59%);
 }
 
-.text-main-1100 {
-  color: hsl(339deg, 46%, 50%);
+.text-complementary-light_accent {
+  color: #c8f8db;
 }
 
-.bg-main-1100 {
-  background-color: hsl(339deg, 46%, 50%);
+.bg-complementary-light_accent {
+  background-color: #c8f8db;
 }
 
-.text-main-1200 {
-  color: hsl(339deg, 46%, 45%);
+.text-complementary-light {
+  color: hsl(0deg, 0%, 99%);
 }
 
-.bg-main-1200 {
-  background-color: hsl(339deg, 46%, 45%);
+.bg-complementary-light {
+  background-color: hsl(0deg, 0%, 99%);
 }
 
-.text-main-1300 {
-  color: hsl(339deg, 46%, 39%);
+.text-state-success {
+  color: hsl(140deg, 66%, 48%);
 }
 
-.bg-main-1300 {
-  background-color: hsl(339deg, 46%, 39%);
+.bg-state-success {
+  background-color: hsl(140deg, 66%, 48%);
 }
 
-.text-main-1400 {
-  color: hsl(339deg, 46%, 33%);
+.text-state-warning {
+  color: hsl(28deg, 94%, 72%);
 }
 
-.bg-main-1400 {
-  background-color: hsl(339deg, 46%, 33%);
+.bg-state-warning {
+  background-color: hsl(28deg, 94%, 72%);
 }
 
-.text-main-1500 {
-  color: hsl(339deg, 46%, 28%);
+.text-state-alert {
+  color: hsl(341deg, 98%, 46%);
 }
 
-.bg-main-1500 {
-  background-color: hsl(339deg, 46%, 28%);
-}
-
-.text-lightAccent-500 {
-  color: hsl(326deg, 7%, 81%);
-}
-
-.bg-lightAccent-500 {
-  background-color: hsl(326deg, 7%, 81%);
-}
-
-.text-lightAccent-600 {
-  color: hsl(326deg, 6%, 77%);
-}
-
-.bg-lightAccent-600 {
-  background-color: hsl(326deg, 6%, 77%);
-}
-
-.text-lightAccent-700 {
-  color: hsl(320deg, 7%, 73%);
-}
-
-.bg-lightAccent-700 {
-  background-color: hsl(320deg, 7%, 73%);
-}
-
-.text-lightAccent-800 {
-  color: hsl(324deg, 6%, 69%);
-}
-
-.bg-lightAccent-800 {
-  background-color: hsl(324deg, 6%, 69%);
-}
-
-.text-lightAccent-900 {
-  color: hsl(320deg, 7%, 65%);
-}
-
-.bg-lightAccent-900 {
-  background-color: hsl(320deg, 7%, 65%);
-}
-
-.text-lightAccent-1000 {
-  color: hsl(323deg, 7%, 62%);
-}
-
-.bg-lightAccent-1000 {
-  background-color: hsl(323deg, 7%, 62%);
-}
-
-.text-lightAccent-1100 {
-  color: hsl(325deg, 5%, 56%);
-}
-
-.bg-lightAccent-1100 {
-  background-color: hsl(325deg, 5%, 56%);
-}
-
-.text-lightAccent-1200 {
-  color: hsl(324deg, 4%, 49%);
-}
-
-.bg-lightAccent-1200 {
-  background-color: hsl(324deg, 4%, 49%);
-}
-
-.text-lightAccent-1300 {
-  color: hsl(327deg, 4%, 43%);
-}
-
-.bg-lightAccent-1300 {
-  background-color: hsl(327deg, 4%, 43%);
-}
-
-.text-lightAccent-1400 {
-  color: hsl(326deg, 4%, 37%);
-}
-
-.bg-lightAccent-1400 {
-  background-color: hsl(326deg, 4%, 37%);
-}
-
-.text-lightAccent-1500 {
-  color: hsl(320deg, 4%, 31%);
-}
-
-.bg-lightAccent-1500 {
-  background-color: hsl(320deg, 4%, 31%);
-}
-
-.text-lightShades-500 {
-  color: hsl(0deg, 14%, 97%);
-}
-
-.bg-lightShades-500 {
-  background-color: hsl(0deg, 14%, 97%);
-}
-
-.text-lightShades-600 {
-  color: hsl(0deg, 18%, 97%);
-}
-
-.bg-lightShades-600 {
-  background-color: hsl(0deg, 18%, 97%);
-}
-
-.text-lightShades-700 {
-  color: hsl(15deg, 20%, 96%);
-}
-
-.bg-lightShades-700 {
-  background-color: hsl(15deg, 20%, 96%);
-}
-
-.text-lightShades-800 {
-  color: hsl(15deg, 17%, 95%);
-}
-
-.bg-lightShades-800 {
-  background-color: hsl(15deg, 17%, 95%);
-}
-
-.text-lightShades-900 {
-  color: hsl(15deg, 15%, 95%);
-}
-
-.bg-lightShades-900 {
-  background-color: hsl(15deg, 15%, 95%);
-}
-
-.text-lightShades-1000 {
-  color: hsl(12deg, 17%, 94%);
-}
-
-.bg-lightShades-1000 {
-  background-color: hsl(12deg, 17%, 94%);
-}
-
-.text-darkAccent-500 {
-  color: hsl(283deg, 16%, 78%);
-}
-
-.bg-darkAccent-500 {
-  background-color: hsl(283deg, 16%, 78%);
-}
-
-.text-darkAccent-600 {
-  color: hsl(281deg, 16%, 74%);
-}
-
-.bg-darkAccent-600 {
-  background-color: hsl(281deg, 16%, 74%);
-}
-
-.text-darkAccent-700 {
-  color: hsl(283deg, 16%, 69%);
-}
-
-.bg-darkAccent-700 {
-  background-color: hsl(283deg, 16%, 69%);
-}
-
-.text-darkAccent-800 {
-  color: hsl(281deg, 16%, 65%);
-}
-
-.bg-darkAccent-800 {
-  background-color: hsl(281deg, 16%, 65%);
-}
-
-.text-darkAccent-900 {
-  color: hsl(283deg, 16%, 60%);
-}
-
-.bg-darkAccent-900 {
-  background-color: hsl(283deg, 16%, 60%);
-}
-
-.text-darkAccent-1000 {
-  color: hsl(282deg, 16%, 56%);
-}
-
-.bg-darkAccent-1000 {
-  background-color: hsl(282deg, 16%, 56%);
-}
-
-.text-darkAccent-1100 {
-  color: hsl(281deg, 13%, 51%);
-}
-
-.bg-darkAccent-1100 {
-  background-color: hsl(281deg, 13%, 51%);
-}
-
-.text-darkAccent-1200 {
-  color: hsl(281deg, 13%, 45%);
-}
-
-.bg-darkAccent-1200 {
-  background-color: hsl(281deg, 13%, 45%);
-}
-
-.text-darkAccent-1300 {
-  color: hsl(281deg, 12%, 39%);
-}
-
-.bg-darkAccent-1300 {
-  background-color: hsl(281deg, 12%, 39%);
-}
-
-.text-darkAccent-1400 {
-  color: hwb(282 29% 62%);
-}
-
-.bg-darkAccent-1400 {
-  background-color: hwb(282 29% 62%);
-}
-
-.text-darkAccent-1500 {
-  color: hsl(280deg, 12%, 28%);
-}
-
-.bg-darkAccent-1500 {
-  background-color: hsl(280deg, 12%, 28%);
-}
-
-.text-darkShades-1000 {
-  color: hsl(268deg, 20%, 17%);
-}
-
-.bg-darkShades-1000 {
-  background-color: hsl(268deg, 20%, 17%);
-}
-
-.text-darkShades-1100 {
-  color: hsl(268deg, 19%, 15%);
-}
-
-.bg-darkShades-1100 {
-  background-color: hsl(268deg, 19%, 15%);
-}
-
-.text-darkShades-1200 {
-  color: hsl(266deg, 20%, 14%);
-}
-
-.bg-darkShades-1200 {
-  background-color: hsl(266deg, 20%, 14%);
-}
-
-.text-darkShades-1300 {
-  color: hsl(267deg, 18%, 12%);
-}
-
-.bg-darkShades-1300 {
-  background-color: hsl(267deg, 18%, 12%);
-}
-
-.text-darkShades-1400 {
-  color: hsl(270deg, 19%, 10%);
-}
-
-.bg-darkShades-1400 {
-  background-color: hsl(270deg, 19%, 10%);
-}
-
-.text-darkShades-1500 {
-  color: hsl(270deg, 18%, 9%);
-}
-
-.bg-darkShades-1500 {
-  background-color: hsl(270deg, 18%, 9%);
-}
-
-.text-neutral-100 {
-  color: hsl(0deg, 0%, 100%);
-}
-
-.bg-neutral-100 {
-  background-color: hsl(0deg, 0%, 100%);
-}
-
-.text-neutral-200 {
-  color: hsl(0deg, 0%, 87%);
-}
-
-.bg-neutral-200 {
-  background-color: hsl(0deg, 0%, 87%);
-}
-
-.text-neutral-300 {
-  color: hsl(0deg, 0%, 80%);
-}
-
-.bg-neutral-300 {
-  background-color: hsl(0deg, 0%, 80%);
-}
-
-.text-neutral-700 {
-  color: hsl(0deg, 0%, 40%);
-}
-
-.bg-neutral-700 {
-  background-color: hsl(0deg, 0%, 40%);
-}
-
-.text-neutral-800 {
-  color: hsl(0deg, 0%, 30%);
-}
-
-.bg-neutral-800 {
-  background-color: hsl(0deg, 0%, 30%);
-}
-
-.text-neutral-900 {
-  color: hsl(0deg, 0%, 15%);
-}
-
-.bg-neutral-900 {
-  background-color: hsl(0deg, 0%, 15%);
+.bg-state-alert {
+  background-color: hsl(341deg, 98%, 46%);
 }
 
 /*----------------------------------------------------------
@@ -578,9 +204,17 @@ html {
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.6;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
 }
 
 /* A elements that don't have a class get default styles */
@@ -643,19 +277,20 @@ Utilities
   transform: translateY(-50%);
 }
 
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .flex {
   display: flex;
 }
 
-/*----------------------------------------------------------
-------------------------------------------------------------
-------------------------------------------------------------
-------------------------------------------------------------
-Typography
-------------------------------------------------------------
-------------------------------------------------------------
-------------------------------------------------------------
-----------------------------------------------------------*/
+.grid_container {
+  width: 100%;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -672,7 +307,7 @@ figure,
 blockquote,
 dl,
 dd {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 @media only screen and (min-width: 480px) {
   body,
@@ -687,7 +322,7 @@ figure,
 blockquote,
 dl,
 dd {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -703,7 +338,7 @@ figure,
 blockquote,
 dl,
 dd {
-    font-size: 1.9rem;
+    font-size: 1.7rem;
   }
 }
 @media only screen and (min-width: 1279px) {
@@ -719,12 +354,12 @@ figure,
 blockquote,
 dl,
 dd {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 
 body {
-  font-family: "Hind-Regular";
+  font-family: "Montserrat-Medium";
   color: var(--clr-neutral-900);
 }
 
@@ -732,30 +367,26 @@ h1,
 h2,
 h3 {
   font-family: "Hind-Medium";
+  line-break: anywhere;
+}
+@media only screen and (min-width: 320px) {
+  h1,
+h2,
+h3 {
+    line-break: auto;
+  }
 }
 
-.fs-800 {
-  font-size: var(--fs-minorThird-800);
-}
-
-.fs-700 {
+h2 {
+  line-height: 1.2em;
+  letter-spacing: 2px;
   font-size: var(--fs-minorThird-700);
+  text-transform: uppercase;
 }
 
-.fs-600 {
-  font-size: var(--fs-minorThird-600);
-}
-
-.fs-500 {
-  font-size: var(--fs-minorThird-500);
-}
-
-.fs-400 {
-  font-size: var(--fs-minorThird-400);
-}
-
-.fs-normal {
-  font-size: var(--fs-minorThird-300);
+mark {
+  background-color: var(--clr-complementary-main);
+  color: var(--clr-primary-light);
 }
 
 /*----------------------------------------------------------
@@ -795,6 +426,37 @@ Component - Layout
 ------------------------------------------------------------
 ------------------------------------------------------------
 ----------------------------------------------------------*/
+.Homepage {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  gap: 0em 0em;
+  grid-template-areas: "Hero_section" "AboutUs_section" "Classes_section";
+}
+.Homepage--Hero_section {
+  grid-area: Hero_section;
+  position: relative;
+  min-height: 100vh;
+}
+.Homepage--AboutUs_section {
+  grid-area: AboutUs_section;
+  position: relative;
+  background: var(--clr-primary-light);
+  color: var(--clr-primary-dark);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.Homepage--Classes_section {
+  grid-area: Classes_section;
+  position: relative;
+  background: var(--clr-primary-light);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .PrimaryButton {
   cursor: pointer;
   border: none;
@@ -866,6 +528,7 @@ Component - Layout
   left: 0;
   right: 0;
   margin-top: 90px;
+  z-index: 10;
 }
 .Modal-Container {
   width: 90%;
@@ -900,7 +563,7 @@ Component - Header
   align-items: center;
   position: fixed;
   width: 100%;
-  background: var(--clr-darkShades-1500);
+  background: var(--clr-primary-main);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   z-index: 1000;
@@ -941,7 +604,7 @@ Component - Header
   width: 100vw;
   height: 100vh;
   outline: 0;
-  background: #030502;
+  background: var(--clr-primary-main);
   z-index: 7;
   transform: translateX(100vw);
   opacity: 0;
@@ -949,7 +612,7 @@ Component - Header
 }
 .Header--menu .Show {
   transform: translateX(0vw);
-  opacity: 0.9;
+  opacity: 1;
 }
 
 /*----------------------------------------------------------
@@ -1052,10 +715,6 @@ Component - Navbar
   color: #fff;
 }
 
-.Hero {
-  min-height: 100vh;
-  margin: 0 auto;
-}
 .Hero--Video {
   position: absolute;
   top: 0;
@@ -1073,12 +732,15 @@ Component - Navbar
   width: 100%;
   height: 100%;
   background: rgba(15, 21, 21, 0.3);
+  -webkit-backdrop-filter: grayscale(1);
+          backdrop-filter: grayscale(1);
   padding-top: 90px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .Hero--Overlay--Content-Box {
+  position: relative;
   margin: 0 1.5rem;
   background: rgba(15, 21, 21, 0.6);
   -webkit-backdrop-filter: blur(2px);
@@ -1086,7 +748,6 @@ Component - Navbar
   padding: 32px;
   border-radius: 12px;
   text-align: left;
-  width: 1000px;
   display: flex;
   flex-direction: column;
   letter-spacing: 0.4px;
@@ -1109,7 +770,6 @@ Component - Navbar
   }
 }
 .Hero--Overlay--Content-Box--Tagline {
-  font-size: 1.6rem;
   font-weight: 700;
   color: #dbe6ed;
   font-style: italic;
@@ -1130,12 +790,10 @@ Component - Navbar
   color: #dbe6ed;
   width: 100%;
   margin-bottom: 32px;
-  line-height: 20px;
 }
 @media only screen and (min-width: 768px) {
   .Hero--Overlay--Content-Box--Description {
     width: 80%;
-    font-size: 1.1rem;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -1170,16 +828,24 @@ Component - Navbar
   }
 }
 
-/*----------------------------------------------------------
-------------------------------------------------------------
-------------------------------------------------------------
-------------------------------------------------------------
-Component - About Us
-------------------------------------------------------------
-------------------------------------------------------------
-------------------------------------------------------------
-----------------------------------------------------------*/
+.spacer {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  aspect-ratio: 2/3;
+}
+
+.layer1 {
+  background-image: url("../../public/wave-haikei23.svg");
+  position: absolute;
+  z-index: 1;
+  bottom: -1px;
+}
+
 .About_Us--Grid {
+  margin: 0 auto;
+  padding: 24px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
@@ -1187,42 +853,283 @@ Component - About Us
   grid-auto-flow: row;
   grid-template-areas: "Title" "Text";
 }
+@media only screen and (min-width: 480px) {
+  .About_Us--Grid {
+    width: 85%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .About_Us--Grid {
+    grid-template-columns: 2fr 1fr;
+    width: 85%;
+  }
+}
 .About_Us--Title {
   grid-area: Title;
+  position: relative;
 }
 .About_Us--Text {
   grid-area: Text;
+  position: relative;
 }
 
 /* center the blockquote in the page */
-/*----------------------------------------------------------
-------------------------------------------------------------
-------------------------------------------------------------
-------------------------------------------------------------
-Component - Classes
-------------------------------------------------------------
-------------------------------------------------------------
-------------------------------------------------------------
-----------------------------------------------------------*/
-/*----------------------------------------------------------
-------------------------------------------------------------
-------------------------------------------------------------
-------------------------------------------------------------
-Component - Classes Swiper
-------------------------------------------------------------
-------------------------------------------------------------
-------------------------------------------------------------
-----------------------------------------------------------*/
-.mySwiper {
-  height: 3000px;
+.Classes--Grid {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+  gap: 1em 0;
+  grid-auto-flow: column;
+  grid-template-areas: "C_Title" "C_Text" "C_Swiper";
+}
+@media only screen and (min-width: 768px) {
+  .Classes--Grid {
+    width: 85%;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "C_Swiper C_Title C_Title " "C_Swiper C_Text C_Text";
+  }
+}
+.Classes--Grid--Title {
+  grid-area: C_Title;
+  margin: 0 24px;
+}
+.Classes--Grid--Text {
+  grid-area: C_Text;
+  margin: 0 24px;
+}
+.Classes--Grid--Swiper {
+  grid-area: C_Swiper;
+  width: 100vw;
+}
+@media only screen and (min-width: 768px) {
+  .Classes--Grid--Swiper {
+    width: 480px;
+  }
 }
 
-/*----------------------------------------------------------
-------------------------------------------------------------
-------------------------------------------------------------
-------------------------------------------------------------
-Component - Footer
-------------------------------------------------------------
-------------------------------------------------------------
-------------------------------------------------------------
-----------------------------------------------------------*//*# sourceMappingURL=styles.css.map */
+.Swiper {
+  width: 100%;
+}
+.Swiper--Slide--Item {
+  width: 90%;
+  height: 400px;
+  margin: 1rem auto 5rem;
+  cursor: pointer;
+  position: relative;
+  border-radius: 12px;
+  border: 2px solid #fff;
+  transition: 0.3s ease all;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.2), 0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.05);
+}
+@media only screen and (min-width: 768px) {
+  .Swiper--Slide--Item:hover {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 1px 1px rgba(0, 0, 0, 0.2), 0 3px 3px rgba(0, 0, 0, 0.15), 0 6px 6px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.05);
+  }
+  .Swiper--Slide--Item:hover .Swiper--Slide--Overlay {
+    background: transparent;
+  }
+}
+.Swiper--Slide--Item--Img {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.Swiper--Slide--Content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25%;
+  background: #fff;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.Swiper--Slide--Content--Class {
+  margin-left: 6px;
+  color: #0f1515;
+  letter-spacing: 0.4px;
+}
+@media only screen and (min-width: 768px) {
+  .Swiper--Slide--Content--Overlay {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    background: rgba(15, 21, 21, 0.2);
+    transition: 0.3s ease all;
+  }
+}
+.Swiper--Slide--Tag {
+  position: absolute;
+  background: #fff;
+  top: -12px;
+  left: 12px;
+  padding: 6px 8px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  letter-spacing: 0.4px;
+}
+
+.Footer {
+  padding: 100px 0 25px 0;
+  width: 100vw;
+  margin: 0 auto;
+  background-color: black;
+}
+.Footer .leaflet-container {
+  height: 300px;
+  z-index: 10;
+}
+.Footer-Newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 100px;
+}
+.Footer-Newsletter-Headline {
+  color: #fff;
+  font-size: 1.6rem;
+  letter-spacing: 0.4px;
+  margin-bottom: 24px;
+}
+.Footer-Newsletter span {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 24px;
+}
+.Footer-Newsletter-Form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Footer-Newsletter-Form Button {
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .Footer-Newsletter-Form {
+    flex-direction: row;
+  }
+  .Footer-Newsletter-Form Button {
+    width: auto;
+  }
+}
+.Footer .Input {
+  letter-spacing: 0.4px;
+  font-family: inherit;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  padding: 12px 24px;
+  border-radius: 12px;
+}
+@media only screen and (min-width: 768px) {
+  .Footer .Input {
+    width: 300px;
+    margin-bottom: 0;
+    margin-right: 12px;
+  }
+}
+.Footer .Input:focus {
+  outline: 0;
+}
+.Footer-Content {
+  width: 100%;
+  min-height: 20vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  text-align: center;
+  margin-bottom: 64px;
+}
+@media only screen and (min-width: 480px) {
+  .Footer-Content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .Footer-Content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.Footer-Content-Col {
+  height: 100%;
+}
+.Footer-Content-Col-Headline {
+  color: #fff;
+  font-size: 1.6rem;
+  margin-bottom: 24px;
+  letter-spacing: 0.4px;
+}
+.Footer-Content-Col-Links li {
+  margin-bottom: 12px;
+}
+.Footer-Content-Col-Links li a {
+  letter-spacing: 0.4px;
+  width: 100%;
+  color: #fff;
+  text-decoration: none;
+}
+.Footer-Base {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+@media only screen and (min-width: 768px) {
+  .Footer-Base {
+    flex-direction: row;
+  }
+}
+.Footer-Base a:not(:first-child), .Footer-Base-Year:not(:first-child),
+.Footer-Base ul:not(:first-child) {
+  margin-bottom: 12px;
+}
+@media only screen and (min-width: 768px) {
+  .Footer-Base a:not(:first-child), .Footer-Base-Year:not(:first-child),
+.Footer-Base ul:not(:first-child) {
+    margin-bottom: 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .Footer-Base a, .Footer-Base-Year,
+.Footer-Base ul {
+    flex: 1;
+  }
+}
+.Footer-Base-Year {
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0.4px;
+  font-size: 0.9rem;
+}
+.Footer-Base-Socials {
+  display: flex;
+  justify-content: flex-end;
+}
+.Footer-Base-Socials li:not(:last-child) {
+  margin-right: 24px;
+}
+@media only screen and (min-width: 768px) {
+  .Footer-Base-Socials li:not(:last-child) {
+    margin-right: 12px;
+  }
+}
+.Footer-Base-Socials li a {
+  font-size: 1.6rem;
+  color: white;
+  text-decoration: none;
+}/*# sourceMappingURL=styles.css.map */

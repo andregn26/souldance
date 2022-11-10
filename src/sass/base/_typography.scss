@@ -1,18 +1,4 @@
 @use "../abstracts" as *;
-/*----------------------------------------------------------
-------------------------------------------------------------
-------------------------------------------------------------
-------------------------------------------------------------
-Typography
-------------------------------------------------------------
-------------------------------------------------------------
-------------------------------------------------------------
-----------------------------------------------------------*/
-
-// * {
-//   font-variation-settings: "wght" var(--font-weight, 375),
-//     "wdth" var(--font-width, 80);
-// }
 
 html {
   font-size: 62.5%;
@@ -30,23 +16,23 @@ figure,
 blockquote,
 dl,
 dd {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   // font-weight: 400;
 
   @include mq(mediumScreenMin) {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   @include mq(largeScreenMin) {
-    font-size: 1.9rem;
+    font-size: 1.7rem;
   }
   @include mq(xLargeScreenMin) {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 
 body {
-  font-family: "Hind-Regular";
+  font-family: "Montserrat-Medium";
   color: var(--clr-neutral-900);
   // letter-spacing: -0.1px;
 }
@@ -55,25 +41,22 @@ h1,
 h2,
 h3 {
   font-family: "Hind-Medium";
+  line-break: anywhere;
+  @include mq(minScreen) {
+    line-break: auto;
+  }
 }
 
-.fs-800 {
-  font-size: var(--fs-minorThird-800);
-}
-.fs-700 {
+h2 {
+  line-height: 1.2em;
+  letter-spacing: 2px;
   font-size: var(--fs-minorThird-700);
+  text-transform: uppercase;
 }
-.fs-600 {
-  font-size: var(--fs-minorThird-600);
-}
-.fs-500 {
-  font-size: var(--fs-minorThird-500);
-}
-.fs-400 {
-  font-size: var(--fs-minorThird-400);
-}
-.fs-normal {
-  font-size: var(--fs-minorThird-300);
+
+mark {
+  background-color: var(--clr-complementary-main);
+  color: var(--clr-primary-light);
 }
 // p {
 //   font-size: var(--fs-minorThird-400);
@@ -128,10 +111,4 @@ h3 {
 //     color: var(--clr-primary-400);
 //     text-decoration: none;
 //   }
-// }
-
-// p:not([class]),
-// ul:not([class]),
-// li:not([class]) {
-//   max-width: 60ch;
 // }

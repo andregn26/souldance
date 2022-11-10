@@ -24,6 +24,26 @@ Utilities
   transform: translateY(-50%);
 }
 
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .flex {
   display: flex;
+}
+
+// .border-layout {
+//   border: 3px solid green;
+// }
+// .border-container {
+//   border: 2px solid yellow;
+// }
+// .border-child_container {
+//   border: 1px dotted red;
+// }
+
+.grid_container {
+  width: 100%;
 }

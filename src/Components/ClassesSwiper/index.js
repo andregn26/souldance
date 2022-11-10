@@ -14,7 +14,7 @@ import { Navigation, Pagination } from "swiper"
 
 import { modalities } from "../../../Data"
 
-const ClassesSwiper = () => {
+const ClassesSwiper = ({ setIsOpen, changeContent }) => {
   return (
     <>
       <Swiper
@@ -38,8 +38,8 @@ const ClassesSwiper = () => {
             <div
               className="Gallery-Item"
               onClick={() => {
-                // changeContent(modality)
-                // setIsOpen(true)
+                changeContent(modality)
+                setIsOpen(true)
               }}
             >
               <img

@@ -1,8 +1,9 @@
 @use "breakpoints" as *;
+@use "spacing" as *;
+// @use "variables" as *;
 
 @mixin mq($key) {
   $size: map-get($breakpoints, $key);
-
   @media only screen and (min-width: $size) {
     @content;
   }
@@ -49,3 +50,14 @@
     }
   }
 }
+
+@mixin center-vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+// @mixin container {
+//   margin: 0 auto;
+//   padding: $spacing-lg;
+// }

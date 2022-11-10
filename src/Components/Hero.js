@@ -6,7 +6,8 @@ import coverVID from "../assets/cover.mp4"
 
 const Hero = () => {
   return (
-    <div className=".Hero_section Hero">
+    <div className="Homepage--Hero_section Hero">
+      {/* <div className="layer1 spacer"></div> */}
       <video
         className="Hero--Video"
         autoPlay={true}
@@ -16,7 +17,7 @@ const Hero = () => {
         id="Video"
       ></video>
       <div className="Hero--Overlay">
-        <div className="Hero--Overlay--Content-Box">
+        {/* <div className="Hero--Overlay--Content-Box">
           <h1 className="Hero--Overlay--Content-Box--Title">
             Estamos à Tua Espera
           </h1>
@@ -27,10 +28,9 @@ const Hero = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet,
             necessitatibus accusamus commodi id maxime voluptatum nemo?
           </p>
-          <div className="Hero--Overlay--Content-Box--Cta">
-            <Button>Vem Experimentar!</Button>
-            <Button className="-outline">Conhece as Modalidades</Button>
-          </div>
+        </div>{" "} */}
+        <div className="Hero--Overlay--Content-Box--Cta">
+          <Button className="-outline">Vem Experimentar!</Button>
         </div>
       </div>
     </div>

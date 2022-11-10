@@ -1,8 +1,10 @@
 import template from "./assets/template.jpg"
 import ballet from "./assets/ballet.jpg"
 import funk from "./assets/funk.jpg"
-import hipHop from "./assets/hip-hop.jpg"
+import hipHop from "./assets/hiphop.jpg"
 import latinas from "./assets/latinas.jpg"
+import latinasKids from "./assets/latinaskids.jpg"
+import salsa from "./assets/salsa.jpg"
 
 export const modalities = [
   {
@@ -11,20 +13,41 @@ export const modalities = [
     hasLevelZero: false,
     danceClass: "Latinas",
     img: latinas,
+    professores: ["Renato", "Ana", "Lúcia"],
+    schedule: [
+      { day: "Segunda-feira", hour: "19:30" },
+      { day: "Quarta-feira", hour: "21:30" },
+    ],
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nostrum praesentium impedit corporis? Doloribus expedita sed autem natus repellat impedit itaque eaque odit voluptas cum.",
   },
   {
     id: 2,
     hasLevels: false,
     hasLevelZero: false,
     danceClass: "Latinas Kids",
-    img: template,
+    img: latinasKids,
+    professores: ["Renato", "Ana", "Lúcia"],
+    schedule: [
+      { day: "Segunda-feira", hour: "19:30" },
+      { day: "Quarta-feira", hour: "21:30" },
+    ],
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nostrum praesentium impedit corporis? Doloribus expedita sed autem natus repellat impedit itaque eaque odit voluptas cum.",
   },
   {
     id: 3,
     hasLevels: true,
     hasLevelZero: true,
     danceClass: "Salsa",
-    img: template,
+    img: salsa,
+    professores: ["Renato", "Ana", "Lúcia"],
+    schedule: [
+      { day: "Segunda-feira", hour: "19:30" },
+      { day: "Quarta-feira", hour: "21:30" },
+    ],
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nostrum praesentium impedit corporis? Doloribus expedita sed autem natus repellat impedit itaque eaque odit voluptas cum.",
   },
   {
     id: 4,
@@ -32,6 +55,13 @@ export const modalities = [
     hasLevelZero: true,
     danceClass: "Bachata",
     img: template,
+    professores: ["Renato", "Ana", "Lúcia"],
+    schedule: [
+      { day: "Segunda-feira", hour: "19:30" },
+      { day: "Quarta-feira", hour: "21:30" },
+    ],
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nostrum praesentium impedit corporis? Doloribus expedita sed autem natus repellat impedit itaque eaque odit voluptas cum.",
   },
   {
     id: 5,
@@ -39,6 +69,13 @@ export const modalities = [
     hasLevelZero: false,
     danceClass: "Kizomba",
     img: template,
+    professores: ["Renato", "Ana", "Lúcia"],
+    schedule: [
+      { day: "Segunda-feira", hour: "19:30" },
+      { day: "Quarta-feira", hour: "21:30" },
+    ],
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nostrum praesentium impedit corporis? Doloribus expedita sed autem natus repellat impedit itaque eaque odit voluptas cum.",
   },
   {
     id: 6,
@@ -46,6 +83,13 @@ export const modalities = [
     hasLevelZero: false,
     danceClass: "Pop Dance",
     img: template,
+    professores: ["Renato", "Ana", "Lúcia"],
+    schedule: [
+      { day: "Segunda-feira", hour: "19:30" },
+      { day: "Quarta-feira", hour: "21:30" },
+    ],
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nostrum praesentium impedit corporis? Doloribus expedita sed autem natus repellat impedit itaque eaque odit voluptas cum.",
   },
   {
     id: 7,
@@ -53,6 +97,13 @@ export const modalities = [
     hasLevelZero: false,
     danceClass: "Hip-Hop",
     img: hipHop,
+    professores: ["Renato", "Ana", "Lúcia"],
+    schedule: [
+      { day: "Segunda-feira", hour: "19:30" },
+      { day: "Quarta-feira", hour: "21:30" },
+    ],
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nostrum praesentium impedit corporis? Doloribus expedita sed autem natus repellat impedit itaque eaque odit voluptas cum.",
   },
   {
     id: 8,
@@ -60,6 +111,13 @@ export const modalities = [
     hasLevelZero: false,
     danceClass: "Ballet",
     img: ballet,
+    professores: ["Renato", "Ana", "Lúcia"],
+    schedule: [
+      { day: "Segunda-feira", hour: "19:30" },
+      { day: "Quarta-feira", hour: "21:30" },
+    ],
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nostrum praesentium impedit corporis? Doloribus expedita sed autem natus repellat impedit itaque eaque odit voluptas cum.",
   },
   {
     id: 9,
@@ -67,6 +125,13 @@ export const modalities = [
     hasLevelZero: false,
     danceClass: "High Heels",
     img: template,
+    professores: ["Renato", "Ana", "Lúcia"],
+    schedule: [
+      { day: "Segunda-feira", hour: "19:30" },
+      { day: "Quarta-feira", hour: "21:30" },
+    ],
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nostrum praesentium impedit corporis? Doloribus expedita sed autem natus repellat impedit itaque eaque odit voluptas cum.",
   },
   {
     id: 10,
@@ -74,6 +139,13 @@ export const modalities = [
     hasLevelZero: false,
     danceClass: "Funk Brasileiro",
     img: funk,
+    professores: ["Renato", "Ana", "Lúcia"],
+    schedule: [
+      { day: "Segunda-feira", hour: "19:30" },
+      { day: "Quarta-feira", hour: "21:30" },
+    ],
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nostrum praesentium impedit corporis? Doloribus expedita sed autem natus repellat impedit itaque eaque odit voluptas cum.",
   },
   {
     id: 11,
@@ -81,6 +153,13 @@ export const modalities = [
     hasLevelZero: false,
     danceClass: "Jazz",
     img: template,
+    professores: ["Renato", "Ana", "Lúcia"],
+    schedule: [
+      { day: "Segunda-feira", hour: "19:30" },
+      { day: "Quarta-feira", hour: "21:30" },
+    ],
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nostrum praesentium impedit corporis? Doloribus expedita sed autem natus repellat impedit itaque eaque odit voluptas cum.",
   },
   {
     id: 12,
@@ -88,6 +167,13 @@ export const modalities = [
     hasLevelZero: false,
     danceClass: "Semba",
     img: template,
+    professores: ["Renato", "Ana", "Lúcia"],
+    schedule: [
+      { day: "Segunda-feira", hour: "19:30" },
+      { day: "Quarta-feira", hour: "21:30" },
+    ],
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nostrum praesentium impedit corporis? Doloribus expedita sed autem natus repellat impedit itaque eaque odit voluptas cum.",
   },
   {
     id: 13,
@@ -95,5 +181,12 @@ export const modalities = [
     hasLevelZero: false,
     danceClass: "Baby Steps",
     img: template,
+    professores: ["Renato", "Ana", "Lúcia"],
+    schedule: [
+      { day: "Segunda-feira", hour: "19:30" },
+      { day: "Quarta-feira", hour: "21:30" },
+    ],
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nostrum praesentium impedit corporis? Doloribus expedita sed autem natus repellat impedit itaque eaque odit voluptas cum.",
   },
 ]

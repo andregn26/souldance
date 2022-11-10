@@ -1,17 +1,9 @@
 @use "../abstracts" as *;
 
-/*----------------------------------------------------------
-------------------------------------------------------------
-------------------------------------------------------------
-------------------------------------------------------------
-Component - About Us
-------------------------------------------------------------
-------------------------------------------------------------
-------------------------------------------------------------
-----------------------------------------------------------*/
-
 .About_Us {
   &--Grid {
+    margin: 0 auto;
+    padding: $spacing-md;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
@@ -20,13 +12,23 @@ Component - About Us
     grid-template-areas:
       "Title"
       "Text";
+
+    @include mq(mediumScreenMin) {
+      width: $main_container-md;
+    }
+    @include mq(largeScreenMin) {
+      grid-template-columns: 2fr 1fr;
+      width: $main_container-md;
+    }
   }
   &--Title {
     grid-area: Title;
+    position: relative;
   }
 
   &--Text {
     grid-area: Text;
+    position: relative;
   }
 }
 
