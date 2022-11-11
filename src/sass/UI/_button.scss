@@ -33,6 +33,25 @@
     border: 1px solid $light;
     transition: all 0.3s ease;
   }
+
+  &--Modal {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: $spacing-sm $spacing-lg;
+    font-family: inherit;
+    font-weight: 700;
+    letter-spacing: $letterSpacing;
+    // font-size: 1.1rem;
+    background: $light;
+    color: $dark;
+    width: 100%;
+    border-radius: 0 0 $borderRadius $borderRadius;
+    transition: all 0.3s ease;
+    &:hover {
+      background: rgab($light, 0.9);
+    }
+  }
 }
 
 .SecondaryButton {

@@ -185,6 +185,7 @@ export const modalities = [
     schedule: [
       { day: "Segunda-feira", hour: "19:30" },
       { day: "Quarta-feira", hour: "21:30" },
+      { day: "Quarta-feira", hour: "21:30" },
     ],
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nostrum praesentium impedit corporis? Doloribus expedita sed autem natus repellat impedit itaque eaque odit voluptas cum.",

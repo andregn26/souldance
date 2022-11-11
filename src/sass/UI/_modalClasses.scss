@@ -1,7 +1,7 @@
 @use "../abstracts" as *;
 
 .Modal {
-  &-Background {
+  &--Background {
     background-color: hsla(0, 0%, 0%, 0.792);
     position: fixed;
     top: 0;
@@ -11,7 +11,7 @@
     margin-top: $headerHeight;
     z-index: 10;
   }
-  &-Container {
+  &--Container {
     width: 90%;
     height: 80%;
     background-color: $white;
@@ -23,9 +23,28 @@
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
 
-    &-Header {
+    &--Header {
       border: 1px solid blue;
+      margin: $spacing-sm 0 0 0;
+      padding: $spacing-sm;
+      &--Heading {
+      }
+    }
+    &--Body {
+      padding: $spacing-sm;
+      &--Description {
+        margin-bottom: $spacing-sm;
+      }
+      &--Professors {
+        margin-bottom: $spacing-md;
+      }
+      &--Schedule {
+      }
     }
   }
 }

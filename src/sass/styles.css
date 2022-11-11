@@ -488,6 +488,23 @@ Component - Layout
   border: 1px solid #dbe6ed;
   transition: all 0.3s ease;
 }
+.PrimaryButton--Modal {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 12px 32px;
+  font-family: inherit;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  background: #dbe6ed;
+  color: #0f1515;
+  width: 100%;
+  border-radius: 0 0 12px 12px;
+  transition: all 0.3s ease;
+}
+.PrimaryButton--Modal:hover {
+  background: rgab(#dbe6ed, 0.9);
+}
 
 .SecondaryButton {
   cursor: pointer;
@@ -520,7 +537,7 @@ Component - Layout
   letter-spacing: 12px;
 }
 
-.Modal-Background {
+.Modal--Background {
   background-color: hsla(0deg, 0%, 0%, 0.792);
   position: fixed;
   top: 0;
@@ -530,7 +547,7 @@ Component - Layout
   margin-top: 90px;
   z-index: 10;
 }
-.Modal-Container {
+.Modal--Container {
   width: 90%;
   height: 80%;
   background-color: #fff;
@@ -541,11 +558,25 @@ Component - Layout
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 }
-.Modal-Container-Header {
+.Modal--Container--Header {
   border: 1px solid blue;
+  margin: 12px 0 0 0;
+  padding: 12px;
 }
-
+.Modal--Container--Body {
+  padding: 12px;
+}
+.Modal--Container--Body--Description {
+  margin-bottom: 12px;
+}
+.Modal--Container--Body--Professors {
+  margin-bottom: 24px;
+}
 /*----------------------------------------------------------
 ------------------------------------------------------------
 ------------------------------------------------------------
