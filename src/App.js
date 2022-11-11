@@ -5,6 +5,7 @@ import { MapContainer, TileLayer, useMap, Marker, Popup } from "react-leaflet"
 import Header from "./Components/Header"
 import Homepage from "./Pages/Homepage"
 import Footer from "./Components/Footer"
+import WapButton from "./Components/UI/WapButton"
 import "./sass/styles.css"
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Header />
       <Homepage />
       <Footer />
+      <WapButton />
     </Fragment>
   )
 }

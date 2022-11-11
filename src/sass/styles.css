@@ -523,6 +523,53 @@ Component - Layout
   background: rgba(219, 230, 237, 0.2);
 }
 
+.Wap--Box {
+  bottom: 14px;
+  right: 16px;
+  transition: opacity 0.5s ease 0s;
+  box-sizing: border-box;
+  direction: ltr;
+  text-align: right;
+  position: fixed !important;
+  z-index: 16000160 !important;
+}
+.Wap--flex {
+  display: flex;
+  margin: 7px;
+  position: relative;
+  justify-content: flex-end;
+  max-height: 50px;
+}
+.Wap--flex--Color {
+  flex-shrink: 0;
+  opacity: 0.7;
+  width: 50px;
+  height: 50px;
+  order: 2;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.4) 2px 2px 6px;
+  transition: all 0.5s ease 0s;
+  position: relative;
+  z-index: 200;
+  display: block;
+  border: 0px;
+  background-color: rgb(77, 194, 71) !important;
+}
+.Wap--flex--Color:hover {
+  box-shadow: rgba(0, 0, 0, 0.7) 2px 2px 11px;
+  opacity: 1;
+}
+.Wap--Symbol {
+  stroke: white;
+  fill: white;
+  stroke-width: 0;
+  height: 100%;
+  width: 100%;
+}
+
 .Logo {
   display: flex;
   align-items: center;
