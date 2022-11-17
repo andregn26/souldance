@@ -4,9 +4,9 @@ import { MapContainer, TileLayer, useMap, Marker, Popup } from "react-leaflet"
 
 import Header from "./Components/Header"
 import Homepage from "./Pages/Homepage"
-import Footer from "./Components/Footer"
+import Footer from "./Components/Footer/Footer"
 import WapButton from "./Components/UI/WapButton"
-import "./sass/styles.css"
+import "./sass/styles.scss"
 function App() {
   return (
     <Fragment>

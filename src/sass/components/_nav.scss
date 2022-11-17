@@ -32,7 +32,7 @@ Component - Navbar
         height: 100%;
         letter-spacing: $letterSpacing;
         text-decoration: none;
-        color: $white;
+        color: $clr-primary-light;
         position: relative;
 
         &::after {
@@ -43,14 +43,14 @@ Component - Navbar
           bottom: 0;
           left: 0;
           right: 0;
-          background: $white;
+          background: $clr-primary-light;
           opacity: 0;
           transition: 0.3s ease opacity;
         }
 
         &:hover::after {
           opacity: 1;
-          color: $white;
+          color: $clr-primary-light;
         }
       }
       a.active {
@@ -60,7 +60,7 @@ Component - Navbar
 
         letter-spacing: $letterSpacing;
         text-decoration: none;
-        color: $white;
+        color: $clr-primary-light;
         position: relative;
 
         &::after {
@@ -71,7 +71,7 @@ Component - Navbar
           bottom: 0;
           left: 0;
           right: 0;
-          background: $white;
+          background: $clr-primary-light;
           opacity: 1;
           // transition: 0.3s ease opacity;
         }
@@ -79,7 +79,7 @@ Component - Navbar
     }
   }
 
-  @include mq(largeScreenMin) {
+  @include mq(lgScreenMin) {
     display: flex;
   }
 }
@@ -102,10 +102,10 @@ Component - Navbar
       }
       a {
         text-decoration: none;
-        color: $white;
+        color: $clr-primary-light;
 
         &:hover {
-          color: $white;
+          color: $clr-primary-light;
         }
       }
     }

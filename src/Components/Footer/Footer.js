@@ -1,6 +1,6 @@
 import React from "react"
-import Logo from "./UI/Logo"
-import Button from "./UI/Button"
+import Logo from "../UI/Logo"
+import Button from "../UI/Button"
 import { FaInstagram, FaFacebook, FaWhatsapp } from "react-icons/fa"
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet"
 // import "leaflet/dist/leaflet.css"
@@ -67,36 +67,35 @@ const coordinates = [38.75726609842309, -9.283417576324181]
 const Footer = () => {
   return (
     <footer className="Footer">
-      <div className="leaflet-container">
-        <MapContainer center={coordinates} zoom={16} scrollWheelZoom={false}>
-          <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
-          <Marker position={coordinates}>
-            <Popup>
-              A pretty CSS3 popup. <br /> Easily customizable.
-            </Popup>
-          </Marker>
-        </MapContainer>
-      </div>
-      <div className="Footer-Newsletter">
-        <h4 className="Footer-Newsletter-Headline">Join the SoulDance</h4>
-        <span>unsubscribe</span>
-        <div className="Footer-Newsletter-Form">
-          <input type="email" placeholder="O teu Email" className="Input" />
-          <Button className="Footer-Newsletter-Form-Button">Subscribe</Button>
-        </div>
-      </div>
-
-      <div className="Footer-Content">{footerColumnsList}</div>
-
-      <div className="Footer-Base">
+      <div className="Footer--SoMe">
         <Logo />
+        <h4 className="Footer-Newsletter-Headline">Join the SoulDance</h4>
+        <ul className="Footer-Base-Socials">{socialIconsList}</ul>
+      </div>
+
+      <MapContainer
+        className="leaflet-container "
+        placeholder
+        center={coordinates}
+        zoom={16}
+        scrollWheelZoom={false}
+      >
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+
+        <Marker position={coordinates}>
+          <Popup>
+            A pretty CSS3 popup. <br /> Easily customizable.
+          </Popup>
+        </Marker>
+      </MapContainer>
+      <div className="Footer-Content">{footerColumnsList}</div>
+      <div className="Footer-Base">
         <span className="Footer-Base-Year">
           SoulDance&nbsp;&copy;&nbsp;{new Date().getFullYear()}
         </span>
-        <ul className="Footer-Base-Socials">{socialIconsList}</ul>
       </div>
     </footer>
   )

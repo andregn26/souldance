@@ -1,10 +1,10 @@
-import template from "./assets/template.jpg"
-import ballet from "./assets/ballet.jpg"
-import funk from "./assets/funk.jpg"
-import hipHop from "./assets/hiphop.jpg"
-import latinas from "./assets/latinas.jpg"
-import latinasKids from "./assets/latinaskids.jpg"
-import salsa from "./assets/salsa.jpg"
+import template from "./assets/images/ballet.png"
+import ballet from "./assets/images/ballet.png"
+import funk from "./assets/images/ballet.png"
+import hipHop from "./assets/images/hiphop.jpg"
+import latinas from "./assets/images/latinas.png"
+import latinasKids from "./assets/images/latinas-kids.png"
+import salsa from "./assets/images/salsa.png"
 
 export const modalities = [
   {

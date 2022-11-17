@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "react-scroll"
 // import { Link } from "react-router-dom"
-import Button from "../../UI/Button"
+import { ButtonFillLight } from "../../UI/Button"
 
 const Nav = ({ isMenu, menuToggle }) => {
   return (
@@ -9,8 +9,7 @@ const Nav = ({ isMenu, menuToggle }) => {
       <ul>
         <li>
           <Link
-            to="AboutUs_Grid"
-            spy={true}
+            to="Homepage--AboutUs_section"
             smooth={true}
             offset={0}
             duration={500}
@@ -44,9 +43,7 @@ const Nav = ({ isMenu, menuToggle }) => {
           </Link>
         </li>
       </ul>
-      <Button outline onClick={menuToggle}>
-        Entra em Contacto
-      </Button>
+      <ButtonFillLight onClick={menuToggle}>Entra em Contacto</ButtonFillLight>
     </nav>
   )
 }

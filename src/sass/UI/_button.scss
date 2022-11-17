@@ -1,73 +1,64 @@
 @use "../abstracts" as *;
 
-.PrimaryButton {
-  cursor: pointer;
+.ButtonFillLight {
+  @include button;
   border: none;
   outline: none;
-  border-radius: $borderRadius;
-  padding: $spacing-sm $spacing-lg;
-  font-family: inherit;
-  font-weight: 700;
-  letter-spacing: $letterSpacing;
-  // font-size: 1.1rem;
-  background: $light;
-  color: $dark;
-  border: 1px solid $dark;
-  transition: all 0.3s ease;
+  background: $clr-primary-light;
+  color: $clr-primary-dark;
   &:hover {
-    background: rgab($light, 0.8);
-  }
-
-  &-outline {
     background: transparent;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    border-radius: $borderRadius;
-    padding: $spacing-sm $spacing-lg;
-    font-family: inherit;
-    font-weight: 700;
-    letter-spacing: $letterSpacing;
-    // font-size: 1.1rem;
-    color: $light;
-    border: 1px solid $light;
-    transition: all 0.3s ease;
+    border: 1px solid $clr-primary-light;
+    color: $clr-primary-light;
   }
-
-  &--Modal {
-    cursor: pointer;
-    border: none;
-    outline: none;
-    padding: $spacing-sm $spacing-lg;
-    font-family: inherit;
-    font-weight: 700;
-    letter-spacing: $letterSpacing;
-    // font-size: 1.1rem;
-    background: $light;
-    color: $dark;
-    width: 100%;
-    border-radius: 0 0 $borderRadius $borderRadius;
-    transition: all 0.3s ease;
-    &:hover {
-      background: rgab($light, 0.9);
-    }
+}
+.ButtonFillDark {
+  @include button;
+  border: none;
+  outline: none;
+  background: $clr-primary-dark;
+  color: $clr-primary-light;
+  &:hover {
+    background: transparent;
+    border: 1px solid $clr-primary-dark;
+    color: $clr-primary-dark;
   }
 }
 
-.SecondaryButton {
-  cursor: pointer;
-  border: 1px solid $light;
+.ButtonOutlineLight {
+  @include button;
   background: transparent;
-  color: $light;
-  border-radius: $borderRadius;
-  padding: $spacing-sm $spacing-lg;
-  font-family: inherit;
-  font-weight: 700;
-  letter-spacing: $letterSpacing;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
-
+  border: 1px solid $clr-primary-light;
+  color: $clr-primary-light;
   &:hover {
-    background: rgba($light, 0.2);
+    background: rgba($clr-primary-light, 0.8);
+    color: $clr-primary-dark;
   }
+}
+.ButtonOutlineDark {
+  @include button;
+  background: transparent;
+  background: $clr-primary-light;
+  color: $clr-primary-dark;
+  &:hover {
+    background: rgba($clr-primary-dark, 1);
+    color: $clr-primary-light;
+  }
+}
+
+.ButtonModal {
+  @include button;
+  border: none;
+  outline: none;
+  background: rgba($clr-primary-dark_accent, 0.5);
+  width: 100%;
+  border-radius: 0 0 $borderRadius $borderRadius;
+  &:hover {
+    background: rgba($clr-primary-main, 1);
+    color: $clr-primary-light;
+  }
+}
+
+.FullWidth {
+  width: 100%;
 }

@@ -4,13 +4,19 @@
 
 .Footer {
   padding: 100px 0 25px 0;
-  width: 100vw;
   margin: 0 auto;
   background-color: black;
 
   .leaflet-container {
     height: 300px;
+    margin: $spacing-xl;
     z-index: 10;
+  }
+
+  &--SoMe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   &-Newsletter {
@@ -21,14 +27,14 @@
     margin-bottom: 100px;
 
     &-Headline {
-      color: $white;
-      font-size: 1.6rem;
+      color: $clr-primary-light;
+      // font-size: 1.6rem;
       letter-spacing: $letterSpacing;
       margin-bottom: $spacing-md;
     }
     span {
-      color: $white;
-      font-size: 1.1rem;
+      color: $clr-primary-light;
+      // font-size: 1.1rem;
       margin-bottom: $spacing-md;
     }
     &-Form {
@@ -40,7 +46,7 @@
         width: 100%;
       }
 
-      @include mq(largeScreenMin) {
+      @include mq(lgScreenMin) {
         Button {
           width: auto;
         }
@@ -56,7 +62,7 @@
     padding: $spacing-sm $spacing-md;
     border-radius: $borderRadius;
 
-    @include mq(largeScreenMin) {
+    @include mq(lgScreenMin) {
       width: 300px;
       margin-bottom: 0;
       margin-right: $spacing-sm;
@@ -75,10 +81,10 @@
     text-align: center;
     margin-bottom: $spacing-xl;
 
-    @include mq(mediumScreenMin) {
+    @include mq(mdScreenMin) {
       grid-template-columns: repeat(2, 1fr);
     }
-    @include mq(largeScreenMin) {
+    @include mq(lgScreenMin) {
       grid-template-columns: repeat(4, 1fr);
     }
 
@@ -86,7 +92,7 @@
       height: 100%;
 
       &-Headline {
-        color: $white;
+        color: $clr-primary-light;
         font-size: 1.6rem;
         margin-bottom: $spacing-md;
         letter-spacing: $letterSpacing;
@@ -98,7 +104,7 @@
           a {
             letter-spacing: $letterSpacing;
             width: 100%;
-            color: $white;
+            color: $clr-primary-light;
             text-decoration: none;
           }
         }
@@ -110,20 +116,19 @@
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
-    color: $white;
-    @include mq(largeScreenMin) {
+    color: $clr-primary-light;
+    @include mq(lgScreenMin) {
       flex-direction: row;
     }
     a,
-    &-Year,
     ul {
       &:not(:first-child) {
         margin-bottom: $spacing-sm;
-        @include mq(largeScreenMin) {
+        @include mq(lgScreenMin) {
           margin-bottom: 0;
         }
       }
-      @include mq(largeScreenMin) {
+      @include mq(lgScreenMin) {
         flex: 1;
       }
     }
@@ -139,13 +144,13 @@
       li {
         &:not(:last-child) {
           margin-right: $spacing-md;
-          @include mq(largeScreenMin) {
+          @include mq(lgScreenMin) {
             margin-right: $spacing-sm;
           }
         }
         a {
           font-size: 1.6rem;
-          color: white;
+          color: $clr-primary-light;
           text-decoration: none;
         }
       }

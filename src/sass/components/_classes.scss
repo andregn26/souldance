@@ -1,8 +1,27 @@
 @use "../abstracts" as *;
 
 .Classes {
-  &--Grid {
-    margin: 0 auto;
+  grid-area: Classes;
+  background: var(--clr-primary-light);
+  color: hsla(var(--clr-primary-dark), 0.8);
+  @include container--section;
+
+  &--Background {
+    // background-image: url("../../public/layered-waves-mobile.svg");
+    width: 100%;
+    height: 100%;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include mq(lgScreenMin) {
+      // background-image: url("../../public/layered-waves-tablet.svg");
+    }
+    @include mq(xlScreenMin) {
+      // background-image: url("../../public/layered-waves-desktop.svg");
+    }
+  }
+
+  &--MainContainer {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto auto auto;
@@ -12,14 +31,21 @@
       "C_Title"
       "C_Text"
       "C_Swiper";
-
-    @include mq(largeScreenMin) {
+    @include mq(mdScreenMin) {
+      width: $width-container-md;
+    }
+    @include mq(lgScreenMin) {
       width: 85%;
       grid-template-columns: 2fr 1fr;
       grid-template-areas:
         "C_Swiper C_Title C_Title "
         "C_Swiper C_Text C_Text";
     }
+  }
+
+  &--FirstContainer {
+    // @include main-container;
+    padding-bottom: 0;
     &--Title {
       grid-area: C_Title;
       margin: 0 $spacing-md;
@@ -28,84 +54,14 @@
       grid-area: C_Text;
       margin: 0 $spacing-md;
     }
-    &--Swiper {
-      grid-area: C_Swiper;
-      width: 100vw;
-      @include mq(largeScreenMin) {
-        width: 480px;
-      }
+  }
+
+  &--SwiperContainer {
+    grid-area: C_Swiper;
+    width: 100vw;
+    padding-bottom: 10rem;
+    @include mq(lgScreenMin) {
+      width: 480px;
     }
   }
 }
-
-// .Classes {
-//   // @include container;
-//   &-Content {
-//     margin: 0 1.5rem;
-//     width: 1000px;
-//     display: flex;
-//     flex-direction: column;
-
-//     &-Title {
-//       color: $dark;
-//       font-size: 2rem;
-//       letter-spacing: $letterSpacing;
-//       font-weight: 900;
-//       position: relative;
-//       margin-bottom: $spacing-xl;
-
-//       &::after {
-//         content: "";
-//         position: absolute;
-//         display: inline;
-//         top: 22px;
-//         right: 0;
-//         width: calc(100% - 351px);
-//         height: 2px;
-//         background: #0f1515;
-//       }
-//     }
-//     &-Gallery {
-//       display: grid;
-//       grid-template-columns: 1fr;
-//       grid-auto-rows: 275px;
-//       gap: $spacing-md;
-//       margin-bottom: $spacing-xl;
-
-//       @include mq(mediumScreenMin) {
-//         grid-template-columns: repeat(2, 1fr);
-//         grid-auto-rows: 250px;
-//       }
-
-//       @include mq(xLargeScreenMin) {
-//         grid-template-columns: repeat(3, 1fr);
-//       }
-//     }
-//     &-ViewMore {
-//       display: flex;
-//       justify-content: center;
-//       align-items: center;
-//       a {
-//         letter-spacing: $letterSpacing;
-//         padding: $spacing-sm $spacing-md;
-//         text-decoration: none;
-//         border-radius: $borderRadius;
-//         color: $dark;
-//         transition: 0.3s ease all;
-//         display: flex;
-//         align-items: center;
-//         font-size: 1.1rem;
-
-//         svg {
-//           font-size: 1.2rem;
-//           margin-left: $spacing-sm;
-//           padding-top: 2px;
-//         }
-
-//         &:hover {
-//           background: rgba($dark, 0.05);
-//         }
-//       }
-//     }
-//   }
-// }

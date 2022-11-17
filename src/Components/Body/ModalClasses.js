@@ -1,6 +1,5 @@
 import React from "react"
-import Button from "../UI/Button"
-import { CgClose } from "react-icons/cg"
+import { ButtonModal } from "../UI/Button"
 
 function ModalClasses({ changeContent, pop }) {
   return (
@@ -27,9 +26,9 @@ function ModalClasses({ changeContent, pop }) {
             </p>
           </div>
 
-          <Button className="--Modal" onClick={changeContent}>
+          <ButtonModal className="Modal" onClick={changeContent}>
             Fechar
-          </Button>
+          </ButtonModal>
         </div>
       </div>
     </div>

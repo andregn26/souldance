@@ -1,33 +1,32 @@
 // color
-$light: #dbe6ed;
-$light2: #efe9e6;
-$lightLine: #dbe6ed;
+$clr-primary-main: rgb(103, 14, 65);
+$clr-primary-dark: rgb(34, 21, 45);
+$clr-primary-dark_accent: rgb(210, 91, 133);
+$clr-primary-light_accent: rgb(221, 131, 162);
+$clr-primary-light: rgb(243, 242, 242);
 
-$dark: #0f1515;
-$dark2: #08332f;
-$darkLine: #055449;
-
-$aqua: #229b91;
-$white: #fff;
-$black: #030502;
-
-// border-radius
+//  border-radius
 $borderRadius: 12px;
 
 // letter spacing
 $letterSpacing: 0.4px;
 
-// spacing
+// spacing - outer e inner
 $spacing-sm: 12px;
 $spacing-md: 24px;
 $spacing-lg: 32px;
 $spacing-xl: 64px;
 
-// spacing
-$main_container: 90%;
-$main_container-md: 85%;
-$main_container-lg: 85%;
-$main_container-xl: 75%;
+// Main containers width,
+$width-container: 90%;
+$width-container-md: 90%;
+$width-container-lg: 85%;
+$width-container-xl: 85%;
+$padding-container: 1.5rem;
+$padding-container-md: 2rem;
+$padding-container-lg: 2.5rem;
+$padding-container-xl: 3rem;
+$padding: 1.5rem;
 
 // heights
 $headerHeight: 90px;

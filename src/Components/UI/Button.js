@@ -1,11 +1,39 @@
 import React from "react"
 
-const Button = ({ className = "", children, onClick }) => {
+export function ButtonFillLight({ className = "", children, onClick }) {
   return (
-    <button onClick={onClick} className={`PrimaryButton${className}`}>
+    <button onClick={onClick} className={`ButtonFillLight ${className}`}>
+      {children}
+    </button>
+  )
+}
+export function ButtonFillDark({ className = "", children, onClick }) {
+  return (
+    <button onClick={onClick} className={`ButtonFillDark ${className}`}>
       {children}
     </button>
   )
 }
 
-export default Button
+export function ButtonOutlineLight({ className = "", children, onClick }) {
+  return (
+    <button onClick={onClick} className={`ButtonOutlineLight ${className}`}>
+      {children}
+    </button>
+  )
+}
+export function ButtonOutlineDark({ className = "", children, onClick }) {
+  return (
+    <button onClick={onClick} className={`ButtonOutlineDark ${className}`}>
+      {children}
+    </button>
+  )
+}
+
+export function ButtonModal({ className = "", children, onClick }) {
+  return (
+    <button onClick={onClick} className={`ButtonModal ${className}`}>
+      {children}
+    </button>
+  )
+}
