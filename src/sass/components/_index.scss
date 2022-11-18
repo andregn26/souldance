@@ -1,8 +1,8 @@
-@import "header";
-@import "nav";
-@import "hero";
-@import "aboutUs";
-@import "classes";
-@import "classesSwiper";
-@import "AboutUsSwiper";
-@import "footer";
+@forward "header";
+@forward "nav";
+@forward "hero";
+@forward "aboutUs";
+@forward "classes";
+@forward "classesSwiper";
+@forward "AboutUsSwiper";
+@forward "footer";

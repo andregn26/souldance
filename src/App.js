@@ -1,21 +1,17 @@
 import React, { Fragment } from "react"
-import { Routes, Route } from "react-router"
-import { MapContainer, TileLayer, useMap, Marker, Popup } from "react-leaflet"
-
+// import { Routes, Route } from "react-router"
 import Header from "./Components/Header"
 import Homepage from "./Pages/Homepage"
 import Footer from "./Components/Footer/Footer"
-import WapButton from "./Components/UI/WapButton"
-import "./sass/styles.scss"
-function App() {
+import ButtonWhatsapp from "./Components/UI/ButtonWhatsapp"
+
+export default function App() {
   return (
     <Fragment>
       <Header />
       <Homepage />
       <Footer />
-      <WapButton />
+      <ButtonWhatsapp />
     </Fragment>
   )
 }
-
-export default App

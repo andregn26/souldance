@@ -1,11 +1,12 @@
 import React from "react"
-import { useState } from "react"
-import { useMediaQuery } from "../../hooks/useMediaQuery"
 import { ButtonOutlineDark } from "../UI/Button"
 import AboutUsSwiper from "../Swiper/AboutUsSwiper"
 
+//TODO use import { useMediaQuery } from "../../hooks/useMediaQuery"
+//TODO Pôr a funcionalidade do swiper
+//TODO
+
 export default function AboutUs() {
-  const isTablet = useMediaQuery("(min-width: 768px)")
   return (
     <section className="AboutUs AboutUs--Background">
       <div className="AboutUs--TextContainer">

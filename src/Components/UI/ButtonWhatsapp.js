@@ -2,7 +2,7 @@ import React from "react"
 
 import { FaWhatsapp } from "react-icons/fa"
 
-function WapButton() {
+export default function ButtonWhatsapp() {
   const cellNumber = 351912785503
   const text = "isto%20%C3%A9%20um%20teste"
   return (
@@ -29,5 +29,3 @@ function WapButton() {
     </div>
   )
 }
-
-export default WapButton
