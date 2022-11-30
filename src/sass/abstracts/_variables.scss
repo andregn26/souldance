@@ -1,12 +1,71 @@
+@use "breakpoints" as *;
+
 // color
-$clr-primary-main: rgb(103, 14, 65);
-$clr-primary-dark: rgb(34, 21, 45);
-$clr-primary-dark_accent: rgb(210, 91, 133);
+
 $clr-primary-light_accent: rgb(221, 131, 162);
 $clr-primary-light: rgb(243, 242, 242);
+$clr-dark-main: rgb(40, 39, 40);
+
+$clr-primary-100: rgb(232, 230, 244);
+$clr-primary-200: rgb(210, 205, 234);
+$clr-primary-300: rgb(187, 180, 223);
+$clr-primary-400: rgb(164, 155, 212);
+$clr-primary-500: rgb(142, 130, 202);
+$clr-primary-main: rgb(119, 105, 191);
+$clr-primary-600: rgb(99, 87, 159);
+$clr-primary-700: rgb(79, 70, 127);
+$clr-primary-800: rgb(60, 53, 96);
+$clr-primary-900: rgb(40, 35, 64);
+$clr-primary-1000: rgb(20, 18, 32);
+$clr-analog1-100: rgb(245, 230, 242);
+$clr-analog1-200: rgb(234, 206, 230);
+$clr-analog1-300: rgb(224, 181, 217);
+$clr-analog1-400: rgb(214, 156, 204);
+$clr-analog1-500: rgb(203, 132, 192);
+$clr-analog1-main: rgb(193, 107, 179);
+$clr-analog1-600: rgb(161, 89, 149);
+$clr-analog1-700: rgb(129, 71, 119);
+$clr-analog1-800: rgb(97, 54, 90);
+$clr-analog1-900: rgb(64, 36, 60);
+$clr-analog1-1000: rgb(32, 18, 30);
+$clr-analog2-100: rgb(239, 230, 244);
+$clr-analog2-200: rgb(223, 204, 233);
+$clr-analog2-300: rgb(208, 179, 222);
+$clr-analog2-400: rgb(192, 154, 211);
+$clr-analog2-500: rgb(176, 128, 200);
+$clr-analog2-main: rgb(160, 103, 189);
+$clr-analog2-600: rgb(133, 86, 157);
+$clr-analog2-700: rgb(107, 69, 126);
+$clr-analog2-800: rgb(80, 52, 95);
+$clr-analog2-900: rgb(53, 34, 63);
+$clr-analog2-1000: rgb(27, 17, 32);
+$clr-complementary-100: rgb(230, 244, 239);
+$clr-complementary-200: rgb(205, 234, 224);
+$clr-complementary-300: rgb(180, 223, 209);
+$clr-complementary-400: rgb(155, 212, 193);
+$clr-complementary-500: rgb(130, 202, 178);
+$clr-complementary-main: rgb(105, 191, 162);
+$clr-complementary-600: rgb(87, 159, 135);
+$clr-complementary-700: rgb(70, 127, 108);
+$clr-complementary-800: rgb(53, 96, 81);
+$clr-complementary-900: rgb(35, 64, 54);
+$clr-complementary-1000: rgb(18, 32, 27);
+$clr-shades-fff: rgb(255, 255, 255);
+$clr-shades-100: rgb(234, 234, 234);
+$clr-shades-200: rgb(212, 212, 212);
+$clr-shades-300: rgb(191, 191, 191);
+$clr-shades-400: rgb(170, 170, 170);
+$clr-shades-500: rgb(148, 148, 148);
+$clr-shades-gray: rgb(127, 127, 127);
+$clr-shades-600: rgb(106, 106, 106);
+$clr-shades-700: rgb(85, 85, 85);
+$clr-shades-800: rgb(64, 64, 64);
+$clr-shades-900: rgb(42, 42, 42);
+$clr-shades-1000: rgb(21, 21, 21);
+$clr-shades-black: rgb(0, 0, 0);
 
 //  border-radius
-$borderRadius: 12px;
+$borderRadius: 6px;
 
 // letter spacing
 $letterSpacing: 0.4px;
@@ -18,15 +77,14 @@ $spacing-lg: 32px;
 $spacing-xl: 64px;
 
 // Main containers width,
-$width-container: 90%;
-$width-container-md: 90%;
+$width-container: 85%;
+$width-container-md: 85%;
 $width-container-lg: 85%;
 $width-container-xl: 85%;
-$padding-container: 1.5rem;
-$padding-container-md: 2rem;
-$padding-container-lg: 2.5rem;
-$padding-container-xl: 3rem;
-$padding: 1.5rem;
+$padding: 5rem;
+$margin: 2rem;
+
+$padding-section: 0 5rem;
 
 // heights
 $headerHeight: 90px;
@@ -35,3 +93,75 @@ $headerHeight: 90px;
 $boxShadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.2),
   0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.1),
   0 16px 16px rgba(0, 0, 0, 0.05);
+
+//! Mixins
+@mixin mq($key) {
+  $size: map-get($breakpoints, $key);
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}
+
+@mixin width-section {
+  width: 95vw;
+  padding: 7rem 2rem;
+  @include mq(mdScreenMin) {
+    width: 95vw;
+    padding: 7rem 2rem;
+  }
+  @include mq(lgScreenMin) {
+    width: 90vw;
+    padding: 7rem 2rem;
+  }
+  @include mq(xlScreenMin) {
+    width: 90vw;
+    padding: 7rem 2rem;
+  }
+  @include mq(xxlScreenMin) {
+    width: 85vw;
+    padding: 5rem 2rem;
+  }
+  @include mq(xxxlScreenMin) {
+    width: 80vw;
+    padding: 0rem 2rem;
+  }
+}
+
+//!Mixins for Buttons
+@mixin button {
+  cursor: pointer;
+  border-radius: $borderRadius;
+  padding: $spacing-sm $spacing-md;
+  font-family: "Montserrat-Medium", sans-serif;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  @content;
+}
+
+//!Mixins for center things
+@mixin center-vertical-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+//!Mixins for containers
+@mixin container--section {
+  padding: 0 5rem;
+  min-height: 100vh;
+  @include center-vertical-flex;
+}
+
+@mixin container--main {
+  width: $width-container;
+  margin: 0 auto;
+  @include mq(mdScreenMin) {
+    width: $width-container-md;
+  }
+  @include mq(lgScreenMin) {
+    width: $width-container-lg;
+  }
+  @include mq(xlScreenMin) {
+    width: $width-container-xl;
+  }
+}

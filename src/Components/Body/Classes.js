@@ -18,7 +18,7 @@ const Classes = () => {
             </p>
           </div>
           <div className="Classes--SwiperContainer">
-            {/* <ClassesSwiper /> */}
+            <ClassesSwiper />
           </div>
         </section>
       </div>

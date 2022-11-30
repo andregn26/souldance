@@ -1,14 +1,4 @@
-@use "../abstracts" as *;
-
-/*----------------------------------------------------------
-------------------------------------------------------------
-------------------------------------------------------------
-------------------------------------------------------------
-Component - Navbar
-------------------------------------------------------------
-------------------------------------------------------------
-------------------------------------------------------------
-----------------------------------------------------------*/
+@use "../../abstracts" as *;
 
 .Nav {
   height: 100%;
@@ -19,6 +9,7 @@ Component - Navbar
     height: 100%;
     display: flex;
     margin-right: $spacing-lg;
+    font-family: "Montserrat-Medium";
     li {
       cursor: pointer;
       height: 100%;
@@ -30,9 +21,9 @@ Component - Navbar
         display: flex;
         align-items: center;
         height: 100%;
-        letter-spacing: $letterSpacing;
+        // letter-spacing: $letterSpacing;
         text-decoration: none;
-        color: $clr-primary-light;
+        color: var(--clr-primary-100);
         position: relative;
 
         &::after {
@@ -43,24 +34,23 @@ Component - Navbar
           bottom: 0;
           left: 0;
           right: 0;
-          background: $clr-primary-light;
+          background: var(--clr-primary-100);
           opacity: 0;
           transition: 0.3s ease opacity;
         }
 
         &:hover::after {
           opacity: 1;
-          color: $clr-primary-light;
+          color: var(--clr-primary-100);
         }
       }
       a.active {
         display: flex;
         align-items: center;
         height: 100%;
-
-        letter-spacing: $letterSpacing;
+        // letter-spacing: $letterSpacing;
         text-decoration: none;
-        color: $clr-primary-light;
+        color: var(--clr-primary-100);
         position: relative;
 
         &::after {
@@ -71,7 +61,7 @@ Component - Navbar
           bottom: 0;
           left: 0;
           right: 0;
-          background: $clr-primary-light;
+          background: var(--clr-primary-100);
           opacity: 1;
           // transition: 0.3s ease opacity;
         }
@@ -79,7 +69,7 @@ Component - Navbar
     }
   }
 
-  @include mq(lgScreenMin) {
+  @include mq(xlScreenMin) {
     display: flex;
   }
 }
@@ -102,10 +92,10 @@ Component - Navbar
       }
       a {
         text-decoration: none;
-        color: $clr-primary-light;
+        color: var(--clr-primary-100);
 
         &:hover {
-          color: $clr-primary-light;
+          color: var(--clr-primary-100);
         }
       }
     }

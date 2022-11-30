@@ -1,0 +1,85 @@
+@use "../../abstracts" as *;
+
+.ButtonFillLight {
+  @include button;
+  border: 1px solid transparent;
+  outline: none;
+  background: var(--clr-complementary-300);
+  color: var(--clr-complementary-1000);
+  &:hover {
+    background: transparent;
+    border: 1px solid $clr-primary-light;
+    color: $clr-primary-light;
+  }
+}
+.ButtonFillDark {
+  @include button;
+  border: none;
+  outline: none;
+  background: $clr-primary-1000;
+  color: $clr-primary-light;
+  &:hover {
+    background: transparent;
+    border: 1px solid $clr-primary-1000;
+    color: $clr-primary-1000;
+  }
+}
+
+.ButtonOutlineLight {
+  @include button;
+  background: transparent;
+  border: 1px solid var(--clr-complementary-main);
+  color: var(--clr-complementary-main);
+  &:hover {
+    background: var(--clr-complementary-main);
+    color: $clr-primary-1000;
+  }
+}
+.ButtonOutlineDark {
+  @include button;
+  background: transparent;
+  background: $clr-primary-light;
+  color: $clr-primary-1000;
+  &:hover {
+    background: rgba($clr-primary-1000, 1);
+    color: $clr-primary-light;
+  }
+}
+
+.ButtonModal {
+  @include button;
+  border: none;
+  outline: none;
+  // background: rgba($clr-primary-dark_accent, 0.5);
+  width: 100%;
+  border-radius: 0 0 $borderRadius $borderRadius;
+  &:hover {
+    background: rgba($clr-primary-main, 1);
+    color: $clr-primary-light;
+  }
+}
+.MenuButton {
+  border: 1px solid transparent;
+  outline: none;
+  background: var(--clr-shades-100);
+  color: var(--clr-complementary-1000);
+  &:hover {
+    background: transparent;
+    border: 1px solid $clr-primary-light;
+    color: $clr-primary-light;
+  }
+}
+
+.HeroButton {
+  background: rgba($color: #000000, $alpha: 0);
+  border: 1px solid var(--clr-shades-100);
+  color: var(--clr-shades-100);
+  &:hover {
+    background: var(--clr-shades-100);
+    color: $clr-primary-1000;
+  }
+}
+
+.fullWidth {
+  width: 100%;
+}

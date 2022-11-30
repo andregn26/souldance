@@ -4,6 +4,8 @@ import Nav from "./Nav"
 import { CgMenuRightAlt, CgClose } from "react-icons/cg"
 import useWindowSize from "../../hooks/useWindowSize"
 
+import ToggleTheme from "../UI/ToggleTheme"
+
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -33,6 +35,17 @@ const Header = () => {
         <aside className={`${"Menu"} ${menuOpen && "Show"}`}>
           <Nav isMenu menuToggle={handleMenuToggle} />
         </aside>
+      </div>
+      <div
+        style={{
+          position: "absolute",
+          width: "100px",
+
+          backgroundColor: "red",
+          marginLeft: "50%",
+        }}
+      >
+        {/* <ToggleTheme /> */}
       </div>
     </header>
   )

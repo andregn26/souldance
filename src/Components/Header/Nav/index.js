@@ -39,11 +39,25 @@ const Nav = ({ isMenu, menuToggle }) => {
             duration={500}
             onClick={menuToggle}
           >
+            Preçário
+          </Link>
+        </li>
+        <li onClick={menuToggle}>
+          <Link
+            to="Footer"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+            onClick={menuToggle}
+          >
             Footer
           </Link>
         </li>
       </ul>
-      <ButtonFillLight onClick={menuToggle}>Entra em Contacto</ButtonFillLight>
+      <ButtonFillLight className="MenuButton" onClick={menuToggle}>
+        Entra em Contacto
+      </ButtonFillLight>
     </nav>
   )
 }

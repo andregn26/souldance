@@ -1,15 +1,15 @@
-@use "../abstracts" as *;
+@use "../../abstracts" as *;
 
 .Logo {
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: $clr-primary-light;
+  color: $clr-primary-main;
 }
 
 .Logo-span {
   font-size: 2rem;
-  color: $clr-primary-light;
+  color: $clr-primary-main;
   font-weight: 900;
   letter-spacing: $spacing-sm;
 }

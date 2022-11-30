@@ -1,9 +1,9 @@
-@use "../abstracts" as *;
+@use "../../abstracts" as *;
 
 .Classes {
   grid-area: Classes;
   background: var(--clr-primary-light);
-  color: hsla(var(--clr-primary-dark), 0.8);
+  color: hsla(var($clr-primary-1000), 0.8);
   @include container--section;
 
   &--Background {

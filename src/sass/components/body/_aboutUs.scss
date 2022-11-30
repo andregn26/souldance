@@ -1,0 +1,46 @@
+@use "../../abstracts" as *;
+
+.AboutUs_GridArea {
+  grid-area: AboutUs_GridArea;
+}
+
+.AboutUs_NewGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+
+  @include mq(xlScreenMin) {
+    display: grid;
+    grid-template-columns: auto 35%;
+    grid-template-rows: 1fr;
+    gap: 0em 5em;
+    grid-template-areas: "AboutUs_Text_GridArea AboutUs_Swiper_GridArea";
+    align-items: center;
+    justify-content: flex-end;
+  }
+  @include mq(xxlScreenMin) {
+    display: grid;
+    grid-template-columns: auto 45%;
+    grid-template-rows: 1fr;
+    gap: 0em 7em;
+    grid-template-areas: "AboutUs_Text_GridArea AboutUs_Swiper_GridArea";
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+.AboutUs_Swiper_GridArea {
+  grid-area: AboutUs_Swiper_GridArea;
+  // width: 100%;
+}
+.AboutUs_Text_GridArea {
+  grid-area: AboutUs_Text_GridArea;
+}
+
+.AboutUs {
+  @include width-section;
+  min-height: 100vh;
+  margin: 0 auto;
+  &--Title {
+    margin-top: 0;
+  }
+}

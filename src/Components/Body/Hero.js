@@ -17,7 +17,7 @@ export default function Hero() {
       />
       <div className="Hero--Overlay">
         <div className="Hero--Content">
-          <ButtonOutlineLight className="OutlineLightBackground Hero--Content--Cta">
+          <ButtonOutlineLight className="HeroButton">
             Vem Experimentar!
           </ButtonOutlineLight>
         </div>

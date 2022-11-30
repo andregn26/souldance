@@ -1,4 +1,4 @@
-@import "../abstracts";
+@use "../../abstracts" as *;
 
 .Header {
   height: $headerHeight;
@@ -8,27 +8,27 @@
   align-items: center;
   position: fixed;
   width: 100%;
-  background: rgba($clr-primary-main, 0.9);
+  background: rgba($clr-primary-main, 1);
   backdrop-filter: blur(5px);
   z-index: 1000;
   transition: all 0.5s ease;
-  @include mq(lgScreenMin) {
+  @include mq(xlcreenMin) {
     padding: 0 3rem;
   }
 
   &--menu {
-    @include mq(lgScreenMin) {
+    @include mq(xlScreenMin) {
       display: none;
     }
     &-toggle {
-      color: $clr-primary-dark;
+      color: $clr-primary-1000;
       // background-color: white;
       position: relative;
       z-index: 10;
       cursor: pointer;
       svg {
         font-size: 2em;
-        color: $clr-primary-light;
+        color: $clr-primary-main;
       }
       &:hover {
         transform: scale(1.05);

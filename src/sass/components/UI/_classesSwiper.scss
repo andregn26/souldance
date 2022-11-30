@@ -1,4 +1,4 @@
-@use "../abstracts" as *;
+@use "../../abstracts" as *;
 
 .Swiper {
   width: 100%;
@@ -10,7 +10,7 @@
       cursor: pointer;
       position: relative;
       border-radius: $borderRadius;
-      border: 2px solid $clr-primary-light;
+      border: 2px solid $clr-primary-main;
       transition: 0.3s ease all;
       box-shadow: $boxShadow;
       &:hover {
@@ -45,13 +45,13 @@
       align-items: center;
       justify-content: center;
       height: 25%;
-      background: $clr-primary-light;
+      background: $clr-primary-main;
       border-bottom-left-radius: $borderRadius;
       border-bottom-right-radius: $borderRadius;
       &--Class {
         margin-left: 6px;
         // font-size: 1.2rem;
-        color: $clr-primary-dark;
+        color: $clr-primary-1000;
         letter-spacing: $letterSpacing;
       }
 
@@ -64,14 +64,14 @@
           left: 0;
           width: 100%;
           height: 75%;
-          background: rgba($clr-primary-dark, 0.2);
+          background: rgba($clr-primary-1000, 0.2);
           transition: 0.3s ease all;
         }
       }
     }
     &--Tag {
       position: absolute;
-      background: $clr-primary-light;
+      background: $clr-primary-main;
       top: -12px;
       left: $spacing-sm;
       padding: 6px 8px;

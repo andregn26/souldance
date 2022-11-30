@@ -1,8 +1,7 @@
-@forward "header";
-@forward "nav";
-@forward "hero";
-@forward "aboutUs";
-@forward "classes";
-@forward "classesSwiper";
-@forward "AboutUsSwiper";
-@forward "footer";
+@forward "../components/Header/header";
+@forward "../components/Header/nav";
+@forward "../components/body/hero";
+@forward "../components/body/aboutUs";
+@forward "../components/body/classes";
+@forward "../components/UI/index";
+@forward "../components/Footer/footer";

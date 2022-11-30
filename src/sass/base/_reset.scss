@@ -40,15 +40,11 @@ html {
 }
 
 /* Set core body defaults */
-body {
-  // min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.6;
-}
-html,
-body {
-  overflow-x: hidden;
-}
+
+// html,
+// body {
+//   overflow-x: hidden;
+// }
 body {
   position: relative;
 }
