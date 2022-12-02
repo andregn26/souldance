@@ -15,9 +15,6 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/andregn26/souldance">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
 
 <h3 align="center">Commercial Website for SoulDance</h3>
 
@@ -30,8 +27,7 @@
     <a href="https://github.com/andregn26/souldance">View Demo</a>
     ·
     <a href="https://github.com/andregn26/souldance/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/andregn26/souldance/issues">Request Feature</a>
+    
   </p>
 </div>
 
@@ -203,8 +199,8 @@ Project Link: [https://github.com/github_username/souldance](https://github.com/
 [stars-url]: https://github.com/andregn26/repo_name/stargazers
 [issues-shield]: https://img.shields.io/github/issues/andregn26/repo_name.svg?style=for-the-badge
 [issues-url]: https://github.com/andregn26/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/andregn26/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/andregn26/repo_name/blob/master/LICENSE.txt
+[license-shield]: https://img.shields.io/github/license/andregn26/souldance.svg?style=for-the-badge
+[license-url]: https://github.com/andregn26/souldance/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/andrengregorio
 [product-screenshot]: images/screenshot.png
@@ -213,7 +209,7 @@ Project Link: [https://github.com/github_username/souldance](https://github.com/
 [React-url]: https://reactjs.org/
 
 
-# Getting Started with Create React App
+<!--# Getting Started with Create React App
 
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
@@ -284,4 +280,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)-->
