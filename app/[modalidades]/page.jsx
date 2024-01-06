@@ -6,7 +6,7 @@ const Modalities = async () => {
 	console.log("🚀 ~ file: page.jsx:6 ~ Modalities ~ allModalities:", allModalities[0].professors);
 
 	return (
-		<div>
+		<div className=" border-2 border-solid border-red-600">
 			{allModalities.map((modality) => (
 				<div key={modality._id}>{modality.name}</div>
 			))}
