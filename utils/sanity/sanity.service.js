@@ -12,6 +12,15 @@ export async function getAllModalities() {
 		"image": image.asset->url,
 		"schedule": schedule[]{},
 		"professors": professors[]->,
-		"modalitiesLevels": modalitiesLevels[]{"type":_type, "schedule": schedule, "submodalityName":submodalityName, "professors":professors[]->},
+	  }`);
+}
+
+export async function getAllProfessors() {
+	return client.fetch(groq`*[_type == "professor"]{
+		_id,
+		_createdAt,
+		name,
+		"image": image.asset->url,
+		"modalities": modalities[]->,
 	  }`);
 }

@@ -14,25 +14,6 @@ const NavBar = () => {
 	const [active, setActive] = useState("");
 	const { handleToggleTheme, theme } = useContext(ThemeContext);
 
-	// const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "valentine");
-
-	// set theme state in localstorage on mount & also update localstorage on state change
-	// useEffect(() => {
-	// 	localStorage.setItem("theme", theme);
-	// 	const localTheme = localStorage.getItem("theme");
-	// 	// add custom data-theme attribute to html tag required to update theme using DaisyUI
-	// 	document.querySelector("html").setAttribute("data-theme", localTheme);
-	// }, [theme]);
-
-	// update state on toggle
-	// const handleToggleTheme = (e) => {
-	// 	if (e.target.checked) {
-	// 		setTheme("night");
-	// 	} else {
-	// 		setTheme("valentine");
-	// 	}
-	// };
-
 	return (
 		<div className="sticky top-0 z-50 flex justify-center py-4">
 			<div className="navbar max-w-xs rounded-full bg-base-100/90 py-0 shadow-2xl outline outline-base-content/5 backdrop-blur md:max-w-4xl">
@@ -56,9 +37,9 @@ const NavBar = () => {
 						<ul className="menu dropdown-content menu-md z-[1] mt-3 w-52 gap-2 rounded-box bg-base-100 p-2 shadow">
 							{navigation.map((item, index) => (
 								<li key={index}>
-									<a key={item.name} href={item.href} className="font-poppins">
+									<Link key={item.name} href={item.href} className="font-poppins">
 										{item.name}
-									</a>
+									</Link>
 								</li>
 							))}
 						</ul>
@@ -70,7 +51,7 @@ const NavBar = () => {
 				<div className="navbar-center ml-10 hidden lg:flex">
 					{navigation.map((item, index) => (
 						<nav key={index} className="menu menu-horizontal px-1">
-							<a
+							<Link
 								key={item.name}
 								href={item.href}
 								className={`btn btn-ghost rounded-full font-poppins text-sm font-light ${
@@ -78,7 +59,7 @@ const NavBar = () => {
 								}`}
 								onClick={() => setActive(item.name)}>
 								{item.name}
-							</a>
+							</Link>
 						</nav>
 					))}
 				</div>
@@ -89,7 +70,7 @@ const NavBar = () => {
 							<input
 								type="checkbox"
 								onChange={(e) => handleToggleTheme(e)}
-								checked={theme === "valentine" ? false : true}
+								checked={theme === "light" ? false : true}
 							/>
 
 							<svg
