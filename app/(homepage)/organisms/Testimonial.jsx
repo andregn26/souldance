@@ -9,28 +9,22 @@ import "swiper/css/pagination";
 import { Navigation, Autoplay, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 const testimonials = [
 	{
-		name: "Peter",
-		position: "Lead Developer",
-		quote: "I really like this marketing agency. They are very professional and know how to get the job done. I would recommend them to anyone.",
-		image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-	},
-	{
-		name: "David",
-		position: "Marketing Manager",
-		quote: "Wonderful team, great service and always available to answer any queries. I always recommend them to my friends.",
+		name: "Teresa Barros",
+		position: "Aluna",
+		quote: "A Souldance é muito mais do que um lugar para dançar. É gratificante fazer parte desta familia acolhedora e é um privilégio ter professores que nos ensinam o que vai além de uma coreografia e que nos mostram que quem dança... é muito mais feliz!",
 		image: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
 	},
 	{
-		name: "Marc",
-		position: "Human Resources",
-		quote: "The best way to market your business. Impressive results.",
-		image: "https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+		name: "Pedro Moreira",
+		position: "Aluno",
+		quote: "Apesar de já ter frequentado mais duas escolas de dança, foi na Souldance que encontrei o equilibrio entre dança, convívio e amizade. Uma verdadeira família que nos faz sentir especiais a cada final de dia. se podia não ser um Souldancer? Podia... Mas não era a mesma coisa!",
+		image: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
 	},
 	{
-		name: "Lisa",
-		position: "Accounting Manager",
-		quote: "First I was not sure about them but now I am a fan. My website is ranking on top of google.",
-		image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+		name: "Bárbara Frukck",
+		position: "Aluna",
+		quote: "A Souldance é uma família e a minha segunda casa. é o melhor local para transformar os dias menos bons em dias espetaculares. Um local onde conheci pessoas maravilhosas e onde tenho a possibilidade de fazer o que mais gosto: dançar!",
+		image: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
 	},
 ];
 const Testimonial = () => {
