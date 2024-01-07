@@ -4,24 +4,28 @@ import Image from "next/image";
 import Link from "next/link";
 import { fadeIn, staggerContainer } from "@/utils/motion";
 import ServicesCards from "@/components/Cards/ServicesCards";
+import picDanceClasses from "@/public/images/dance-classes.jpg";
+import picAulasNoivos from "@/public/images/aulas-noivos.jpg";
+import picEvents from "@/public/images/events.jpg";
+import picSpace from "@/public/images/space.jpg";
 
 const services = [
 	{
 		name: "Aulas de Dança",
-		bg: "https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?q=100&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		bg: picDanceClasses,
 		href: "/modalidades",
 	},
 	{
 		name: "Aulas para Noivos",
-		bg: "https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=800",
+		bg: picAulasNoivos,
 	},
 	{
 		name: "Eventos Corporativos",
-		bg: "https://images.pexels.com/photos/533446/pexels-photo-533446.jpeg?auto=compress&cs=tinysrgb&w=800",
+		bg: picEvents,
 	},
 	{
 		name: "Aluguer de Espaço",
-		bg: "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=800",
+		bg: picSpace,
 	},
 ];
 const Services = () => {
