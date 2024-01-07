@@ -5,7 +5,7 @@ import { createContext, useState, useEffect } from "react";
 export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-	const [theme, setTheme] = useState("valentine");
+	const [theme, setTheme] = useState("light");
 	console.log("🚀 ~ file: themeContext.jsx:9 ~ ThemeProvider ~ theme:", theme);
 	const [isMounted, setIsMounted] = useState(false);
 
@@ -14,10 +14,14 @@ export const ThemeProvider = ({ children }) => {
 		localStorage.setItem("theme", theme);
 		const storedTheme = localStorage.getItem("theme");
 		setTheme(storedTheme);
-	}, [theme]);
+	}, [theme, setIsMounted]);
 
 	if (!isMounted) {
-		return <>Loading ...</>;
+		return (
+			<div id="loading" className="min-h-screen flex justify-center items-center">
+				Is loading
+			</div>
+		);
 	}
 
 	// const changeTheme = (theme) => {
@@ -27,9 +31,9 @@ export const ThemeProvider = ({ children }) => {
 
 	const handleToggleTheme = (e) => {
 		if (e.target.checked) {
-			setTheme("night");
+			setTheme("dark");
 		} else {
-			setTheme("valentine");
+			setTheme("light");
 		}
 		localStorage.setItem("theme", theme);
 	};

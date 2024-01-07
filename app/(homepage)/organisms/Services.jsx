@@ -1,7 +1,9 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { fadeIn, staggerContainer } from "@/utils/motion";
+import ServicesCards from "@/components/Cards/ServicesCards";
 
 const services = [
 	{
@@ -30,32 +32,26 @@ const Services = () => {
 			whileInView="show"
 			viewport={{ once: true, amount: 0.25 }}
 			id="servicos"
-			className="mt-10 flex flex-col items-center justify-center md:mt-20">
+			className="mt-10 flex flex-col items-center justify-center md:mt-20 px-8 md:px-24">
 			<motion.div variants={fadeIn("up", "tween", 0.2, 1)} className="flex flex-col items-center justify-center">
 				<h1 className="text-center font-poppins text-2xl font-semibold md:text-5xl">Os Nossos Serviços</h1>
 				<span className="text-md mt-2 px-2 text-center font-poppins md:mt-4 md:px-5 md:text-xl">
-					Uncover new paths, explore opportunities and chart your success with us.
+					Na Souldance, oferecemos aulas de dança para todos, incluindo aulas especiais para noivos, eventos
+					corporativos memoráveis e aluguer de espaço para tornar cada passo uma experiência única
 				</span>
 			</motion.div>
-			<motion.div variants={fadeIn("up", "tween", 0.2, 1)} className="container mt-10 grid gap-10 p-4 md:grid-cols-2 ">
-				{services.map((item, index) => (
-					<div
-						key={index}
-						className="card image-full bg-base-100 shadow-xl transition duration-300 hover:-translate-y-1">
-						<figure className="object-cover">
-							<img src={item.bg} alt={item.name} />
-						</figure>
-						<div className="card-body">
-							<h2 className="card-title mt-auto font-poppins text-4xl font-semibold contrast-200">
-								{item.href ? (
-									<>
-										<Link href={item.href}>{item.name}</Link>
-									</>
-								) : (
-									<>{item.name}</>
-								)}
-							</h2>
-						</div>
+			<motion.div
+				variants={fadeIn("up", "tween", 0.2, 1)}
+				className="container mt-10 grid gap-10 p-4 md:grid-cols-2 2xl:grid-cols-4 ">
+				{services.map((service, index) => (
+					<div key={index}>
+						{service.href ? (
+							<Link href={service.href}>
+								<ServicesCards service={service} />
+							</Link>
+						) : (
+							<ServicesCards service={service} />
+						)}
 					</div>
 				))}
 			</motion.div>

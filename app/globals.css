@@ -16,4 +16,12 @@
   }
 } */
 
+.swiper-button-prev, .swiper-button-next {
+  @apply !text-gray-300
+}
+
+.swiper-pagination-bullet-active {
+@apply !bg-primary
+}
+
 
