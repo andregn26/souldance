@@ -6,7 +6,6 @@ export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
 	const [theme, setTheme] = useState("light");
-	console.log("🚀 ~ file: themeContext.jsx:9 ~ ThemeProvider ~ theme:", theme);
 	const [isMounted, setIsMounted] = useState(false);
 
 	useEffect(() => {

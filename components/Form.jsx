@@ -2,26 +2,36 @@
 
 import { useState } from "react";
 import useContactForm from "@/hooks/useContactForm";
-import sendEmail from "@/utils/sendEmail";
+import axios from "axios";
+// import sendEmail from "@/utils/sendEmail";
 
 const Form = () => {
-	const [responseMessage, setResponseMessage] = useState({ isSuccessful: false, message: "" });
+	const [responseMessage, setResponseMessage] = useState({ isSuccessful: null, message: "" });
 	const { values, handleChange } = useContactForm();
-	console.log("🚀 ~ file: Form.jsx:6 ~ Form ~ values:", values);
-	const handleSubmit = async (e) => {
-		e.preventDefault();
+
+	const sendMail = async (e) => {
 		try {
-			const req = await sendEmail(values.email, values.subject, values.message);
-			if (req.status === 200) {
-				setResponseMessage({ isSuccessful: true, message: "Thank you for your message." });
+			e.preventDefault();
+			const response = await axios({
+				method: "post",
+				url: "/api/sendmail",
+				data: {
+					email: values.email,
+					subject: values.subject,
+					message: values.message,
+				},
+			});
+			console.log(response);
+			if (response.status === 200) {
+				setResponseMessage({ isSuccessful: true, message: "Mensagem enviada!" });
 			}
-		} catch (e) {
-			console.log(e);
+		} catch (error) {
 			setResponseMessage({
 				isSuccessful: false,
-				message: "Oops something went wrong. Please try again.",
+				message: "Oops! Alguma coisa correu mal!",
 			});
 		}
+		// console.log("🚀 ~ file: Form.jsx:9 ~ Form ~ responseMessage:", responseMessage);
 	};
 
 	return (
@@ -29,7 +39,7 @@ const Form = () => {
 			<div className="card-body mx-auto w-full overflow-hidden rounded-lg px-8 py-10 shadow-xl outline outline-base-content/5 ">
 				<h1 className="card-title">O que gostarias de saber?</h1>
 
-				<form onSubmit={handleSubmit} className="mt-6">
+				<form onSubmit={sendMail} className="mt-6">
 					<div className="flex-1">
 						<label htmlFor="email" className="mb-2 block text-sm">
 							Email
@@ -72,12 +82,22 @@ const Form = () => {
 							className="textarea textarea-bordered w-full"
 							placeholder="Mensagem"></textarea>
 					</div>
-
-					<input
+					<button
 						type="submit"
-						className="btn btn-neutral mt-6 w-full transform px-6 py-3 text-sm font-medium capitalize duration-300  "
-						value="Enviar"
-					/>
+						className="btn btn-primary mt-6 w-full transform px-6 py-3 text-sm font-medium capitalize duration-300  ">
+						Enviar
+					</button>
+					{responseMessage.isSuccessful === null ? (
+						<></>
+					) : (
+						<>
+							{responseMessage.isSuccessful ? (
+								<Toast type="info" message={responseMessage.message} />
+							) : (
+								<Toast type="error" message={responseMessage.message} />
+							)}
+						</>
+					)}
 				</form>
 			</div>
 		</div>
