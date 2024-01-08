@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "@/utils/motion";
+import Form from "@/components/Form";
 
 const Contact = () => {
 	return (
@@ -130,54 +131,7 @@ const Contact = () => {
 						</div>
 					</div>
 
-					<div className="card mt-8 lg:mx-6 w-full">
-						<div className="card-body mx-auto w-full overflow-hidden rounded-lg px-8 py-10 shadow-xl outline outline-base-content/5 ">
-							<h1 className="card-title">O que gostarias de saber?</h1>
-
-							<form className="mt-6">
-								<div className="flex-1">
-									<label htmlFor="name" className="mb-2 block text-sm">
-										Nome
-									</label>
-									<input
-										id="name"
-										autoComplete="name"
-										type="text"
-										placeholder="O teu nome"
-										className="input input-bordered w-full"
-									/>
-								</div>
-
-								<div className="mt-6 flex-1">
-									<label htmlFor="email" className="mb-2 block text-sm">
-										Email
-									</label>
-									<input
-										id="email"
-										autoComplete="email"
-										type="email"
-										placeholder="abcd@exemplo.com"
-										className="input input-bordered w-full"
-									/>
-								</div>
-
-								<div className="mt-6 w-full">
-									<label htmlFor="message" className="mb-2 block text-sm">
-										Mensagem
-									</label>
-									<textarea
-										id="message"
-										autoComplete="message"
-										className="textarea textarea-bordered w-full"
-										placeholder="Mensagem"></textarea>
-								</div>
-
-								<button className="btn btn-neutral mt-6 w-full transform px-6 py-3 text-sm font-medium capitalize duration-300  ">
-									Enviar
-								</button>
-							</form>
-						</div>
-					</div>
+					<Form />
 				</div>
 			</motion.div>
 		</motion.section>
