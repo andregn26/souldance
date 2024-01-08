@@ -10,6 +10,7 @@ import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import Image from "next/image";
 
 const team = [
 	{
@@ -97,15 +98,17 @@ const Team = ({ professors }) => {
 					{professors.map((professor) => (
 						<SwiperSlide key={professor._id} className="h-full w-full">
 							<div className="card  bg-base-200 shadow-lg  ">
-								<figure className="px-10 pt-10">
-									<img
+								<figure className="relative px-10 pt-10 h-48 w-48 mx-auto mt-8 rounded-full">
+									<Image
 										src={
 											professor.image
 												? professor.image
 												: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
 										}
 										alt={`professor-${professor.name}`}
-										className="h-44 w-44 rounded-full"
+										fill
+										objectFit="cover"
+										objectPosition="top"
 									/>
 								</figure>
 								<div className="card-body items-center text-center">
