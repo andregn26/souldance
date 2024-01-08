@@ -3,6 +3,7 @@
 import { useState } from "react";
 import useContactForm from "@/hooks/useContactForm";
 import axios from "axios";
+import toast, { Toaster } from "react-hot-toast";
 // import sendEmail from "@/utils/sendEmail";
 
 const Form = () => {
@@ -20,16 +21,37 @@ const Form = () => {
 					subject: values.subject,
 					message: values.message,
 				},
+			}).then((res) => {
+				if (res.status === 200) {
+					setResponseMessage({ isSuccessful: true, message: "Mensagem enviada!" });
+					const notify = () =>
+						toast.custom((t) => (
+							<div className="toast">
+								<div className="alert alert-success">
+									<span>Mensagem enviada!</span>
+								</div>
+							</div>
+						));
+					notify();
+				}
+
+				console.log(res);
 			});
-			console.log(response);
-			if (response.status === 200) {
-				setResponseMessage({ isSuccessful: true, message: "Mensagem enviada!" });
-			}
 		} catch (error) {
 			setResponseMessage({
 				isSuccessful: false,
 				message: "Oops! Alguma coisa correu mal!",
 			});
+			const notify = () =>
+				toast.custom((t) => (
+					<div className="toast">
+						<div className="alert alert-error">
+							<span>Oops! Alguma coisa correu mal!</span>
+						</div>
+					</div>
+				));
+
+			notify();
 		}
 		// console.log("🚀 ~ file: Form.jsx:9 ~ Form ~ responseMessage:", responseMessage);
 	};
@@ -87,7 +109,7 @@ const Form = () => {
 						className="btn btn-primary mt-6 w-full transform px-6 py-3 text-sm font-medium capitalize duration-300  ">
 						Enviar
 					</button>
-					{responseMessage.isSuccessful === null ? (
+					{/* {responseMessage.isSuccessful === null ? (
 						<></>
 					) : (
 						<>
@@ -97,7 +119,28 @@ const Form = () => {
 								<Toast type="error" message={responseMessage.message} />
 							)}
 						</>
-					)}
+					)} */}
+					<Toaster
+						position="bottom-right"
+						reverseOrder={false}
+						gutter={8}
+						containerClassName=""
+						containerStyle={{}}
+						toastOptions={{
+							// Define default options
+							className: "bg-primary",
+							duration: 5000,
+
+							// Default options for specific types
+							success: {
+								duration: 3000,
+								theme: {
+									primary: "green",
+									secondary: "black",
+								},
+							},
+						}}
+					/>
 				</form>
 			</div>
 		</div>

@@ -15,7 +15,6 @@ export default function RootLayout({ children }) {
 					<ClientThemeWrapper>
 						<NavBar />
 						<div className=""> {children}</div>
-
 						<Footer />
 					</ClientThemeWrapper>
 				</ThemeProvider>
