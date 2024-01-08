@@ -78,6 +78,13 @@ const professor = {
 			// 	Rule.max(400).error("Shorter titles are usually better"),
 		},
 	],
+	orderings: [
+		{
+			title: "Alphabetically order",
+			name: "AlphabeticallyDesc",
+			by: [{ field: "name", direction: "desc" }],
+		},
+	],
 };
 
 export default professor;
