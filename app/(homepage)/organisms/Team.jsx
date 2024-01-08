@@ -107,8 +107,7 @@ const Team = ({ professors }) => {
 										}
 										alt={`professor-${professor.name}`}
 										fill
-										objectFit="cover"
-										objectPosition="top"
+										style={{ objectFit: "cover", objectPosition: "top" }}
 									/>
 								</figure>
 								<div className="card-body items-center text-center">

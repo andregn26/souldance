@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Hero from "./organisms/Hero";
 import Services from "./organisms/Services";
 import Testimonial from "./organisms/Testimonial";
