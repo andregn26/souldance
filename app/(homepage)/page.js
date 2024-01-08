@@ -15,7 +15,7 @@ export const revalidate = 60; // revalidate this page every 60 seconds
 
 const Home = async () => {
 	const allProfessors = await getAllProfessors();
-	console.log("🚀 ~ file: page.js:16 ~ Home ~ allProfessors:", allProfessors);
+	// console.log("🚀 ~ file: page.js:16 ~ Home ~ allProfessors:", allProfessors);
 	return (
 		<main className="flex min-h-screen flex-col items-center justify-between  ">
 			<Hero />
