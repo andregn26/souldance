@@ -1,18 +1,20 @@
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
 import { Inter } from "next/font/google";
+import { Open_Sans, League_Spartan } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/Navbar";
 import { ThemeProvider } from "@/context/ThemeContext";
 import ClientThemeWrapper from "@/context/ClientThemeWrapper";
 import Footer from "@/components/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const openSans = Open_Sans({ subsets: ["latin"], variable: "--body-font" });
+const leagueSpartan = League_Spartan({ subsets: ["latin"], variable: "--display-font", weight: ["400", "700"] });
 
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
-			<body className={inter.className}>
+			<body className={`${openSans.variable} ${leagueSpartan.variable}`}>
 				<ThemeProvider>
 					<ClientThemeWrapper>
 						<div className="main">

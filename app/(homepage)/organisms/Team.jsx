@@ -11,6 +11,7 @@ import "swiper/css/grid";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import Image from "next/image";
+import ProfessorCard from "@/components/Cards/ProfessorCard";
 
 const Team = ({ professors }) => {
 	return (
@@ -20,27 +21,27 @@ const Team = ({ professors }) => {
 			whileInView="show"
 			viewport={{ once: true, amount: 0.25 }}
 			id="equipa"
-			className="flex flex-col items-center justify-center">
+			className="flex flex-col items-center justify-center ">
 			<motion.div variants={fadeIn("up", "tween", 0.2, 1)} className="flex flex-col items-center justify-center">
-				<h1 className="text-center font-poppins text-2xl font-semibold md:text-5xl">Os nossos professores</h1>
-				<span className="text-md mt-4 px-2 text-center font-poppins md:mt-4 md:px-5 md:text-xl">
+				<h1 className="section_title">Os nossos professores</h1>
+				<span className="text-md mt-4 px-2 text-center font-body md:mt-4 md:px-5 md:text-xl">
 					our passionate team collaborates seamlessly to create solutions.
 				</span>
 			</motion.div>
 			<motion.div variants={fadeIn("up", "tween", 0.2, 1)} className="mt-10 h-full">
 				<Swiper
-					pagination={true}
+					pagination={{ clickable: true }}
 					slidesPerView={1}
 					spaceBetween={30}
 					grid={{
-						rows: 3,
+						rows: 2,
 						fill: "rows",
 					}}
 					breakpoints={{
 						640: {
 							slidesPerView: 2,
 							grid: {
-								rows: 3,
+								rows: 2,
 								fill: "row",
 							},
 						},
@@ -60,31 +61,10 @@ const Team = ({ professors }) => {
 						},
 					}}
 					modules={[Grid, Pagination, Mousewheel, Keyboard, Navigation]}
-					className=" h-[calc(100%+60px)] w-[calc(100vw-35px)] max-w-screen-xl !pb-20">
+					className=" h-[calc(100%+60px)] w-[calc(100vw-60px)] md:w-[calc(100vw-155px)] max-w-screen-xl !pb-20">
 					{professors.map((professor) => (
 						<SwiperSlide key={professor._id} className="h-full w-full">
-							<div className="card  bg-base-200/60 shadow-lg  ">
-								<figure className="relative px-10 pt-10 h-48 w-48 mx-auto mt-8 rounded-full">
-									<Image
-										src={
-											professor.image
-												? professor.image
-												: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-										}
-										alt={`professor-${professor.name}`}
-										fill
-										style={{ objectFit: "cover", objectPosition: "top" }}
-									/>
-								</figure>
-								<div className="card-body items-center text-center">
-									<h2 className="card-title font-poppins">{professor.name}</h2>
-									{professor.position ? (
-										<h2 className="font-poppins">{professor.position}</h2>
-									) : (
-										<>nothing</>
-									)}
-								</div>
-							</div>
+							<ProfessorCard professor={professor} />
 						</SwiperSlide>
 					))}
 				</Swiper>

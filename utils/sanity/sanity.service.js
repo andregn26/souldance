@@ -21,6 +21,7 @@ export async function getAllProfessors() {
 		_createdAt,
 		name,
 		"image": image.asset->url,
+		socialMedia,
 		"modalities": modalities[]->,
 	  }`);
 }

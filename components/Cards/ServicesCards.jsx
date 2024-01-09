@@ -14,7 +14,7 @@ const ServicesCards = ({ service }) => {
 				/>
 			</figure>
 			<div className="card-body">
-				<h2 className="card-title mt-auto font-poppins text-4xl font-semibold contrast-200">{service.name}</h2>
+				<h2 className="card-title mt-auto font-display text-4xl font-semibold contrast-200">{service.name}</h2>
 			</div>
 		</div>
 	);
