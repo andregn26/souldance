@@ -1,4 +1,5 @@
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/Navbar";
@@ -24,8 +25,9 @@ export default function RootLayout({ children }) {
 						</div>
 					</ClientThemeWrapper>
 				</ThemeProvider>
+				<Analytics />
+				<SpeedInsights />
 			</body>
-			<SpeedInsights />
 		</html>
 	);
 }
