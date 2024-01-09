@@ -60,7 +60,7 @@
 }
 
 .section_title {
-  @apply text-center font-display text-3xl font-semibold md:text-6xl text-slate-50
+  @apply text-center font-display text-3xl font-semibold md:text-6xl 
 }
 
 .card.image-full:before {
