@@ -13,9 +13,14 @@ export default function RootLayout({ children }) {
 			<body className={inter.className}>
 				<ThemeProvider>
 					<ClientThemeWrapper>
-						<NavBar />
-						<div className=""> {children}</div>
-						<Footer />
+						<div className="main">
+							<div className="gradient" />
+						</div>
+						<div className="z-10">
+							<NavBar />
+							<div className=""> {children}</div>
+							<Footer />
+						</div>
 					</ClientThemeWrapper>
 				</ThemeProvider>
 			</body>
