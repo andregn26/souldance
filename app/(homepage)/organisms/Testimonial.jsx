@@ -37,8 +37,8 @@ const Testimonial = () => {
 			id="testemunhos"
 			className="my-20 flex flex-col items-center justify-center md:my-32 ">
 			<motion.div variants={fadeIn("up", "tween", 0.2, 1)} className="flex flex-col items-center justify-center">
-				<h1 className="text-center font-poppins text-2xl font-semibold md:text-5xl">Testemunhos</h1>
-				<span className="text-md mt-2 px-2 font-poppins md:mt-4 md:px-5 md:text-xl">
+				<h1 className="section_title">Testemunhos</h1>
+				<span className="text-md mt-2 px-2 font-body md:mt-4 md:px-5 md:text-xl">
 					O que os alunos dizem de nós.
 				</span>
 			</motion.div>
@@ -60,7 +60,7 @@ const Testimonial = () => {
 						<SwiperSlide className="h-full  flex justify-center" key={index}>
 							<div className="flex h-full items-center justify-center   rounded-xl mx-4">
 								<figure className="mx-10 mt-10">
-									<blockquote className="text-center font-poppins font-semibold leading-8 text-base-content lg:text-2xl">
+									<blockquote className="text-center font-body font-semibold leading-8 text-base-content lg:text-2xl">
 										<p>“{item.quote}”</p>
 									</blockquote>
 									<div className="mt-10 flex flex-col items-center">

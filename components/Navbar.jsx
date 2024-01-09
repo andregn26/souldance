@@ -4,7 +4,6 @@ import Link from "next/link";
 import React, { useState, useEffect, useContext } from "react";
 
 const navigation = [
-	{ name: "Home", href: "/#home" },
 	{ name: "Serviços", href: "/#servicos" },
 	{ name: "Testemunhos", href: "/#testemunhos" },
 	{ name: "Equipa", href: "#equipa" },
@@ -37,14 +36,14 @@ const NavBar = () => {
 						<ul className="menu dropdown-content menu-md z-[1] mt-3 w-52 gap-2 rounded-box bg-base-100 p-2 shadow">
 							{navigation.map((item, index) => (
 								<li key={index}>
-									<Link key={item.name} href={item.href} className="font-poppins">
+									<Link key={item.name} href={item.href} className="font-body">
 										{item.name}
 									</Link>
 								</li>
 							))}
 						</ul>
 					</div>
-					<Link href="/" className="btn btn-ghost rounded-full font-poppins text-lg font-semibold">
+					<Link href="/" className="btn btn-ghost rounded-full font-display text-xl font-semibold">
 						Souldance
 					</Link>
 				</div>
@@ -54,7 +53,7 @@ const NavBar = () => {
 							<Link
 								key={item.name}
 								href={item.href}
-								className={`btn btn-ghost rounded-full font-poppins text-sm font-light ${
+								className={`btn btn-ghost rounded-full font-display text-base font-light ${
 									active === item.name ? "bg-base-300" : ""
 								}`}
 								onClick={() => setActive(item.name)}>

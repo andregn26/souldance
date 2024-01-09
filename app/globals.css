@@ -59,6 +59,10 @@
   }
 }
 
+.section_title {
+  @apply text-center font-display text-3xl font-semibold md:text-6xl text-slate-50
+}
+
 .card.image-full:before {
 @apply bg-transparent bg-gradient-to-t from-slate-900 from-30% 
 }
