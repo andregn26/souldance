@@ -57,8 +57,8 @@ const Form = () => {
 	};
 
 	return (
-		<div className="card mt-8 lg:mx-6 w-full">
-			<div className="card-body mx-auto w-full overflow-hidden rounded-lg px-8 py-10 shadow-xl outline outline-base-content/5 ">
+		<div className="card mt-8 lg:mx-6 w-full bg-base-200/60">
+			<div className="card-body mx-auto w-full overflow-hidden rounded-lg px-8 py-10 shadow-xl  ">
 				<h1 className="card-title">O que gostarias de saber?</h1>
 
 				<form onSubmit={sendMail} className="mt-6">

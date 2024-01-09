@@ -12,40 +12,6 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import Image from "next/image";
 
-const team = [
-	{
-		name: "Jack",
-		profile: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-		position: "Founder & CEO",
-	},
-	{
-		name: "John",
-		profile: "https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-		position: "CoFounder & CTO",
-	},
-	{
-		name: "Emily",
-		profile: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-		position: "Head of Growth",
-	},
-	{
-		name: "Sam",
-		profile: "https://images.unsplash.com/photo-1615109398623-88346a601842?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-		position: "App Developer",
-	},
-	{
-		name: "Antonio",
-		profile: "https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-		position: "Web Developer",
-	},
-
-	{
-		name: "Mark",
-		profile: "https://images.unsplash.com/photo-1567784177951-6fa58317e16b?ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-		position: "Video Editor",
-	},
-];
-
 const Team = ({ professors }) => {
 	return (
 		<motion.div
@@ -97,7 +63,7 @@ const Team = ({ professors }) => {
 					className=" h-[calc(100%+60px)] w-[calc(100vw-35px)] max-w-screen-xl !pb-20">
 					{professors.map((professor) => (
 						<SwiperSlide key={professor._id} className="h-full w-full">
-							<div className="card  bg-base-200 shadow-lg  ">
+							<div className="card  bg-base-200/60 shadow-lg  ">
 								<figure className="relative px-10 pt-10 h-48 w-48 mx-auto mt-8 rounded-full">
 									<Image
 										src={
@@ -120,17 +86,6 @@ const Team = ({ professors }) => {
 								</div>
 							</div>
 						</SwiperSlide>
-						// <SwiperSlide key={professor._id} className="card w-80 bg-base-200 shadow-lg lg:w-96">
-
-						// 	<div className="card-body items-center text-center">
-						// 		<h2 className="card-title font-poppins">{professor.name}</h2>
-						// 		{professor.position ? (
-						// 			<h2 className="font-poppins">{professor.position}</h2>
-						// 		) : (
-						// 			<>nothing</>
-						// 		)}
-						// 	</div>
-						// </SwiperSlide>
 					))}
 				</Swiper>
 			</motion.div>
