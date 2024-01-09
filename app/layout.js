@@ -1,3 +1,4 @@
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/Navbar";
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
 					</ClientThemeWrapper>
 				</ThemeProvider>
 			</body>
+			<SpeedInsights />
 		</html>
 	);
 }
