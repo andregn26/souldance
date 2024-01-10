@@ -10,16 +10,17 @@ export async function getAllModalities() {
 		description,
 		tags,
 		"image": image.asset->url,
-		"schedule": schedule[]{},
+		"schedule": schedule,
 		"professors": professors[]->,
 	  }`);
 }
 
 export async function getAllProfessors() {
-	return client.fetch(groq`*[_type == "professor"] | order(name asc){
+	return client.fetch(groq`*[_type == "professor"] | order(slug.current asc){
 		_id,
 		_createdAt,
 		name,
+		"slug": slug.current,
 		"image": image.asset->url,
 		socialMedia,
 		"modalities": modalities[]->,

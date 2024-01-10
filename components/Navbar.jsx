@@ -69,7 +69,7 @@ const NavBar = () => {
 							<input
 								type="checkbox"
 								onChange={(e) => handleToggleTheme(e)}
-								checked={theme === "light" ? false : true}
+								checked={theme === "dark" ? false : true}
 							/>
 
 							<svg

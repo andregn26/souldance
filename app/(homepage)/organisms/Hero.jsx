@@ -40,7 +40,10 @@ const Hero = () => {
 							className="btn btn-primary md:btn-lg rounded-2xl font-body shadow-md">
 							Conhece as Modalidades
 						</Link>
-						<a href="/" className="btn btn-ghost md:btn-lg rounded-2xl font-body font-light">
+						<a
+							href="https://horarios.tiiny.site"
+							target="_blank"
+							className="btn btn-ghost md:btn-lg rounded-2xl font-body font-light">
 							Horários 23/24
 						</a>
 					</div>
