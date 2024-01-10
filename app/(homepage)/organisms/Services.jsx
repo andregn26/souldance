@@ -6,24 +6,24 @@ import ServicesCards from "@/components/Cards/ServicesCards";
 import picDanceClasses from "@/public/images/dance-classes.jpg";
 import picAulasNoivos from "@/public/images/aulas-noivos.jpg";
 import picEvents from "@/public/images/events.jpg";
-import picSpace from "@/public/images/space.jpg";
+import picSpace from "@/public/images/space.webp";
 
 const services = [
 	{
-		name: "Aulas de Dança",
+		name: "Aulas de dança",
 		bg: picDanceClasses,
 		href: "/modalidades",
 	},
 	{
-		name: "Aulas para Noivos",
+		name: "Aulas para noivos",
 		bg: picAulasNoivos,
 	},
 	{
-		name: "Eventos Corporativos",
+		name: "Eventos corporativos",
 		bg: picEvents,
 	},
 	{
-		name: "Aluguer de Espaço",
+		name: "Aluguer de espaço",
 		bg: picSpace,
 	},
 ];
