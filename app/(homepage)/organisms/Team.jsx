@@ -22,10 +22,10 @@ const Team = ({ professors }) => {
 			id="equipa"
 			className="flex flex-col items-center justify-center ">
 			<motion.div variants={fadeIn("up", "tween", 0.2, 1)} className="flex flex-col items-center justify-center">
-				<h1 className="section_title">Os nossos professores</h1>
-				<span className="text-md mt-4 px-2 text-center font-body md:mt-4 md:px-5 md:text-xl">
+				<h2 className="section_title">Os nossos professores</h2>
+				<p className="text-md mt-4 px-2 text-center font-body md:mt-4 md:px-5 md:text-xl">
 					our passionate team collaborates seamlessly to create solutions.
-				</span>
+				</p>
 			</motion.div>
 			<motion.div variants={fadeIn("up", "tween", 0.2, 1)} className="mt-10 h-full">
 				<Swiper
