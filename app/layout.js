@@ -11,6 +11,12 @@ import Footer from "@/components/Footer";
 const openSans = Open_Sans({ subsets: ["latin"], variable: "--body-font" });
 const leagueSpartan = League_Spartan({ subsets: ["latin"], variable: "--display-font", weight: ["400", "700"] });
 
+export const metadata = {
+	title: "Souldance | Explora a magia da dança",
+	description:
+		"Descobre a energia contagiante da dança na Souldance. Oferecemos aulas envolventes e divertidas para todos os níveis onde serás acompanhado pelos melhores professores de dança do mercado.",
+};
+
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en">

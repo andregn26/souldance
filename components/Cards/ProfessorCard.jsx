@@ -21,7 +21,7 @@ const ProfessorCard = ({ professor }) => {
 				/>
 			</figure>
 			<div className="card-body px-6 py-3 relative items-center text-center">
-				<h2 className="card-title mt-2 font-body">{name}</h2>
+				<h3 className="card-title mt-2 font-body">{name}</h3>
 				{modalities ? (
 					<div
 						className={`${
@@ -29,11 +29,11 @@ const ProfessorCard = ({ professor }) => {
 						} font-body  gap-x-3 gap-y-3 flex-wrap  justify-center align-middle mt-3`}>
 						{modalities.map((modality) => {
 							return (
-								<h4
+								<h3
 									key={`professor-card-modality-${modality._id}`}
 									className="text-[10px] h-full font-semibold badge badge-primary  w-full dark:badge-outline  justify-self-center">
 									{modality.name}
-								</h4>
+								</h3>
 							);
 						})}
 					</div>

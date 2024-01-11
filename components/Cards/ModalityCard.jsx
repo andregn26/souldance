@@ -2,8 +2,6 @@ import Image from "next/image";
 import React from "react";
 import Calendar from "../icons/Calendar";
 import Clock from "../icons/Clock";
-import imageUrlBuilder from "@sanity/image-url";
-import { createClient } from "next-sanity";
 import { useImageUrlBuilder } from "@/hooks/useImageUrlBuilder";
 
 const ModalityCard = ({ modality }) => {
@@ -33,11 +31,11 @@ const ModalityCard = ({ modality }) => {
 						</>
 					)}
 				</div>
-				<h1
+				<h3
 					className="font-display font-bold text-2xl text-gray-50 absolute bottom-0 w-full h-2/3 bg-transparent bg-gradient-to-t from-gray-900/95 pb-3 pl-6 from-0% flex items-end "
 					id="name-from-modality">
 					{name}
-				</h1>
+				</h3>
 			</figure>
 			<div className="px-6 py-4 flex flex-col gap-2">
 				<div id="schedule-from-modality">
@@ -82,7 +80,7 @@ const ModalityCard = ({ modality }) => {
 								</div>
 								<div>
 									{professors.map((professor, index) => (
-										<p key={`professor-name-${index}`}>{professor.name} </p>
+										<h3 key={`professor-name-${index}`}>{professor.name} </h3>
 									))}
 								</div>
 							</div>

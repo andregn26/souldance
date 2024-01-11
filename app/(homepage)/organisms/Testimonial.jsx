@@ -41,10 +41,8 @@ const Testimonial = () => {
 			id="testemunhos"
 			className="my-20 flex flex-col items-center justify-center md:my-32 ">
 			<motion.div variants={fadeIn("up", "tween", 0.2, 1)} className="flex flex-col items-center justify-center">
-				<h1 className="section_title">Testemunhos</h1>
-				<span className="text-md mt-2 px-2 font-body md:mt-4 md:px-5 md:text-xl">
-					O que os alunos dizem de nós.
-				</span>
+				<h2 className="section_title">Testemunhos</h2>
+				<p className="text-md mt-2 px-2 font-body md:mt-4 md:px-5 md:text-xl">O que os alunos dizem de nós.</p>
 			</motion.div>
 
 			<motion.div variants={fadeIn("up", "tween", 0.2, 1)} className="py-4">

@@ -37,11 +37,11 @@ const Services = () => {
 			id="servicos"
 			className="mt-10 flex flex-col items-center justify-center md:mt-20 px-8 md:px-24">
 			<motion.div variants={fadeIn("up", "tween", 0.2, 1)} className="flex flex-col items-center justify-center">
-				<h1 className="section_title">Os Nossos Serviços</h1>
-				<span className="text-md mt-2 px-2 text-center font-body md:mt-4 md:px-5 md:text-xl">
+				<h2 className="section_title">Os Nossos Serviços</h2>
+				<p className="text-md mt-2 px-2 text-center font-body md:mt-4 md:px-5 md:text-xl">
 					Na Souldance, oferecemos aulas de dança para todos, incluindo aulas especiais para noivos, eventos
 					corporativos memoráveis e aluguer de espaço para tornar cada passo uma experiência única
-				</span>
+				</p>
 			</motion.div>
 			<motion.div
 				variants={fadeIn("up", "tween", 0.2, 1)}
