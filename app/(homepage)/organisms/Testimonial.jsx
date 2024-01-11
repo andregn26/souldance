@@ -1,30 +1,35 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { fadeIn, staggerContainer } from "@/utils/motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Autoplay, Pagination, Mousewheel, Keyboard } from "swiper/modules";
+import testemunhoPedro from "@/public/images/testemunho-pedro.jpg";
+console.log("🚀 ~ testemunhoPedro:", testemunhoPedro);
+import testemunhoBarbara from "@/public/images/testemunho-barbara.webp";
+import testemunhoTeresa from "@/public/images/testemunho-teresa.jpg";
 const testimonials = [
 	{
 		name: "Teresa Barros",
 		position: "Aluna",
 		quote: "A Souldance é muito mais do que um lugar para dançar. É gratificante fazer parte desta familia acolhedora e é um privilégio ter professores que nos ensinam o que vai além de uma coreografia e que nos mostram que quem dança... é muito mais feliz!",
-		image: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+		image: testemunhoTeresa,
 	},
 	{
 		name: "Pedro Moreira",
 		position: "Aluno",
 		quote: "Apesar de já ter frequentado mais duas escolas de dança, foi na Souldance que encontrei o equilibrio entre dança, convívio e amizade. Uma verdadeira família que nos faz sentir especiais a cada final de dia. se podia não ser um Souldancer? Podia... Mas não era a mesma coisa!",
-		image: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+		image: testemunhoPedro,
 	},
 	{
 		name: "Bárbara Frukck",
 		position: "Aluna",
 		quote: "A Souldance é uma família e a minha segunda casa. é o melhor local para transformar os dias menos bons em dias espetaculares. Um local onde conheci pessoas maravilhosas e onde tenho a possibilidade de fazer o que mais gosto: dançar!",
-		image: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+		image: testemunhoBarbara,
 	},
 ];
 const Testimonial = () => {
@@ -51,7 +56,7 @@ const Testimonial = () => {
 					mousewheel={true}
 					keyboard={true}
 					autoplay={{
-						delay: 2500,
+						delay: 3500,
 						disableOnInteraction: true,
 					}}
 					modules={[Navigation, Autoplay, Pagination, Mousewheel, Keyboard]}
@@ -64,10 +69,11 @@ const Testimonial = () => {
 										<p>“{item.quote}”</p>
 									</blockquote>
 									<div className="mt-10 flex flex-col items-center">
-										<img
+										<Image
 											className="mx-auto h-14 w-14 rounded-full"
 											src={item.image}
 											alt={item.name}
+											placeholder="blur"
 										/>
 										<div className="mt-4 flex justify-center gap-2 lg:tracking-widest">
 											<div>{item.name}</div>
