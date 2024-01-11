@@ -1,15 +1,14 @@
 import React from "react";
 import { getAllModalities } from "@/utils/sanity/sanity.service";
-import ModalityCard from "@/components/Cards/ModalityCard";
+import ModalitiesGrid from "./ModalitiesGrid";
 
 const AllModalities = async () => {
 	const allModalities = await getAllModalities();
+	console.log("🚀 ~ AllModalities ~ allModalities[0].professors.image:", allModalities[0].professors[0].image.asset);
 
 	return (
 		<>
-			{allModalities.map((modality) => {
-				return <ModalityCard modality={modality} />;
-			})}
+			<ModalitiesGrid allModalities={allModalities} />
 		</>
 	);
 };
