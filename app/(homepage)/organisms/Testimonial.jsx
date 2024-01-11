@@ -9,7 +9,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Autoplay, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 import testemunhoPedro from "@/public/images/testemunho-pedro.jpg";
-console.log("🚀 ~ testemunhoPedro:", testemunhoPedro);
 import testemunhoBarbara from "@/public/images/testemunho-barbara.webp";
 import testemunhoTeresa from "@/public/images/testemunho-teresa.jpg";
 const testimonials = [

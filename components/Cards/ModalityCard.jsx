@@ -2,15 +2,15 @@ import Image from "next/image";
 import React from "react";
 import Calendar from "../icons/Calendar";
 import Clock from "../icons/Clock";
+import imageUrlBuilder from "@sanity/image-url";
+import { createClient } from "next-sanity";
+import { useImageUrlBuilder } from "@/hooks/useImageUrlBuilder";
 
 const ModalityCard = ({ modality }) => {
 	const { _id, name, tags, image, schedule, professors } = modality;
-	console.log("🚀 ~ image:", image);
 
 	return (
-		<div
-			className="col-span-6 sm:col-span-3 md:col-span-3 xl:col-span-3 card w-full min-w-72 sm:min-w-full  bg-base-100 shadow-xl transition duration-300 hover:-translate-y-1"
-			key={_id}>
+		<div className="col-span-6 sm:col-span-3 md:col-span-3 xl:col-span-3 card w-full min-w-72 sm:min-w-full  bg-base-100 shadow-xl transition duration-300 hover:-translate-y-1">
 			<figure id="image-from-modality" className="relative min-h-48 ">
 				<Image
 					src={
@@ -39,13 +39,13 @@ const ModalityCard = ({ modality }) => {
 					{name}
 				</h1>
 			</figure>
-			<div className="px-6 py-4">
+			<div className="px-6 py-4 flex flex-col gap-2">
 				<div id="schedule-from-modality">
 					{!schedule ? null : (
 						<>
-							{schedule.map((danceClass) => (
+							{schedule.map((danceClass, index) => (
 								<div
-									key={danceClass._id}
+									key={`${danceClass._id}-${index}`}
 									className=" flex justify-between text-sm font-semibold mb-4">
 									<p className="flex gap-2">
 										<Calendar />
@@ -62,19 +62,30 @@ const ModalityCard = ({ modality }) => {
 				<div id="professors-from-modality" className="text-xs">
 					{!professors ? null : (
 						<>
-							{professors.map((professor) => {
-								console.log("🚀 ~ {professors.map ~ professor:", professor);
-								return (
-									<div key={professor._id}>
-										<div className="avatar">
-											<div className="w-8 rounded-full">
-												<img src={professor.image.asset._ref} />
+							<div className="flex items-center gap-2">
+								<div className="avatar-group -space-x-6 rtl:space-x-reverse">
+									{professors.map((professor, index) => {
+										return (
+											<div
+												key={`professor-image-${index}`}
+												className="avatar">
+												<div className="w-10">
+													<img
+														src={useImageUrlBuilder(
+															professor.image
+														).url()}
+													/>
+												</div>
 											</div>
-										</div>
-										<p>{professor.name}</p>
-									</div>
-								);
-							})}
+										);
+									})}
+								</div>
+								<div>
+									{professors.map((professor, index) => (
+										<p key={`professor-name-${index}`}>{professor.name} </p>
+									))}
+								</div>
+							</div>
 						</>
 					)}
 				</div>
