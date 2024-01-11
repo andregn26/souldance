@@ -7,8 +7,8 @@ const ProfessorCard = ({ professor }) => {
 	const { name, image, modalities, socialMedia } = professor;
 	// console.log("🚀 ~ ProfessorCard ~ professor:", professor);
 	return (
-		<div className="card  bg-base-200/60 shadow-lg min-h-[440px] overflow-hidden ">
-			<figure className="relative px-10 pt-10 h-36 w-36 md:h-48 md:w-48 mx-auto mt-8 rounded-full">
+		<div className="card  bg-base-200/60 shadow-lg max-w-[640px] min-h-[310px] lg:min-h-[330px] overflow-hidden ">
+			<figure className="relative  h-24 w-24 md:h-28 md:w-28 mx-auto mt-6 rounded-full">
 				<Image
 					src={
 						image
@@ -20,8 +20,8 @@ const ProfessorCard = ({ professor }) => {
 					style={{ objectFit: "cover", objectPosition: "top" }}
 				/>
 			</figure>
-			<div className="card-body relative items-center text-center">
-				<h2 className="card-title font-body">{name}</h2>
+			<div className="card-body px-6 py-3 relative items-center text-center">
+				<h2 className="card-title mt-2 font-body">{name}</h2>
 				{modalities ? (
 					<div
 						className={`${
@@ -51,15 +51,17 @@ const ProfessorCard = ({ professor }) => {
 					</div>
 				) : (
 					<div className="join w-full absolute bottom-0 overflow-hidden !rounded-t-none ">
-						<button disabled={!socialMedia.facebook} className="btn w-1/2   join-item">
+						<button
+							disabled={!socialMedia.facebook}
+							className="btn w-1/2 !h-[2.3rem] !min-h-[2.3rem]   join-item">
 							<a href={socialMedia.facebook} target="_blank">
-								<Facebook />
+								<Facebook className={"!w-6 !h-6"} />
 							</a>
 						</button>
 
-						<button disabled={!socialMedia} className="btn w-1/2  join-item">
+						<button disabled={!socialMedia} className="btn w-1/2 !h-[2.3rem] !min-h-[2.3rem] join-item">
 							<a href={socialMedia.instagram} target="_blank">
-								<Instagram />
+								<Instagram className={"!w-6 !h-6"} />
 							</a>
 						</button>
 					</div>

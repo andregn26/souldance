@@ -60,7 +60,7 @@ const Testimonial = () => {
 						<SwiperSlide className="h-full  flex justify-center" key={index}>
 							<div className="flex h-full items-center justify-center   rounded-xl mx-4">
 								<figure className="mx-10 mt-10">
-									<blockquote className="text-center font-body font-semibold leading-8 text-base-content lg:text-2xl">
+									<blockquote className="text-center font-body font-semibold leading-8 text-base-content lg:text-xl">
 										<p>“{item.quote}”</p>
 									</blockquote>
 									<div className="mt-10 flex flex-col items-center">

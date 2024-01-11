@@ -10,7 +10,6 @@ import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import Image from "next/image";
 import ProfessorCard from "@/components/Cards/ProfessorCard";
 
 const Team = ({ professors }) => {
@@ -31,6 +30,7 @@ const Team = ({ professors }) => {
 			<motion.div variants={fadeIn("up", "tween", 0.2, 1)} className="mt-10 h-full">
 				<Swiper
 					pagination={{ clickable: true }}
+					navigation={true}
 					slidesPerView={1}
 					spaceBetween={30}
 					grid={{
@@ -61,7 +61,7 @@ const Team = ({ professors }) => {
 						},
 					}}
 					modules={[Grid, Pagination, Mousewheel, Keyboard, Navigation]}
-					className=" h-[calc(100%+60px)] w-[calc(100vw-60px)] md:w-[calc(100vw-155px)] max-w-screen-xl !pb-20">
+					className=" h-[calc(100%+60px)] w-[calc(100vw-60px)] md:w-[calc(100vw-155px)] max-w-screen-xl !pb-12">
 					{professors.map((professor) => (
 						<SwiperSlide key={professor._id} className="h-full w-full">
 							<ProfessorCard professor={professor} />
