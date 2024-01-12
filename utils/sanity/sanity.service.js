@@ -2,7 +2,7 @@ import { groq } from "next-sanity";
 import { client } from "./client";
 
 export async function getAllModalities() {
-	return client.fetch(groq`*[_type == "modality"] | order(name asc){
+	return client.fetch(groq`*[_type == "modality"] | order(schedule[0].order asc){
 		_id,
 		_createdAt,
 		name,
@@ -16,7 +16,7 @@ export async function getAllModalities() {
 }
 
 export async function getAllProfessors() {
-	return client.fetch(groq`*[_type == "professor"] | order(slug.current asc){
+	return client.fetch(groq`*[_type == "professor"] | order(order asc){
 		_id,
 		_createdAt,
 		name,

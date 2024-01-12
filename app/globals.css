@@ -16,6 +16,28 @@
   }
 } */
 
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) var(--primary);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  @apply bg-slate-950 
+
+  
+}
+
+*::-webkit-scrollbar-thumb {
+  @apply bg-primary/50   rounded-md border-4
+
+}
+
 .main {
   width: 100vw;
   min-height: 100vh;

@@ -35,33 +35,33 @@ const Team = ({ professors }) => {
 					spaceBetween={30}
 					grid={{
 						rows: 2,
-						fill: "rows",
+						fill: "column",
 					}}
 					breakpoints={{
 						640: {
 							slidesPerView: 2,
 							grid: {
 								rows: 2,
-								fill: "row",
+								fill: "column",
 							},
 						},
 						1024: {
 							slidesPerView: 3,
 							grid: {
 								rows: 2,
-								fill: "row",
+								fill: "column",
 							},
 						},
 						1280: {
 							slidesPerView: 4,
 							grid: {
 								rows: 2,
-								fill: "row",
+								fill: "column",
 							},
 						},
 					}}
 					modules={[Grid, Pagination, Mousewheel, Keyboard, Navigation]}
-					className=" h-[calc(100%+60px)] w-[calc(100vw-60px)] md:w-[calc(100vw-155px)] max-w-screen-xl !pb-12">
+					className="h-[calc(100vh+60px)]  w-[calc(100vw-60px)] md:w-[calc(100vw-155px)] max-w-screen-xl !pb-12">
 					{professors.map((professor) => (
 						<SwiperSlide key={professor._id} className="h-full w-full">
 							<ProfessorCard professor={professor} />

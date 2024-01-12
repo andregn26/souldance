@@ -4,7 +4,7 @@ import ModalitiesGrid from "./ModalitiesGrid";
 
 const AllModalities = async () => {
 	const allModalities = await getAllModalities();
-	console.log("🚀 ~ AllModalities ~ allModalities[0].professors.image:", allModalities[0].professors[0].image.asset);
+	console.log("🚀 ~ AllModalities ~ allModalities[0].professors.image:", allModalities[0]);
 
 	return (
 		<>

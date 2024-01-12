@@ -60,7 +60,7 @@ const Testimonial = () => {
 					className="container h-full  mx-4 max-w-[calc(100vw-30px)]   rounded-xl">
 					{testimonials.map((item, index) => (
 						<SwiperSlide className="h-full  flex justify-center" key={index}>
-							<div className="flex h-full items-center justify-center   rounded-xl mx-4">
+							<div className="flex h-full items-center justify-center max-w-screen-md   rounded-xl mx-auto">
 								<figure className="mx-10 mt-10">
 									<blockquote className="text-center font-body font-semibold leading-8 text-base-content lg:text-xl">
 										<p>“{item.quote}”</p>

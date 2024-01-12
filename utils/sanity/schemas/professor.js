@@ -40,6 +40,11 @@ const professor = {
 				maxLength: 90,
 			},
 		},
+		{
+			name: "order",
+			title: "Ordem",
+			type: "number",
+		},
 		//NOTE IMAGEM
 		{
 			name: "image",
