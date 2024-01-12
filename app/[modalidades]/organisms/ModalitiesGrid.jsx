@@ -57,7 +57,7 @@ const ModalitiesGrid = ({ allModalities }) => {
 	return (
 		<div className="grid grid-cols-6 xl:grid-cols-12 sm:w-full gap-8  mt-16">
 			<div className="col-span-6 sm:col-span-3 md:col-span-3 xl:col-span-3 card w-full min-w-72 sm:min-w-full  bg-base-100 shadow-xl">
-				<form className="relative w-full flex-center justify-center items-center h-full px-4 py-6 ">
+				<form className="relative w-full flex flex-col gap-4  items-center  h-full px-4 py-6 ">
 					<input
 						type="text"
 						placeholder="Procura por modalidade"
@@ -69,7 +69,7 @@ const ModalitiesGrid = ({ allModalities }) => {
 					/>
 
 					<select
-						className="select w-full max-w-xs"
+						className="select w-full bg-base-200"
 						value={searchTextByDayOfWeek}
 						onChange={handleSearchDayOfWeek}>
 						<option value={""} selected>

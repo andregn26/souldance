@@ -66,7 +66,7 @@ const ModalityCard = ({ modality }) => {
 										return (
 											<div
 												key={`professor-image-${index}`}
-												className="avatar">
+												className="avatar border-base-300">
 												<div className="w-10">
 													<img
 														src={useImageUrlBuilder(

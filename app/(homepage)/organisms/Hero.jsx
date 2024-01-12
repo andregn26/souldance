@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "@/utils/motion";
 import Link from "next/link";
 import Image from "next/image";
-import picHero from "@/public/images/ballet.webp";
+import picHero from "@/public/images/hero-image.jpg";
 
 const Hero = () => {
 	return (
@@ -17,8 +17,8 @@ const Hero = () => {
 			id="home"
 			className="hero py-10 flex justify-center px-8">
 			<motion.div variants={fadeIn("up", "tween", 0.2, 1)} className="hero-content gap-16 flex-col lg:flex-row-reverse">
-				<figure className="max-w-xs rounded-b-box rounded-t-[14rem] shadow-2xl outline outline-base-content/5 md:max-w-[400px] overflow-hidden">
-					<Image src={picHero} priority alt="hero" placeholder="blur" />
+				<figure className="relative max-w-xs rounded-b-box rounded-t-[14rem] shadow-2xl outline outline-base-content/5 md:max-w-[400px] overflow-hidden">
+					<Image src={picHero} priority className="object-cover" alt="hero" placeholder="blur" />
 				</figure>
 
 				<div className="text-center lg:text-start">

@@ -67,6 +67,11 @@ const modality = {
 							name: "hours",
 							type: "string",
 						},
+						{
+							title: "Ordem da semana",
+							name: "order",
+							type: "number",
+						},
 					],
 				},
 			],
