@@ -1,4 +1,5 @@
 import React, { Suspense } from "react";
+import { getAllModalities } from "@/utils/sanity/sanity.service";
 import AllModalities from "./organisms/AllModalities";
 import AnimatedSection from "@/components/Animations/AnimatedSection";
 import AnimatedHeader from "@/components/Animations/AnimatedFadeIn";
@@ -6,7 +7,9 @@ import AnimatedFadeIn from "@/components/Animations/AnimatedFadeIn";
 import Hourglass from "@/components/icons/Hourglass";
 export const revalidate = 60; // revalidate this page every 60 seconds
 
-const Modalities = () => {
+const Modalities = async () => {
+	const allModalities = await getAllModalities();
+	console.log("🚀 ~ AllModalities ~ allModalities[0].professors.image:", allModalities[0]);
 	return (
 		<AnimatedSection>
 			<div className=" flex min-h-screen w-full flex-col items-center  max-w-screen-xl px-8 md:px-16 ">
@@ -34,7 +37,7 @@ const Modalities = () => {
 								</div>
 							</>
 						}>
-						<AllModalities />
+						<AllModalities allModalities={allModalities} />
 					</Suspense>
 				</AnimatedFadeIn>
 				<Hourglass />
