@@ -6,6 +6,9 @@ import { fadeIn, staggerContainer } from "@/utils/motion";
 import Form from "@/components/Form";
 import Facebook from "@/components/icons/Facebook";
 import Instagram from "@/components/icons/Instagram";
+import Email from "@/components/icons/Email";
+import Phone from "@/components/icons/Phone";
+import Address from "@/components/icons/Address";
 
 const Contact = () => {
 	return (
@@ -27,67 +30,24 @@ const Contact = () => {
 					<div className="lg:mx-0 lg:mt-0 lg:flex  lg:flex-col lg:items-center">
 						<div className="mt-6 space-y-8 md:mt-8">
 							<p className="-mx-2 flex items-start">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									className="text-base-400 mx-2 h-6 w-6"
-									fill="none"
-									viewBox="0 0 24 24"
-									stroke="currentColor"
-									strokeWidth="2">
-									<path
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-									/>
-									<path
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-									/>
-								</svg>
-
+								<Address />
 								<span className="mx-2 w-72 font-body text-base-content">
-									<a href="/#" target="_blank">
-										Rua da bica (serrado) 2735- 628 Massamá
+									<a
+										href="https://www.google.com/maps/place//data=!4m2!3m1!1s0xd1ecd5c8488ca57:0x4fd01d2891ae5869?sa=X&ved=2ahUKEwjFu8_f7NqDAxW5TkEAHWygCN4Q4kB6BAg4EAA"
+										target="_blank">
+										Rua da bica (serrado) nº8, 2735-628 Massamá
 									</a>
 								</span>
 							</p>
 
 							<p className="-mx-2 flex items-start">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									className="text-base-400 mx-2 h-6 w-6"
-									fill="none"
-									viewBox="0 0 24 24"
-									stroke="currentColor"
-									strokeWidth="2">
-									<path
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-									/>
-								</svg>
-
+								<Phone />
 								<span className="mx-2 w-72 truncate font-body text-base-content">
 									936 151 438
 								</span>
 							</p>
-
 							<p className="-mx-2 flex items-start">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									className="text-base-400 mx-2 h-6 w-6"
-									fill="none"
-									viewBox="0 0 24 24"
-									stroke="currentColor"
-									strokeWidth="2">
-									<path
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-									/>
-								</svg>
-
+								<Email />
 								<span className="mx-2 w-72 truncate font-body text-base-content">
 									geral.souldance@gmail.com
 								</span>
@@ -95,26 +55,23 @@ const Contact = () => {
 						</div>
 
 						<div className="mt-6 w-80 md:mt-8">
-							<h3 className="text-base-400 ">Follow us</h3>
-
 							<div className="-mx-1.5 mt-4 flex ">
 								<a
 									className="btn mx-1.5 rounded-full bg-base-100"
-									href="https://www.facebook.com"
+									href="https://www.facebook.com/souldance.anacardoso/"
 									aria-label="facebook">
 									<Facebook />
 								</a>
 
 								<a
 									className="btn mx-1.5 rounded-full bg-base-100"
-									href="https://www.instagram.com"
+									href="https://www.instagram.com/souldance.anacardoso/"
 									aria-label="instagram">
 									<Instagram />
 								</a>
 							</div>
 						</div>
 					</div>
-
 					<Form />
 				</div>
 			</motion.div>

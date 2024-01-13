@@ -25,6 +25,11 @@ const modality = {
 			title: "Descrição",
 			type: "string",
 		},
+		{
+			name: "duration",
+			title: "Duração da Aula",
+			type: "number",
+		},
 		//NOTE TAGS
 		{
 			name: "tags",
