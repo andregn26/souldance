@@ -12,7 +12,9 @@ const ModalityCard = ({ modality }) => {
 			<figure id="image-from-modality" className="relative min-h-48 ">
 				<Image
 					src={
-						"https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+						!image
+							? "https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+							: image
 					}
 					alt={name}
 					fill
