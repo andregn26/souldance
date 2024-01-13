@@ -11,13 +11,13 @@ const ModalitiesGrid = ({ allModalities }) => {
 	const [isLoading, setIsLoading] = useState(false);
 
 	const daysOfWeek = new Set(modalities.map((itemOne) => itemOne.schedule.map((itemTwo) => itemTwo.dayOfWeek)).flat());
-	console.log("🚀 ~ ModalitiesGrid ~ daysOfWeek:", daysOfWeek);
+	// console.log("🚀 ~ ModalitiesGrid ~ daysOfWeek:", daysOfWeek);
 
 	const [friday, tuesday, wednesday, saturday, thursday, monday] = daysOfWeek;
 
 	useEffect(() => {
 		setModalities(allModalities);
-	}, []);
+	}, [modalities]);
 
 	const filterModalitiesByName = (searchText) => {
 		const regex = new RegExp(searchText, "i");
