@@ -53,7 +53,6 @@ const Form = () => {
 
 			notify();
 		}
-		// console.log("🚀 ~ file: Form.jsx:9 ~ Form ~ responseMessage:", responseMessage);
 	};
 
 	return (

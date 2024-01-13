@@ -11,9 +11,6 @@ const ModalitiesGrid = ({ allModalities }) => {
 	const [isLoading, setIsLoading] = useState(false);
 
 	const daysOfWeek = new Set(modalities.map((itemOne) => itemOne.schedule.map((itemTwo) => itemTwo.dayOfWeek)).flat());
-	// console.log("🚀 ~ ModalitiesGrid ~ daysOfWeek:", daysOfWeek);
-
-	const [friday, tuesday, wednesday, saturday, thursday, monday] = daysOfWeek;
 
 	useEffect(() => {
 		setModalities(allModalities);
@@ -75,12 +72,15 @@ const ModalitiesGrid = ({ allModalities }) => {
 						<option value={""} selected>
 							Dia da semana
 						</option>
-						<option value={monday}>{monday}</option>
-						<option value={tuesday}>{tuesday}</option>
+						{[...daysOfWeek].map((day) => (
+							<option value={day}>{day}</option>
+						))}
+
+						{/* <option value={thursday}>{thursday}</option>
 						<option value={wednesday}>{wednesday}</option>
-						<option value={thursday}>{thursday}</option>
-						<option value={friday}>{friday}</option>
-						<option value={saturday}>{saturday}</option>
+						<option value={tuesday}>{tuesday}</option>
+						<option value={sat}>{sat}</option>
+						<option value={friday}>{friday}</option> */}
 					</select>
 				</form>
 			</div>
