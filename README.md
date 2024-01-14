@@ -1,5 +1,7 @@
 # Souldance - Dance School
 
+Souldance website is a dynamic platform designed for a seamless user experience and efficient data management. Utilizing Sanity.io, to empower the client with a robust backoffice, allowing them to effortlessly edit and manage website content. The integration of Nodemailer ensures a secure and direct channel for user inquiries, enhancing communication. The website was designed with the aim of creating a pleasant user experience. The animations were created using the Framer Motion library.
+
 ## Tech Stack
 
 ### Client
@@ -8,6 +10,7 @@
 - Tailwind CSS
 - DaisyUI
 - Swiper.js
+- Framer Motion
 
 ### Server
 
