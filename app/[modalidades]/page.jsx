@@ -1,10 +1,8 @@
 import React, { Suspense } from "react";
 import { getAllModalities } from "@/utils/sanity/sanity.service";
 import AllModalities from "./organisms/AllModalities";
-import AnimatedSection from "@/components/Animations/AnimatedSection";
 import AnimatedHeader from "@/components/Animations/AnimatedFadeIn";
 import AnimatedFadeIn from "@/components/Animations/AnimatedFadeIn";
-import Hourglass from "@/components/icons/Hourglass";
 export const revalidate = 60; // revalidate this page every 60 seconds
 
 const Modalities = async () => {
@@ -15,10 +13,9 @@ const Modalities = async () => {
 			<AnimatedHeader className={"max-w-screen-md self-start mt-16"}>
 				<h1 className="section_title !text-left">Modalidades</h1>
 				<p>
-					Desde danças clássicas até estilos contemporâneos, na Souldance vais encontrar a modalidade com que
-					mais te identificas. Se pretendes descobrir qual o ritmo que ressoa dentro de ti, desafiasmos-te a
-					vir experimentar qualquer modalidade livre de compromissos. Junta-te a nós e embarca nesta jornada
-					extraordinária pelo mundo da arte e da dança!
+					Desde danças de salão até ao funk brasileiro, a Souldance tem todos os estilos para que possas
+					encontrar aquele com que te identificas mais. Se ainda não sabes qual é o ritmo que tens dentro de
+					ti, vem ter connosco e experimenta uma aula! Difícil vai ser escolher!
 				</p>
 			</AnimatedHeader>
 			<AnimatedFadeIn>
@@ -39,7 +36,6 @@ const Modalities = async () => {
 					<AllModalities allModalities={allModalities} />
 				</Suspense>
 			</AnimatedFadeIn>
-			<Hourglass />
 		</div>
 	);
 };

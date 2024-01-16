@@ -20,7 +20,7 @@ const ProfessorCard = ({ professor }) => {
 					style={{ objectFit: "cover", objectPosition: "top" }}
 				/>
 			</figure>
-			<div className="card-body px-6 py-3 relative items-center text-center">
+			<div className="card-body px-6 py-3 relative items-center justify-between text-center">
 				<h3 className="card-title mt-2 font-body">{name}</h3>
 				{modalities ? (
 					<div
@@ -31,41 +31,26 @@ const ProfessorCard = ({ professor }) => {
 							return (
 								<h3
 									key={`professor-card-modality-${modality._id}`}
-									className="text-[10px] h-full font-semibold badge badge-primary  w-full dark:badge-outline  justify-self-center">
+									className="text-[10px] font-semibold badge badge-primary  w-full dark:badge-outline  justify-self-center">
 									{modality.name}
 								</h3>
 							);
 						})}
 					</div>
 				) : null}
-
-				{!socialMedia ? (
-					<div className="join w-full absolute bottom-0 overflow-hidden !rounded-t-none ">
-						<button disabled={!socialMedia} className="btn w-1/2   join-item">
-							<Facebook />
-						</button>
-
-						<button disabled={!socialMedia} className="btn w-1/2  join-item">
+				<div className="w-full mt-2  ">
+					{!socialMedia ? (
+						<button disabled className="btn w-full !h-[2.3rem] !min-h-[2.3rem]">
 							<Instagram />
 						</button>
-					</div>
-				) : (
-					<div className="join w-full absolute bottom-0 overflow-hidden !rounded-t-none ">
-						<button
-							disabled={!socialMedia.facebook}
-							className="btn w-1/2 !h-[2.3rem] !min-h-[2.3rem]   join-item">
-							<a href={socialMedia.facebook} target="_blank">
-								<Facebook className={"!w-6 !h-6"} />
-							</a>
-						</button>
-
-						<button disabled={!socialMedia} className="btn w-1/2 !h-[2.3rem] !min-h-[2.3rem] join-item">
+					) : (
+						<button className="btn w-full !h-[2.3rem] !min-h-[2.3rem]">
 							<a href={socialMedia.instagram} target="_blank">
 								<Instagram className={"!w-6 !h-6"} />
 							</a>
 						</button>
-					</div>
-				)}
+					)}
+				</div>
 			</div>
 		</div>
 	);
