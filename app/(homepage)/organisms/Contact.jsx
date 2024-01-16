@@ -20,9 +20,9 @@ const Contact = () => {
 			id="contactos"
 			className="mt-20 w-full max-w-screen-lg">
 			<motion.div variants={fadeIn("up", "tween", 0.2, 1)} className="flex w-full flex-col justify-center">
-				<h2 className="section_title">Fala Connosco</h2>
+				<h2 className="section_title">Fala connosco</h2>
 				<p className="text-md mt-2 px-2 text-center font-body md:mt-4 md:px-5 md:text-xl">
-					Contacta-nos para saberes mais sobre a nossa escola e serviços
+					Contacta-nos para saberes mais sobre a nossa escola e serviços.
 				</p>
 			</motion.div>
 			<motion.div variants={fadeIn("up", "tween", 0.2, 1)} className="container mx-auto px-6 py-10">

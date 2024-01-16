@@ -71,7 +71,6 @@ const Form = () => {
 							onChange={handleChange}
 							autoComplete="email"
 							type="email"
-							placeholder="abcd@exemplo.com"
 							className="input input-bordered w-full"
 						/>
 					</div>
@@ -86,7 +85,6 @@ const Form = () => {
 							onChange={handleChange}
 							autoComplete="subject"
 							type="text"
-							placeholder="Assunto"
 							className="input input-bordered w-full"
 						/>
 					</div>
@@ -100,8 +98,7 @@ const Form = () => {
 							value={values.message}
 							onChange={handleChange}
 							autoComplete="message"
-							className="textarea textarea-bordered w-full"
-							placeholder="Mensagem"></textarea>
+							className="textarea textarea-bordered w-full"></textarea>
 					</div>
 					<button
 						type="submit"

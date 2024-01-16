@@ -3,9 +3,11 @@ import React from "react";
 import Calendar from "../icons/Calendar";
 import Clock from "../icons/Clock";
 import { useImageUrlBuilder } from "@/hooks/useImageUrlBuilder";
+import Hourglass from "@/components/icons/Hourglass";
 
 const ModalityCard = ({ modality }) => {
-	const { _id, name, tags, image, schedule, professors } = modality;
+	const { _id, name, tags, image, schedule, professors, duration } = modality;
+	const stringDuration = duration.toString();
 
 	return (
 		<div className="col-span-6 sm:col-span-3 md:col-span-3 xl:col-span-3 card w-full min-w-72 sm:min-w-full  bg-base-100 shadow-xl transition duration-300 hover:-translate-y-1">
@@ -33,11 +35,16 @@ const ModalityCard = ({ modality }) => {
 						</>
 					)}
 				</div>
-				<h3
-					className="font-display font-bold text-2xl text-gray-50 absolute bottom-0 w-full h-2/3 bg-transparent bg-gradient-to-t from-gray-900/95 pb-3 pl-6 from-0% flex items-end "
-					id="name-from-modality">
-					{name}
-				</h3>
+				<div className="absolute bottom-0 w-full h-2/3 bg-transparent bg-gradient-to-t from-gray-900/95 pb-3 px-6 from-0% flex items-end justify-between">
+					<div className="flex items-center justify-between w-full">
+						<h3 className="font-display font-bold text-2xl text-gray-50 " id="name-from-modality">
+							{name}
+						</h3>
+						<span className="text-sm flex items-center gap-1">
+							{stringDuration} <Hourglass className={"w-3 h-3"} />{" "}
+						</span>
+					</div>
+				</div>
 			</figure>
 			<div className="px-6 py-4 flex flex-col gap-2">
 				<div id="schedule-from-modality">

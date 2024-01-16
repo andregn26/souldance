@@ -54,7 +54,7 @@ const ModalitiesGrid = ({ allModalities }) => {
 	return (
 		<div className="grid grid-cols-6 xl:grid-cols-12 sm:w-full gap-8  mt-16">
 			<div className="col-span-6 sm:col-span-3 md:col-span-3 xl:col-span-3 card w-full min-w-72 sm:min-w-full  bg-base-100 shadow-xl">
-				<form className="relative w-full flex flex-col gap-4  items-center  h-full px-4 py-6 ">
+				<form className="relative w-full flex flex-col gap-8 items-center  h-full px-4 py-6 ">
 					<input
 						type="text"
 						placeholder="Procura por modalidade"
@@ -75,13 +75,16 @@ const ModalitiesGrid = ({ allModalities }) => {
 						{[...daysOfWeek].map((day) => (
 							<option value={day}>{day}</option>
 						))}
-
-						{/* <option value={thursday}>{thursday}</option>
-						<option value={wednesday}>{wednesday}</option>
-						<option value={tuesday}>{tuesday}</option>
-						<option value={sat}>{sat}</option>
-						<option value={friday}>{friday}</option> */}
 					</select>
+					<div className="flex flex-col gap-4">
+						<p className="text-xs text-center">
+							Ainda não sabes qual a modalidade que queres? Vem experimentar, sem custos e sem
+							compromisso!
+						</p>
+						<button className="btn btn-outline btn-primary w-full">
+							<a href="">Quero experimentar!</a>
+						</button>
+					</div>
 				</form>
 			</div>
 			{searchTextByName || searchTextByDayOfWeek ? (
