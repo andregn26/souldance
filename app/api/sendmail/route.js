@@ -4,6 +4,7 @@ import { NextResponse } from "next/server";
 export async function POST(request) {
 	try {
 		const { subject, message, email } = await request.json();
+		console.log("email", subject)
 
 		if (!subject || !message || !email) {
 			return NextResponse.json({ message: "Todos os campos são obrigatórios!", sent: false }, { status: 400 });

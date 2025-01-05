@@ -20,8 +20,8 @@ const Home = async () => {
 		<main className="flex min-h-screen flex-col items-center justify-between  ">
 			<Hero />
 			<Services />
-			<Testimonial />
 			<Team professors={allProfessors} />
+			<Testimonial />
 			<Contact />
 		</main>
 	);

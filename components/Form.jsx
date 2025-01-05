@@ -4,7 +4,7 @@ import { useState } from "react";
 import useContactForm from "@/hooks/useContactForm";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
-// import sendEmail from "@/utils/sendEmail";
+import sendEmail from "@/utils/sendEmail";
 
 const Form = () => {
 	const [responseMessage, setResponseMessage] = useState({ isSuccessful: null, message: "" });
@@ -35,7 +35,7 @@ const Form = () => {
 					notify();
 				}
 
-				console.log(res);
+				// console.log(res);
 			});
 		} catch (error) {
 			setResponseMessage({

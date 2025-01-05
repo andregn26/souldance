@@ -19,7 +19,7 @@ const Team = ({ professors }) => {
 			initial="hidden"
 			whileInView="show"
 			viewport={{ once: true, amount: 0.25 }}
-			id="equipa"
+			id="professores"
 			className="flex flex-col items-center justify-center ">
 			<motion.div variants={fadeIn("up", "tween", 0.2, 1)} className="flex flex-col items-center justify-center">
 				<h2 className="section_title">Os nossos professores</h2>

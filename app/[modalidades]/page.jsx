@@ -7,7 +7,7 @@ export const revalidate = 60; // revalidate this page every 60 seconds
 
 const Modalities = async () => {
 	const allModalities = await getAllModalities();
-	console.log("🚀 ~ AllModalities ~ allModalities[0]", allModalities[0]);
+	// console.log("🚀 ~ AllModalities ~ allModalities[0]", allModalities[0]);
 	return (
 		<div className="flex min-h-screen w-full flex-col items-center mx-auto  max-w-screen-xl px-8 md:px-16 ">
 			<AnimatedHeader className={"max-w-screen-md self-start mt-16"}>

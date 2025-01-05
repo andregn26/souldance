@@ -26,7 +26,7 @@ const Hero = () => {
 						A tua escola de dança em Sintra
 					</span> */}
 					<h1 className="font-display text-3xl font-black uppercase md:text-7xl text-primary ">
-						Aulas de Dança
+					Modalidades
 						<br />
 						<span className="text-base-content/50"> para Todas as Idades</span>
 					</h1>
@@ -39,13 +39,13 @@ const Hero = () => {
 						<Link
 							href="/modalidades"
 							className="btn btn-primary md:btn-lg rounded-2xl font-body shadow-md">
-							Conhece as Modalidades
+							Conhece as modalidades
 						</Link>
 						<a
 							href="https://horarios.tiiny.site"
 							target="_blank"
 							className="btn btn-ghost md:btn-lg rounded-2xl font-body font-light">
-							Horários 23/24
+							Horários
 						</a>
 					</div>
 				</div>

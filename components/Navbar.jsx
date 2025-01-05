@@ -6,8 +6,8 @@ import MenuDropdown from "./icons/MenuDropdown";
 
 const navigation = [
 	{ name: "Serviços", href: "/#servicos" },
-	{ name: "Testemunhos", href: "/#testemunhos" },
-	{ name: "Equipa", href: "#equipa" },
+	// { name: "Testemunhos", href: "/#testemunhos" },
+	{ name: "Professores", href: "/#professores" },
 	{ name: "Contactos", href: "/#contactos" },
 ];
 const NavBar = () => {
@@ -43,7 +43,7 @@ const NavBar = () => {
 								key={item.name}
 								href={item.href}
 								className={`btn btn-ghost rounded-full font-display text-base font-light ${
-									active === item.name ? "bg-base-300" : ""
+									active === item.name ? "" : ""
 								}`}
 								onClick={() => setActive(item.name)}>
 								{item.name}
@@ -52,7 +52,7 @@ const NavBar = () => {
 					))}
 				</div>
 
-				<div className="navbar-end h-10 scale-75">
+{/* 				<div className="navbar-end h-10 scale-75">
 					<button className="btn btn-circle btn-ghost">
 						<label className="swap swap-rotate w-12 h-12">
 							<input
@@ -76,7 +76,7 @@ const NavBar = () => {
 							</svg>
 						</label>
 					</button>
-				</div>
+				</div> */}
 			</div>
 		</div>
 	);
