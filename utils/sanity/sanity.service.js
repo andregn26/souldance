@@ -27,3 +27,13 @@ export async function getAllProfessors() {
 		"modalities": modalities[]->,
 	  }`);
 }
+
+export async function getAllServices() {
+	return client.fetch(groq`*[_type == "service"] | order(order asc){
+		_id,
+		_createdAt,
+		name,
+		"slug": slug.current,
+		"image": image.asset->,
+	  }`);
+}

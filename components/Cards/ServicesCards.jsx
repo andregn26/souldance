@@ -1,15 +1,18 @@
 import Image from "next/image";
 import React from "react";
+import { getImageUrl } from "@/utils/useImageUrlBuilder";
 
 const ServicesCards = ({ service }) => {
+	const { name, image } = service;
 	return (
 		<div className="card image-full bg-base-100 shadow-xl transition duration-300 hover:-translate-y-1 min-h-64 ">
 			<figure className="object-cover relative">
 				<Image
-					src={service.bg}
-					alt={service.name}
+					src={getImageUrl(image).url()}
+					alt={name}
 					sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
 					fill
+					blurDataURL={image.metadata.lqip}
 					placeholder="blur"
 				/>
 			</figure>

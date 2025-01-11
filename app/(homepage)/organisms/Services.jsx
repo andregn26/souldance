@@ -3,31 +3,9 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { fadeIn, staggerContainer } from "@/utils/motion";
 import ServicesCards from "@/components/Cards/ServicesCards";
-import picDanceClasses from "@/public/images/dance-classes.jpg";
-import picAulasNoivos from "@/public/images/aulas-noivos.jpg";
-import picEvents from "@/public/images/events.jpg";
-import picSpace from "@/public/images/space.webp";
 
-const services = [
-	{
-		name: "Aulas de dança",
-		bg: picDanceClasses,
-		href: "/modalidades",
-	},
-	{
-		name: "Aulas para noivos",
-		bg: picAulasNoivos,
-	},
-	{
-		name: "Eventos corporativos",
-		bg: picEvents,
-	},
-	{
-		name: "Aluguer de espaço",
-		bg: picSpace,
-	},
-];
-const Services = () => {
+
+const Services = ({ services }) => {
 	return (
 		<motion.div
 			variants={staggerContainer}
@@ -42,17 +20,20 @@ const Services = () => {
 			<motion.div
 				variants={fadeIn("up", "tween", 0.2, 1)}
 				className="container mt-10 grid gap-10 p-4 md:grid-cols-2 2xl:grid-cols-4 ">
-				{services.map((service, index) => (
-					<div key={index}>
-						{service.href ? (
-							<Link href={service.href}>
+				{services.map((service, index) => {
+					return (
+						<div key={index}>
+							{service.slug ? (
+								<Link href={`/${service.slug}`}>
+									<ServicesCards service={service} />
+
+								</Link>
+							) : (
 								<ServicesCards service={service} />
-							</Link>
-						) : (
-							<ServicesCards service={service} />
-						)}
-					</div>
-				))}
+							)}
+						</div>
+					)
+				})}
 			</motion.div>
 		</motion.div>
 	);
