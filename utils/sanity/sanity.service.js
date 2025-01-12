@@ -7,10 +7,9 @@ export async function getAllModalities() {
 		_createdAt,
 		name,
 		"slug": slug.current,
-		description,
 		tags,
 		duration,
-		"image": image.asset->url,
+		"image": image.asset->,
 		"schedule": schedule,
 		"professors": professors[]->,
 	  }`);
