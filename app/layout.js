@@ -17,7 +17,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 	return (
-		<html lang="en">
+		<html lang="en" data-theme={"dark"}>
 			<body className={`${openSans.variable} ${leagueSpartan.variable}`}>
 						<div className="main">
 							<div className="gradient" />
