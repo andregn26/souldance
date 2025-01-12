@@ -8,6 +8,7 @@ const modality = {
 			name: "name",
 			title: "Modalidade Principal",
 			type: "string",
+			validation: (Rule) => Rule.required(),
 		},
 		//NOTE SLUG
 		{
@@ -18,13 +19,9 @@ const modality = {
 				source: "name",
 				maxLength: 90,
 			},
+			validation: (Rule) => Rule.required(),
 		},
-		//NOTE DESCRIÇÃO
-		{
-			name: "description",
-			title: "Descrição",
-			type: "string",
-		},
+		//NOTE DURAÇÃO
 		{
 			name: "duration",
 			title: "Duração da Aula",
@@ -51,6 +48,7 @@ const modality = {
 					type: "string",
 				},
 			],
+			validation: (Rule) => Rule.required(),
 		},
 		//NOTE HORÁRIO
 		{
@@ -80,6 +78,7 @@ const modality = {
 					],
 				},
 			],
+			validation: (Rule) => Rule.required(),
 		},
 		//NOTE PROFESSORS
 		{
@@ -94,6 +93,7 @@ const modality = {
 					to: { type: "professor" },
 				},
 			],
+			validation: (Rule) => Rule.required(),
 		},
 	],
 };
