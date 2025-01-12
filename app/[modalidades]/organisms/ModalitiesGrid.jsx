@@ -6,7 +6,6 @@ const ModalitiesGrid = ({ allModalities }) => {
 	const [searchTextByName, setSearchTextByName] = useState("");
 	const [searchTextByDayOfWeek, setSearchTextByDayOfWeek] = useState("");
 	const [modalities, setModalities] = useState([]);
-	const [searchTimeout, setSearchTimeout] = useState(null);
 	const [searchedResults, setSearchedResults] = useState([]);
 	const [isLoading, setIsLoading] = useState(false);
 
@@ -27,28 +26,19 @@ const ModalitiesGrid = ({ allModalities }) => {
 	};
 
 	const handleSearchModalitiesName = (e) => {
-		clearTimeout(searchTimeout);
 		setIsLoading(true);
 		setSearchTextByName(e.target.value);
-		setSearchTimeout(
-			setTimeout(() => {
-				const searchResult = filterModalitiesByName(e.target.value);
-				setSearchedResults(searchResult);
-				setIsLoading(false);
-			}, 1000)
-		);
+		const searchResult = filterModalitiesByName(e.target.value);
+		setSearchedResults(searchResult);
+		setIsLoading(false);
 	};
 	const handleSearchDayOfWeek = (e) => {
-		clearTimeout(searchTimeout);
 		setIsLoading(true);
 		setSearchTextByDayOfWeek(e.target.value);
-		setSearchTimeout(
-			setTimeout(() => {
-				const searchResult = filterModalitiesByDayOfWeek(e.target.value);
-				setSearchedResults(searchResult);
-				setIsLoading(false);
-			}, 1000)
-		);
+
+		const searchResult = filterModalitiesByDayOfWeek(e.target.value);
+		setSearchedResults(searchResult);
+		setIsLoading(false);
 	};
 
 	return (
