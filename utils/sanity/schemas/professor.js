@@ -3,13 +3,14 @@ const professor = {
 	title: "Professor",
 	type: "document",
 	fields: [
-		//NOTE NOME E REDES SOCIAIS
+		//NOTE NOME
 		{
 			title: "Nome",
 			name: "name",
 			type: "string",
-			// validation: (Rule) => Rule.required(),
+			validation: (Rule) => Rule.required(),
 		},
+		//NOTE REDES SOCIAIS
 		{
 			type: "object",
 			name: "socialMedia",
@@ -20,13 +21,7 @@ const professor = {
 					name: "instagram",
 					type: "string",
 					fieldset: "social",
-				},
-				{
-					title: "Facebook",
-					name: "facebook",
-					type: "string",
-					fieldset: "social",
-				},
+				}
 			],
 		},
 		//NOTE SLUG
@@ -40,6 +35,7 @@ const professor = {
 				maxLength: 90,
 			},
 		},
+		//NOTE ORDER
 		{
 			name: "order",
 			title: "Ordem",
@@ -58,6 +54,7 @@ const professor = {
 					type: "string",
 				},
 			],
+			validation: (Rule) => Rule.required(),
 		},
 		//NOTE MODALIDADES
 		{
@@ -72,15 +69,6 @@ const professor = {
 					to: { type: "modality" },
 				},
 			],
-		},
-		//NOTE BIO
-		{
-			title: "Biografia",
-			description: "Escreve um pequeno parágrafo sobre o professor.",
-			name: "bio",
-			type: "text",
-			// validation: (Rule) =>
-			// 	Rule.max(400).error("Shorter titles are usually better"),
 		},
 	],
 	orderings: [

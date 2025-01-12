@@ -22,7 +22,7 @@ export async function getAllProfessors() {
 		_createdAt,
 		name,
 		"slug": slug.current,
-		"image": image.asset->url,
+		"image": image.asset->,
 		socialMedia,
 		"modalities": modalities[]->,
 	  }`);

@@ -1,32 +1,32 @@
 import React from "react";
 import Image from "next/image";
-import Facebook from "../icons/Facebook";
+
 import Instagram from "../icons/Instagram";
+import { getImageUrl } from "@/utils/useImageUrlBuilder";
 
 const ProfessorCard = ({ professor }) => {
 	const { name, image, modalities, socialMedia } = professor;
-	// console.log("🚀 ~ ProfessorCard ~ professor:", professor);
+
 	return (
 		<div className="card  bg-base-200/60 shadow-lg max-w-[640px] min-h-[310px] lg:min-h-[330px] overflow-hidden ">
 			<figure className="relative  h-24 w-24 md:h-28 md:w-28 mx-auto mt-6 rounded-full">
 				<Image
-					src={
-						image
-							? image
-							: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-					}
+					src={getImageUrl(image).width(168).url()}
 					alt={`professor-${name}`}
+					sizes="(max-width: 768px) 144px, (max-width: 1024px) 168px, 168px"
 					fill
+					loading="lazy"
 					style={{ objectFit: "cover", objectPosition: "top" }}
+					blurDataURL={image.metadata.lqip}
+					placeholder="blur"
 				/>
 			</figure>
 			<div className="card-body px-6 py-3 relative items-center justify-between text-center">
 				<h3 className="card-title mt-2 font-body">{name}</h3>
 				{modalities ? (
 					<div
-						className={`${
-							modalities.length === 1 ? "flex w-1/2" : "grid grid-cols-2"
-						} font-body  gap-x-3 gap-y-3 flex-wrap  justify-center align-middle mt-3`}>
+						className={`${modalities.length === 1 ? "flex w-1/2" : "grid grid-cols-2"
+							} font-body  gap-x-3 gap-y-3 flex-wrap  justify-center align-middle mt-3`}>
 						{modalities.map((modality) => {
 							return (
 								<h3
