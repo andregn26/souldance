@@ -12,11 +12,6 @@ const Modalities = async () => {
 		<div className="flex min-h-screen w-full flex-col items-center mx-auto  max-w-screen-xl px-8 md:px-16 ">
 			<AnimatedHeader className={"max-w-screen-md self-start mt-16"}>
 				<h1 className="section_title !text-left">Modalidades</h1>
-				<p>
-					Desde danças de salão até ao funk brasileiro, a Souldance tem todos os estilos para que possas
-					encontrar aquele com que te identificas mais. Se ainda não sabes qual é o ritmo que tens dentro de
-					ti, vem ter connosco e experimenta uma aula! Difícil vai ser escolher!
-				</p>
 			</AnimatedHeader>
 			<AnimatedFadeIn>
 				<Suspense
