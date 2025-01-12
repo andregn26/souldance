@@ -5,7 +5,6 @@ import MenuDropdown from "./icons/MenuDropdown";
 
 const navigation = [
 	{ name: "Serviços", href: "/#servicos" },
-	// { name: "Testemunhos", href: "/#testemunhos" },
 	{ name: "Professores", href: "/#professores" },
 	{ name: "Contactos", href: "/#contactos" },
 ];
@@ -20,10 +19,12 @@ const NavBar = () => {
 						<div tabIndex={0} role="button" className="btn btn-circle btn-ghost lg:hidden ">
 							<MenuDropdown />
 						</div>
-						<ul className="menu dropdown-content menu-md z-[1] mt-3 w-52 gap-2 rounded-box bg-base-100 p-2 shadow">
+						<ul tabIndex={0} className="menu dropdown-content menu-md z-[1] mt-3 w-52 gap-2 rounded-box bg-base-100 p-2 shadow">
 							{navigation.map((item, index) => (
 								<li key={index}>
-									<Link key={item.name} href={item.href} className="font-body">
+									<Link
+										href={item.href}
+										className="font-body">
 										{item.name}
 									</Link>
 								</li>
@@ -34,20 +35,19 @@ const NavBar = () => {
 						Souldance
 					</Link>
 				</div>
-				<div className="navbar-center ml-10 hidden lg:flex">
+				<div className="navbar-center ml-10 hidden lg:flex"><nav className="menu menu-horizontal px-1">
 					{navigation.map((item, index) => (
-						<nav key={index} className="menu menu-horizontal px-1">
-							<Link
-								key={item.name}
-								href={item.href}
-								className={`btn btn-ghost rounded-full font-display text-base font-light ${
-									active === item.name ? "" : ""
+
+						<Link
+							key={index}
+							href={item.href}
+							className={`btn btn-ghost rounded-full font-display text-base font-light ${active === item.name ? "" : ""
 								}`}
-								onClick={() => setActive(item.name)}>
-								{item.name}
-							</Link>
-						</nav>
-					))}
+							onClick={() => setActive(item.name)}>
+							{item.name}
+						</Link>
+
+					))}</nav>
 				</div>
 			</div>
 		</div>
