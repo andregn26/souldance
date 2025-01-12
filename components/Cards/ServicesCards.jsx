@@ -10,7 +10,8 @@ const ServicesCards = ({ service }) => {
 				<Image
 					src={getImageUrl(image).url()}
 					alt={name}
-					sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+					loading="lazy"
+					sizes="(max-width: 768px) 419px, (max-width: 1200px) 378px, 298px"
 					fill
 					blurDataURL={image.metadata.lqip}
 					placeholder="blur"
