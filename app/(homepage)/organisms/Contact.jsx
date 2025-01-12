@@ -43,13 +43,13 @@ const Contact = () => {
 							<p className="-mx-2 flex items-start">
 								<Phone />
 								<span className="mx-2 w-72 truncate font-body text-base-content">
-									936 151 438
+									<a href="tel:+351215941718">215 941 718</a>
 								</span>
 							</p>
 							<p className="-mx-2 flex items-start">
 								<Email />
 								<span className="mx-2 w-72 truncate font-body text-base-content">
-									geral.souldance@gmail.com
+									<a href="mailto:geral.souldance@gmail.com">geral.souldance@gmail.com</a>
 								</span>
 							</p>
 						</div>
