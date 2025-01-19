@@ -36,3 +36,15 @@ export async function getAllServices() {
 		"image": image.asset->,
 	  }`);
 }
+
+
+export async function getSchedule() {
+	return client.fetch(groq`*[_type == "schedule"][0]{
+		_id,
+		_createdAt,
+		name,
+		gallery[]{
+			asset->,
+		  },
+	  }`);
+}

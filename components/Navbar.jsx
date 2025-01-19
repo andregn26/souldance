@@ -6,6 +6,8 @@ import MenuDropdown from "./icons/MenuDropdown";
 const navigation = [
 	{ name: "Serviços", href: "/#servicos" },
 	{ name: "Professores", href: "/#professores" },
+	{ name: "Modalidades", href: "/modalidades" },
+	{ name: "Horários", href: "/horarios" },
 	{ name: "Contactos", href: "/#contactos" },
 ];
 const NavBar = () => {
