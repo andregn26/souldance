@@ -7,7 +7,7 @@ const navigation = [
 	{ name: "Serviços", href: "/#servicos" },
 	{ name: "Professores", href: "/#professores" },
 	{ name: "Modalidades", href: "/modalidades" },
-	{ name: "Horários", href: "/horarios" },
+	{ name: "Horários e Preçário", href: "/horarios" },
 	{ name: "Contactos", href: "/#contactos" },
 ];
 const NavBar = () => {
