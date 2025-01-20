@@ -48,3 +48,14 @@ export async function getSchedule() {
 		  },
 	  }`);
 }
+
+export async function getTestimonies() {
+	return client.fetch(groq`*[_type == "testimony"]|order(orderRank){
+		_id,
+		_createdAt,
+		name,
+		position,
+		quote,
+		"image": photo.asset->,
+	  }`);
+}
