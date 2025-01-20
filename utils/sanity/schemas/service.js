@@ -1,8 +1,14 @@
+import {orderRankField, orderRankOrdering} from '@sanity/orderable-document-list'
+
 const modality = {
 	name: "service",
 	title: "Serviços",
 	type: "document",
+	orderings: [orderRankOrdering],
 	fields: [
+		orderRankField({
+            type: 'service',
+        }),
 		//NOTE MAIN MODALITY NAME
 		{
 			name: "name",

@@ -20,11 +20,17 @@ export default defineConfig({
                             type: 'testimony',
                             S,
                             context,
+							title: "Testemunhos"
+                        }),
+						orderableDocumentListDeskItem({
+                            type: 'service',
+                            S,
+                            context,
+							title: "Serviços"
                         }),
                         // Add more as needed
 						S.documentTypeListItem("modality").title("Modalidades"),
 						S.documentTypeListItem("professor").title("Professores"),
-                        S.documentTypeListItem("service").title("Serviços"),
                         S.documentTypeListItem("schedule").title("Horários"),
                     ]);
             },

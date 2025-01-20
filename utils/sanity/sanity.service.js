@@ -28,7 +28,7 @@ export async function getAllProfessors() {
 }
 
 export async function getAllServices() {
-	return client.fetch(groq`*[_type == "service"] | order(order asc){
+	return client.fetch(groq`*[_type == "service"] | order(orderRank){
 		_id,
 		_createdAt,
 		name,
