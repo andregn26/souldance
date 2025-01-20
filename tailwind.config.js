@@ -32,7 +32,8 @@ module.exports = {
 			{
 				dark: {
 					...require("daisyui/src/theming/themes")["dark"],
-					primary: "#e879f9",
+					primary: "#8f65ed",
+					secondary: "#8476DA"
 				},
 			},
 		],
