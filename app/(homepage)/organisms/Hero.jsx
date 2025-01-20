@@ -41,12 +41,11 @@ const Hero = () => {
 							className="btn btn-primary md:btn-lg rounded-2xl font-body shadow-md">
 							Conhece as modalidades
 						</Link>
-						<a
-							href="https://horarios.tiiny.site"
-							target="_blank"
+						<Link
+							href="/horarios"
 							className="btn btn-ghost md:btn-lg rounded-2xl font-body font-light">
 							Horários
-						</a>
+						</Link>
 					</div>
 				</div>
 			</motion.div>
