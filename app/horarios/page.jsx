@@ -2,6 +2,8 @@ import React from "react";
 import { getSchedule } from "@/utils/sanity/sanity.service";
 import ClientImageList from "./ClientImageList";
 
+export const revalidate = 60; // revalidate this page every 60 seconds
+
 
 const Schedule = async () => {
 	const schedule = await getSchedule();
