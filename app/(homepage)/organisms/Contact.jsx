@@ -43,7 +43,7 @@ const Contact = () => {
 							<p className="-mx-2 flex items-start">
 								<Phone />
 								<span className="mx-2 w-72 truncate font-body text-base-content">
-									<a href="tel:+351215941718">215 941 718</a>
+									<a href="tel:+351923128427">923 128 427</a>
 								</span>
 							</p>
 							<p className="-mx-2 flex items-start">
